@@ -20,3 +20,4 @@ npm-debug.log
 
 utils/data/allseen.json
 utils/data/alltx.json
+txs/
