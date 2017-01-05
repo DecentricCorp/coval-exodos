@@ -1,0 +1,60 @@
+﻿<form class="form-horizontal" role="form">
+    <div class="form-group" style="">
+        <div class="col-sm-3">
+            <label for="identityName" class="control-label">Name</label>
+        </div>
+        <div class="col-sm-3">
+            <input data-validate="required" autofocus required id="identityName" type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col-sm-3">
+            <input data-validate="required" required id="identityLastName" type="text" class="form-control" placeholder="Last name">
+        </div>
+        <div class="col-sm-3">
+            <button onclick="javascript:return false" style="display:none" class="btn btn-primary btn-xs logout" id="notMeButton">Not you? Logout</button>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <label for="encryptedAccount" class="control-label">Email Address</label>
+        </div>
+        <div class="col-sm-7">
+            <input id="emailInput" type="text" class="form-control" placeholder="Email used to receive backups.">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+            <label for="encryptedAccountFileInput" class="control-label">Backup File</label>
+        </div>
+        <div class="col-sm-7">
+            <!--<textarea type="text" class="form-control" id="encryptedAccount"></textarea>-->
+            <input id="encryptedAccountFileInput" type="file">
+        </div>
+    </div>
+    <!--<div class="form-group">
+        <div class="col-sm-3">
+            <label for="qrButtonImportAccount" class="control-label"> Data Option 2</label>
+        </div>
+        <div class="col-sm-7">
+            <input id="hiddenEncryptedData" for="encryptedAccountFileInput" type="hidden">
+            <button class="qrButtonImportAccount">
+                <i class="glyphicon glyphicon-qrcode"></i>
+                Import Account from QR
+                <div class="ripple-wrapper"></div>
+            </button>
+            <i class="glyphicon glyphicon-check" for="hiddenEncryptedData" style="display: none;"></i>
+        </div>
+    </div>-->
+    <div class="form-group">
+        <div class="col-sm-3">
+            <label for="passwordInput" class="control-label">Password</label>
+        </div>
+        <div class="col-sm-7">
+            <input type="password" class="form-control" id="passwordInput" placeholder="Password used to encrypt account">
+        </div>
+    </div>
+    <!--<div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-default importEncryptedDataButton">Import</button>
+        </div>
+    </div>-->
+</form>

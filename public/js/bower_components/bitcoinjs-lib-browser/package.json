@@ -1,0 +1,20 @@
+{
+  "name": "bitcoinjs-lib-browser",
+  "version": "1.0.0",
+  "description": "Browser version of bitcoinjs-lib with coval network add-on",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js --standalone bitcoin > dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shannon Code",
+  "license": "MIT",
+  "dependencies": {
+    "bigi": "^1.4.2",
+    "bitcoinjs-coval": "git://github.com/DecentricCorp/bitcoinjs-coval.git",
+    "bitcoinjs-lib": "2.3.0",
+    "bs58": "^4.0.0",
+    "buffer": "^5.0.2",
+    "ecurve": "^1.0.5"
+  }
+}

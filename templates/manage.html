@@ -1,0 +1,45 @@
+﻿<div class="animated fadeInUp">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <span class="label label-primary">{{label}}</span>
+                                {{address}}
+                                {{#if isIdentity}}
+                                <span class="label label-info">Identity Address</span>
+                                {{/if}}
+                            </h3>
+
+                        </div>
+                        <div class="panel-body">
+                            <div class="section">
+                                <div class="container-fluid">
+                                    <div class="col-xs-4 span4 ">
+                                        {{#if isIdentity}}
+                                        <a href="javascript:void(0)" keydata="{{pk}}" labelData="{{label}}" class="btn btn-default btn-raised renameAccount disabled" disabled>Rename</a>
+                                        {{else}}
+                                        <a href="javascript:void(0)" keydata="{{pk}}" labelData="{{label}}" class="btn btn-default btn-raised renameAccount">Rename</a>
+                                        {{/if}}
+                                    </div>
+                                    <div class="col-xs-4 span4">
+                                        <a href="javascript:void(0)" keydata="{{pk}}" class="btn btn-warning btn-raised viewPrivateKey">View Private Key</a>
+                                    </div>
+                                    <div class="col-xs-4 span4">
+                                        {{#if isIdentity}}
+                                        <a href="javascript:void(0)" keydata="{{pk}}" class="btn btn-danger btn-raised deleteKey disabled" disabled>Delete</a>
+                                        {{else}}
+                                        <a href="javascript:void(0)" keydata="{{pk}}" class="btn btn-danger btn-raised deleteKey">Delete</a>
+                                        {{/if}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

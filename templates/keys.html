@@ -1,0 +1,112 @@
+﻿    
+<div class="container animated fadeInUp">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="manage-account-panel" class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3  class="panel-title">Manage Your Accounts</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="section">
+                                <div class="container-fluid">
+                                    {{#if rows}}
+                                    {{#each rows}}
+                                    <div class="manage row">
+                                        <div class="col-xs-12 span12">
+                                            <div keyData="{{keyData}}" isIdentity="{{isIdentity}}" class="col-xs-3 span3">
+                                                <span class="label label-primary keys-label">{{label}}</span>
+                                            </div>
+                                            <div class="col-xs-2 span2 key-network">
+                                                {{network}}
+                                            </div>
+                                            <div class="col-xs-5 span5 key-address">
+                                                {{address}}
+                                            </div>
+                                            <div class="col-xs-2 span2 key-copy" >
+												<span class="label label-primary copy-label">copy</button>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    {{/each}}
+                                    {{else}}
+                                    <div class="empty history row">You have no addresses associated with this account.</div>
+                                    {{/if}}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="btn-group manage-group">
+                <a href="bootstrap-elements.html" data-target="#" class="c btn btn-primary manage dropdown-toggle generate-keys" data-toggle="dropdown">Generate New Account&nbsp;&nbsp;<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    {{#if chainIds}}
+                    {{#each chainIds}}
+                    <li><a href="javascript:void(0)">{{name}}</a>
+                    {{/each}}
+                    {{else}}
+                    <li><a href="javascript: return false">No Coins Available</a></li>
+                    {{/if}}
+                </ul>
+            </div-->
+            <p></p>
+
+        </div>
+        <div id="manage"></div>
+        <div id="history"></div>
+    </div>
+</div>
+<script>
+    function complete() {
+        multiStageHelp = {}
+        multiStageHelp.step = []
+        multiStageHelp.step.push(
+               configureMultiStageHelp(
+               function () {
+                   setOverlay(".keys-label:nth(0)", "A friendly label for your account. ", "top")
+                   setOverlay(".generate-keys", "You can create new accounts using this tool", "right")
+                   setOverlay(".panel-body:nth(0)", "Select an account to manage from here.", "top")
+                   setTimeout(function () { $('body').chardinJs('start') }, 100)
+               }
+               , 1))
+
+        multiStageHelp.step.push(
+               configureMultiStageHelp(
+               function () {
+                   $(".manage.row:nth(0)").click()
+                   setTimeout(function () {
+                       unsetOverlay(".keys-label:nth(0)")
+                       unsetOverlay(".generate-keys")
+                       unsetOverlay(".panel-body:nth(0)")
+
+                       setOverlay(".label-info:contains('Identity Address')", "This is your main (identity) account and cannot be deleted or renamed", "right")
+                       setOverlay(".renameAccount", "Provides the ability to change the label of this account.", "bottom")
+                       setOverlay("#qrcode img", "This QR Code represents your Private Key and should be guarded. Save it someplace save or scan it using a QR code reader.", "bottom")
+                       setOverlay(".viewPrivateKey", "<p><strong>Advanced</strong></p> This will allow you to view your private key.", "top")
+                       setOverlay(".deleteKey", "<p><strong>Warning: Can cause loss of funds.</strong></p> Destroys this account.", "bottom")
+                       setOverlay(".history.row", "This is where all trnsaction history is displayed. Receipts and Sends are displayed here.", "bottom")
+                       setTimeout(function() { $('body').chardinJs('start') }, 800)
+                   },500)
+               }
+               , 2, 8000))
+
+        multiStageHelp.step.push(
+              configureMultiStageHelp(
+              function () {
+                  $(".manage.row:nth(0)").click()
+                  loadPageExplicitely("keys")
+                  multiStageHelp = {}
+              }
+              , 3))
+        
+
+        
+
+    }
+</script>
+

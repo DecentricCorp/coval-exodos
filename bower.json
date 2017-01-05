@@ -1,0 +1,13 @@
+{
+  "name": "exodos",
+  "dependencies": {
+    "bootstrap": "~3.1.0",
+    "jquery": "~2.1.0",
+    "datatables.net": "^1.10.13",
+    "datatables.net-dt": "^1.10.13",
+    "moment": "^2.17.1",
+    "ethereum-bsm": "https://github.com/DecentricCorp/ethereum-bsm.git",
+    "bitcoinjs-lib": "2.3.0",
+    "bitcoinjs-lib-browser": "git://github.com/DecentricCorp/bitcoinjs-lib-browser.git"
+  }
+}

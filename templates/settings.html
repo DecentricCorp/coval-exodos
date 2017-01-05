@@ -1,0 +1,51 @@
+﻿<div class="animated fadeInUp">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Wallet Status</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="section">
+                                <div class="container-fluid">
+                                    {{#if coins}}
+                                        {{#each coins}}
+                                        <div class="wallet-status row">
+                                            <div class="col-xs-6 span6">
+                                                <span class="{{name}}-status" url="{{url}}">{{toCapital name}}</span>
+                                            </div>
+                                            <div class="col-xs-6 span6 sync">
+                                                <span class="{{name}}-sync" ></span>
+                                            </div>
+                                        </div>
+                                        {{/each}}
+                                    {{else}}
+                                        <div class="empty wallet-status row">There coins enabled in this account.</div>
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function complete() {
+        $.each($(".wallet-status.row"),function(key, value){
+            var selector = value
+            var url = $(value).find("span").attr("url")
+            var sync = $(value).find(".sync")
+            $.ajax({
+                    url: url + "/api/sync",
+                    success : function (data) {
+                        $(sync).html("Synch Status: <b>"+data.status.capitalize()+"</b>   <span class='sync-"+data.status+"'> "+data.syncPercentage+"%</span>")
+                        console.log(data)
+                    }
+            })
+        })  
+    }
+</script>

@@ -1,0 +1,304 @@
+﻿<div class="section animated fadeInUp">
+    <div class="container animated fadeInUp">
+        <div class="section">
+            <div class="container">
+                <div class="row notElectron">
+                    <div class="col-md-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Cloud Services Auto Save</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="section">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <a href="#import" onclick=" javascript: return false; " class="connect-cloud btn btn-info btn-lg btn-{{warn}}"><span class="mdi-image-filter-drama"></span> Connect Cloud Storage</a>
+                                            <p for="connect-cloud" class="button-msg text-{{warnmsgClass}}">{{{warntext}}}</p>
+                                        </div>
+                                        {{#each services}}
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="section">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-sm-2  hidden-xs">
+                                                                <div class="thumbnail">
+                                                                    <img src="./images/cloud/{{this.service}}.png" class="img-responsive cloud-img">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-10 cloud-service-row">
+                                                                <span class="cloud-service-name">{{this.service}}</span>
+                                                                <!--<a href="#" onclick=" javascript: return false; " class="btn btn-xs btn-default">Backup now<span class="mdi-content-add-circle-outline"></span></a>-->
+                                                                {{#if this.canAuto}}
+
+                                                                {{else}}
+                                                                    <a href="#" data="{{this.service}}" onclick="javascript: return false; " class="pull-right btn btn-md btn-warning cloud-export">Must manually export at least one backup.</a>
+                                                                {{/if}}
+                                                                <a href="#" data="{{this.service}}" onclick="javascript: return false; " class="pull-right btn btn-md btn-default cloud-remove">Remove<!--<span class="mdi-content-clear"></span>--></a>
+                                                            </div>
+                                                            <!--<div class="col-sm-2 hidden-xs"></div>-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> {{/each}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Import Individual Key</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="section">
+                            <div class="container">
+                                <div class="row-fluid">
+                                    <div class="col-md-2 hidden-xs span3"></div>
+                                    <div class="col-md-6 span8">
+                                        <div class="row-fluid">
+                                            <form class="form-horizontal" role="form">
+                                                <div class="form-group">
+                                                    <div class="col-sm-3">
+                                                        <label for="inputpk" class="control-label">Private Key</label>
+                                                    </div>
+                                                    <div class="col-sm-7">
+                                                        <input type="password" class="form-control" id="inputpk" placeholder="xpriv">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-3">
+                                                        <label for="labelInput" class="control-label">Label</label>
+                                                    </div>
+                                                    <div class="col-sm-7">
+                                                        <input type="text" class="form-control" id="labelInput" placeholder="Label to reference this account">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-offset-2 col-sm-10">
+                                                        <button class="btn btn-default importKey">Import</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 hidden-xs span3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- -->
+        <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i class="fa fa-lg fa-download"></i>
+                        Manually Import Account (Restore Backup or Login)
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="section">
+                        <div class="container">
+                            <div class="row-fluid">
+                                <div class="col-md-2 hidden-xs span3"></div>
+                                <div class="col-md-6 span8">
+                                    <div class="row-fluid">
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group" style="display: none;">
+                                                <div class="col-sm-3">
+                                                    <label for="encryptedAccount" class="control-label"> Data Option 1</label>
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <input id="encryptedAccount" accept=".txt" type="file">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-3">
+                                                    <label for="passwordInput" class="control-label">Password</label>
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <input type="password" class="form-control" id="passwordInput" placeholder="Password used to encrypt account">
+                                                </div>
+                                            </div>
+                                            <div class="form-group import-options">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <button onclick="$('#encryptedAccount').click()" class="btn btn-default importEncryptedData">
+                                                        <i class="glyphicon glyphicon-file"></i>
+                                                        From File
+                                                    </button>
+                                                    <button onclick="javascript: return false;" class="btn btn-default notElectron importEncryptedDataCloud">
+                                                        <i class="glyphicon glyphicon-cloud"></i>
+                                                        From Cloud
+                                                    </button>
+                                                    <button style="display: none;" class="btn btn-default importEncryptedData">
+                                                        <i class="glyphicon glyphicon-qrcode"></i>
+                                                        From QR Code
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 hidden-xs span3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <i class="fa fa-lg fa-upload"></i>
+                            Manually Export Account (Backup)
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="section">
+                            <div class="container">
+                                <div class="row-fluid">
+                                    <div class="col-md-2 hidden-xs span3"></div>
+                                    <div class="col-md-6 span8">
+                                        <div class="row-fluid">
+                                            <form class="form-horizontal" role="form">
+
+                                                <div class="form-group">
+                                                    <div class="col-sm-3">
+                                                        <label for="passwordExportInput" class="control-label">Password</label>
+                                                    </div>
+                                                    <div class="col-sm-7">
+                                                        <input type="password" class="form-control" id="passwordExportInput" placeholder="Password used to encrypt account">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group export-options">
+                                                    <div class="col-sm-offset-2 col-sm-10">
+                                                        <button class="btn btn-default exportEncryptedData">
+                                                            <i class="glyphicon glyphicon-file"></i>
+                                                            To File
+                                                        </button>
+                                                        
+                                                        <button class="btn btn-default notElectron exportEncryptedDataToCloud">
+                                                            <i class="glyphicon glyphicon-cloud"></i>
+                                                            To Cloud
+                                                        </button>
+                                                        <button style="display: none;" class="btn btn-default exportEncryptedQRData">
+                                                            <i class="glyphicon glyphicon-qrcode"></i>
+                                                            To QR Code
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 hidden-xs span3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="display:none">
+
+            <button id="explorer-test">Choose a file</button>
+
+            <button id="explorer-saver-test">Save a file</button>
+
+            <div id="file-info"></div>
+
+
+        </div>
+    </div>
+</div>
+<script>
+/*    $(document).ready(function () {
+        
+    })*/
+    function complete() {
+        multiStageHelp = {}
+        multiStageHelp.step = []
+
+        initKloudless($(".connect-cloud"))
+        initKloud()
+        if (mobileAndTabletcheck()) {
+            $("[for='qrButtonImportAccount']").hide()
+            $("#encryptedAccount").hide()
+        } else {
+            $(".qrButtonImportAccount").hide()
+        }
+
+
+        multiStageHelp.step.push(
+            configureMultiStageHelp(
+                function() {
+                    setOverlay(".connect-cloud", "Connect a cloud account in order to turn on Auto Backup.", "top")
+                    setTimeout(function() { $('body').chardinJs('start') }, 100)
+                }, 1))
+
+        multiStageHelp.step.push(
+           configureMultiStageHelp(
+               function () {
+                   unsetOverlay(".connect-cloud")
+                   setOverlay("#inputpk", "Paste individual Private Keys here.", "top")
+                   setOverlay("#labelInput", "Name this key.", "left")
+                   setOverlay(".importKey","Start Import by clicking here", "bottom")
+                   setTimeout(function () { $('body').chardinJs('start') }, 500)
+               }, 2))
+
+        multiStageHelp.step.push(
+           configureMultiStageHelp(
+               function () {
+                   unsetOverlay("#inputpk")
+                   unsetOverlay("#labelInput")
+                   unsetOverlay(".importKey")
+                   setOverlay("#passwordInput", "Use the password you previously used to encrypt your backup.", "right")
+                   $(".import-options").fadeIn()
+                   setTimeout(function () {
+                       setOverlay(".importEncryptedData", "To Import from a file. (Like an email backup)", "left")
+                       setOverlay(".importEncryptedDataCloud", "To Import from a Cloud service.", "bottom")
+                   }, 100)
+                   setTimeout(function () { $('body').chardinJs('start') }, 500)
+               }, 3))
+
+        multiStageHelp.step.push(
+           configureMultiStageHelp(
+               function () {
+                   unsetOverlay("#passwordInput")
+                   unsetOverlay(".importEncryptedData")
+                   unsetOverlay(".importEncryptedDataCloud")
+                   setOverlay("#passwordExportInput", "Choose a password to encrypt your backup.", "right")
+                   $(".import-options").fadeOut()
+                   $(".export-options").fadeIn()
+                   setTimeout(function () {
+                       setOverlay(".exportEncryptedData", "To Import from a file. (Like an email backup)", "left")
+                       setOverlay(".exportEncryptedDataToCloud", "To Import from a Cloud service.", "bottom")
+                   }, 100)
+                   setTimeout(function () { $('body').chardinJs('start') }, 500)
+               }, 4))
+
+        multiStageHelp.step.push(
+           configureMultiStageHelp(
+               function () {
+                   unsetOverlay("#passwordExportInput")
+                   unsetOverlay(".exportEncryptedData")
+                   unsetOverlay(".exportEncryptedDataToCloud")
+                   multiStageHelp = {}
+                   loadPageExplicitely("import")
+               }, 5))
+    }
+</script>

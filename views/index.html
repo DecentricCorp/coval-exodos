@@ -1,0 +1,168 @@
+    <!-- Page Content -->
+    <div id="frame" class="container pageContent">
+
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-8">
+                <table id="example-table" cellspacing="0" class="table table-striped">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th></th>
+                            <th>address</th>
+                            <th>balance</th>
+                            <th>lastActivity</th>
+                            <th>txCount</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <th>Sum</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </tfoot>         
+                </table>
+
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+                <!-- Blog Search Well -->
+                <div class="well">
+                    <h4>Search</h4>
+                    <div class="input-group">
+                        <input type="text" class="customSearch form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+                <div class="well">
+                     <h4>Transaction Count</h4>
+                    <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                        <span class="input-group-addon">
+                            Min
+                        </span>
+                        <input id="min"  type="text" class="form-control" aria-label="Minimum TX #">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                        <span class="input-group-addon">
+                            Max
+                        </span>
+                        <input id="max"  type="text" class="form-control" aria-label="Maximum TX #">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Blog Categories Well -->
+                <div class="well">
+                    <h4>Quick Links</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+                <div class="well" style="display: none;">
+                    <h4>Chat</h4>
+                    <div class="input-group">
+                        <input id="commandInput" type="text" class="customSearch form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>                        
+                    </div>
+                    <div id="qrcode"></div>
+                    <!-- /.input-group -->
+                </div>
+                <div class="well" style="display: none;">
+                    <div class="row">
+                        <div id="to-choose-address" class="btn-group wallet-address-picker">
+                            <button class="address-view btn btn-default" type="button"><span>Choose Account</span></button>
+                            <button type="button" class="btn btn-default dropdown-toggle"
+                                    aria-expanded="false" data-toggle="dropdown">
+                                <span class="caret"></span>
+                                <span class="caret sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="addressItem">
+                                    <div class="accountInPicker address-item">
+                                        Primary Spend Account
+                                        <span class="accountInPickerBalance positiveBalance">175</span>
+                                    </div>
+                                </li>
+                                <li class="addressItem">
+                                    <div class="accountInPicker address-item">
+                                        Savings
+                                        <span class="accountInPickerBalance">0</span>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a class="btn btn-lg wallet-action" href="#" data-toggle="modal" data-target="#basicModal">Generate new address</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Widget Well -->
+                <!--div class="well">
+                    <h4>Side Widget Well</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+                </div-->
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Decentric 2016</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>

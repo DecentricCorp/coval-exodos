@@ -1,0 +1,238 @@
+﻿<div class="animated fadeInUp">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Wallet</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="section">
+                                <div class="container">
+                                    <div class="row-fluid">
+                                        <!--<div class="col-md-2 hidden-xs span3"></div>-->
+                                        <div class="col-md-6 span6 send-panel">
+                                            <!-- <div class="row-fluid">
+                                                <div class="container balance-container"></div><div class="shortCode"></div>
+                                            </div>-->
+                                            <form class="form-horizontal text-left" role="form">
+                                                <div class="form-group">
+                                                    <div class="wallet-section-title" style="text-align: center">Sending Funds</div>
+                                                    <div class="col-sm-11">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input-lg amount" id="amount" placeholder="How much?">
+                                                            <p class="text-warning amount-warning"></p>
+                                                            <p class="text-primary amount-bonus"></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <label for="inputEmail3" class="control-label fromAddressLabel">FROM:</label>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <div id="to-choose-address" class="btn-group wallet-address-picker">
+                                                            <button class="address-view btn btn-default" type="button"><span>Choose Account</span></button>
+                                                            <button type="button" class="btn btn-default dropdown-toggle"
+                                                                    aria-expanded="false" data-toggle="dropdown">
+                                                                <span class="caret"></span>
+                                                                <span class="caret sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <ul class="dropdown-menu" role="menu">
+                                                                <li class="addressItem">
+                                                                    <div class="accountInPicker address-item">
+                                                                        Primary Spend Account
+                                                                        <span class="accountInPickerBalance positiveBalance">175</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="addressItem">
+                                                                    <div class="accountInPicker address-item">
+                                                                        Savings
+                                                                        <span class="accountInPickerBalance">0</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="divider"></li>
+                                                                <li>
+                                                                    <a class="btn btn-lg wallet-action" href="#" data-toggle="modal" data-target="#basicModal">Generate new address</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <!--<button class="btn btn-default qrButton" disabled>
+                                                            <i class="glyphicon glyphicon-qrcode"></i>
+                                                            <div class="ripple-wrapper"></div>
+                                                        </button>-->
+                                                    </div>
+                                                </div>
+                                                <!--<div class="form-group">
+
+                                                </div>-->
+                                                <div class="form-group">
+                                                    <div class="col-sm-2">
+                                                        <label for="toAddress" class="control-label toAddressLabel">TO:</label>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <div class="form-group">
+                                                            <img class="toImage" src="images/preload-6-white.gif" style="width: 25px; position: absolute;">
+                                                            <input type="text" class="form-control toAddress" id="toAddress" placeholder="Recipient Address" value="{{to}}">
+                                                            <p class="text-warning"></p>
+                                                        </div>
+                                                        <button class="btn btn-default qrScanButton">
+                                                            <i class="glyphicon glyphicon-facetime-video"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="menu-container advanced">
+                                                        <label class="utxo-help ">Select one or more spendable amounts.</label>
+                                                        <div class="utxo button-container"></div>
+                                                        <div>
+
+                                                            <div class="transaction-hash-form form-group">
+                                                                <label for="comment">Transaction Hex:</label>
+                                                                <textarea class="transaction-hash form-control" rows="5" id="comment" style="margin: 0px 449px 0px 0px; width: 630px; height: 118px;"></textarea>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-sm-9 text-center">
+                                                    <button type="button" class="btn btn-default send-now" disabled>
+                                                        Send Now
+                                                    </button>
+                                                    <button class="btn btn-default reset">
+                                                        Reset
+                                                    </button>
+                                                    <!--<div class="col-sm-4 span6">
+
+                                                    </div>
+                                                    <div class="col-sm-3 span3 advanced">
+                                                        <button class="btn btn-default send-later">Send Later</button>
+                                                    </div>
+                                                    <div class="col-sm-4 span6 pull-right">
+
+                                                    </div>-->
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-md-6 span6 receive-panel">
+                                            <form class="form-horizontal text-left" role="form">
+                                                <div class="form-group">
+                                                    <!--<div class="col-sm-2">
+                                                        <label class="control-label ">RECEIVEING:</label>
+                                                    </div>-->
+                                                    <div class="col-sm-12" style="text-align: center">
+                                                        <div class="wallet-section-title">Receiving Funds</div>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input-lg" id="receive" placeholder="Where To?">
+                                                            <p style="display: none" class="text-info request-info">Copy this address and send to the person you are requesting payment from.</p>
+                                                            <br />
+                                                            <div class="col-sm-2"><label for="inputEmail3" class="control-label fromAddressLabel">TO:</label></div>
+                                                            <div class="col-sm-9">
+                                                            <div id="from-choose-address" class="btn-group wallet-address-picker">
+                                                                <button class="address-view btn btn-default" type="button"><span>Choose Account</span></button>
+                                                                <button type="button" class="btn btn-default dropdown-toggle"
+                                                                        aria-expanded="false" data-toggle="dropdown">
+                                                                    <span class="caret"></span>
+                                                                    <span class="caret sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <ul class="dropdown-menu" role="menu">
+                                                                    <li class="addressItem">
+                                                                        <div class="accountInPicker address-item">
+                                                                            Primary Spend Account
+                                                                            <span class="accountInPickerBalance positiveBalance">175</span>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="addressItem">
+                                                                        <div class="accountInPicker address-item">
+                                                                            Savings
+                                                                            <span class="accountInPickerBalance">0</span>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="divider"></li>
+                                                                    <li>
+                                                                        <a class="btn btn-lg wallet-action" href="#" data-toggle="modal" data-target="#basicModal">Generate new address</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="form-group">
+                                                    <div id="qrcode" title="" style="display: none">
+                                                        <canvas width="256" height="256" style="display: none;"></canvas>
+                                                        <img src="">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function complete() {
+            multiStageHelp = {}
+            multiStageHelp.step = []
+            multiStageHelp.step.push(
+                configureMultiStageHelp(
+                function() {
+                    setOverlay(".send-panel .wallet-section-title", "Send funds from here.", "top")
+                    setOverlay(".wallet-address-picker:nth(0)", "Choose the address you want to send from or receive to.", "top")
+                    setOverlay(".toAddress","The address you are sending funds to goes here.", "bottom")
+                    setOverlay("#amount", "Amount to send.", "right")
+                    setTimeout(function () { $('body').chardinJs('start') }, 100)
+                }
+                , 1))
+            multiStageHelp.step.push(
+                configureMultiStageHelp(
+                function () {
+                    unsetOverlay("#amount")
+                    unsetOverlay(".send-panel .wallet-section-title")
+                    unsetOverlay(".wallet-address-picker:nth(0)")
+                    unsetOverlay(".toAddress")
+                    setOverlay(".receive-panel .wallet-section-title", "Request funds from here.", "top")
+                    setOverlay(".wallet-address-picker:nth(1)", "Choose the address you want to send from or receive to.", "left")
+                    setTimeout(function () { $('body').chardinJs('start') }, 500)
+                }
+                , 2))
+
+            multiStageHelp.step.push(
+                configureMultiStageHelp(
+                function () {
+                    $(".accountInPicker:nth(0)").click()
+                    unsetOverlay(".receive-panel .wallet-section-title")
+                    unsetOverlay(".wallet-address-picker:nth(1)")
+                    setOverlay("#receive", "You can copy this address and send to someone you want to send you funds.", "left")
+                    setOverlay("#qrcode img", "QR code can be scanned by the person paying you.", "bottom")
+                    //setOverlay(".panel-title:contains('History')","Account history for the selected address will display here.","bottom")
+                    setTimeout(function () { $('body').chardinJs('start') }, 800)
+                }
+                , 3))
+
+            multiStageHelp.step.push(
+                configureMultiStageHelp(
+                function () {
+                    unsetOverlay("#qrcode")
+                    unsetOverlay("#receive")
+                    //unsetOverlay(".panel-title:contains('History')")
+                    loadPageExplicitely("wallet")
+                    multiStageHelp = {}
+                }
+                , 5))
+            
+           /* setOverlay(".receive-panel .wallet-section-title", "Request funds from here.", "top")
+            setOverlay("#qrcode", "QR code can be scanned by the person paying you.", "bottom")
+            setOverlay(".wallet-address-picker", "Choose the address you want to send from or receive to.", "top")
+            setOverlay("#amount", "Amount to send.", "right")*/
+        }
+    </script>
+    <div id="history"></div>
+
+
+</div>

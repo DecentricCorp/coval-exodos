@@ -1,0 +1,24 @@
+{
+  "name": "ethereum-bsm",
+  "version": "0.1.0",
+  "author": "Alex Beregszaszi <alex@rtfs.hu>",
+  "homepage": "https://github.com/axic/ethereum-bsm",
+  "description": "Bitcoin Signed Message in Ethereum",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/axic/ethereum-bsm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/axic/ethereum-bsm/issues"
+  },
+  "keywords": [
+    "ethereum",
+    "bitcoin"
+  ],
+  "main": "bsm.js",
+  "dependencies": {
+    "bitcoinjs-lib": "^2.2.0",
+    "ethereumjs-util": "^4.0.1"
+  }
+}
