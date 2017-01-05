@@ -13,7 +13,7 @@ var table
         footerCallbackCnt = 0
         table = 
         $('#example-table').DataTable({
-            "ajax": "/utils/data/rich.json",
+            "ajax": "utils/data/rich.json",
             "deferRender": false,
             "columns": [
                 {
