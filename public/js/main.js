@@ -8,6 +8,7 @@ var table
     $(document).ready(function(){        
         init()
         verbose = false
+        var bitcoreMnemonic = Mnemonic
     })
     function init(){
         footerCallbackCnt = 0
@@ -74,16 +75,20 @@ var table
         loginCheck()
     }
 
-    function loginCheck() {
+    function loginCheck(cb) {
+        if (!cb) {
+            var cb = function(bool){}
+        }
         me.data.identity(function(identity){
             var loggedIn = (identity.email != "" && identity.name != "")
             if (verbose) console.log("Logged in", loggedIn, identity)
             if (loggedIn) {
                 $(".loginStatus").text(identity.name.replace('::', ' ') + " Logout"  )
-                enableKeysView()
+                enableKeysView()                
             } else {
                 disableKeysView()
             }
+            return cb(loggedIn)
         })
     }
             
@@ -197,4 +202,79 @@ var table
         return function() {
             return newtables.privkey.verifyMessage(payload.coval.toSign, payload.coval.covalAddress, payload.coval.signature, cb)
         }
+    }
+
+    function generateMnemonicSeed() {
+        var m  = new _Mnemonic(128),
+            p  = m.toWords().toString().replace(/,/gi, " "),
+            h  = m.toHex()
+            return {phrase: p, seed: h}
+    }
+
+    function generateSeedFromFreeWallet() {
+        return CryptoJS.AES.decrypt(localStorage.getItem('wallet'), String(0)).toString(CryptoJS.enc.Utf8)
+    }
+
+    function generateAddressFromSeed(seed, index, cb){
+        var pk = bitcore.HDPrivateKey.fromSeed(seed, bitcore.Networks.mainnet)
+        var d = pk.derive("m/0'/0/"+index)
+        var returnVal = d.privateKey.toAddress().toString()
+        return cb(returnVal)
+    }
+
+    function performSignturesOverKeys(cb){
+        var payloads = []
+        var totalBalance = 0
+        var _keys
+        if (!cb) {var cb = function(){}}
+        loginCheck(function(loggedIn){
+            if (loggedIn) {
+                if (localStorage.address) {
+                    me.data.privkey.allRecordsArray(function(items){
+                        if (items.length > 0) {
+                            _keys = items.filter(function(item){return item.key.network.name==="coval"})                        
+                            _keys.forEach(function(item){
+                                //console.log(item.key.xprivkey)
+                                signBalance(item.key.xprivkey, function(_payload){
+                                    var balance = _payload.coval.swap.balance
+                                    var rounded = Math.round(balance)
+                                    totalBalance += rounded
+                                    console.log("Processed", _payload.coval.covalAddress ,"with a balance of", balance, "rounded to", rounded, "for a total of", totalBalance)
+                                    payloads[payloads.length] = _payload
+                                    if (payloads.length === _keys.length) {
+                                        console.log("Complete")
+                                        var bonus = Math.round(totalBalance*.15)
+                                        var seed = generateSeedFromFreeWallet()
+                                        generateAddressFromSeed(seed, 0, function(xcpAddress){
+                                            var swapRequest = packageSwapRequest(xcpAddress, payloads, totalBalance, bonus)
+                                            return cb(swapRequest)
+                                        })
+                                        
+                                    }
+                                })
+                            })
+                        } else {
+                            return cb(payloads)
+                        }
+                    })
+                } else {
+                    console.log("No xcp address")
+                }
+            } else {
+                console.log("Not logged in")
+                popLoginModalSelection()
+            }
+            return cb(payloads) 
+        })        
+    }
+
+    function packageSwapRequest(xcpAddress, payloads, totalBalance, bonus){
+        return {
+                    CounterpartyAddress: xcpAddress,
+                    SwapSignatures: payloads,
+                    A_TotalOfBalances: totalBalance,
+                    B_BonusAmount: bonus,
+                    C_TotalSwapRequested: totalBalance + bonus,
+                    PassedSignatureChecks: true
+                }
     }

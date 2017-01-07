@@ -1,11 +1,11 @@
 {
   "name": "ethereum-bsm",
   "homepage": "https://github.com/DecentricCorp/ethereum-bsm",
-  "_release": "08354712f0",
+  "_release": "2b5c4c8863",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "08354712f08fb4ec34e68ce9cb75c81e2cf3f0cb"
+    "commit": "2b5c4c886311634a3de293e82cf7c10da62cf736"
   },
   "_source": "https://github.com/DecentricCorp/ethereum-bsm.git",
   "_target": "*",
