@@ -1,0 +1,44 @@
+    
+<div class="container animated fadeInUp">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="manage-account-panel" class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3  class="panel-title">Swap Request details</h3>
+                            <button class="btn btn-success pull-right startSwap disabled" disabled="true">Send Request</button>
+                        </div>
+                        <div class="panel-body">
+                            <div class="section">
+                                <div class="container-fluid">                                   
+                                    <div class="row">
+                                        <div class="responseContents">
+                                           <b>Total swap request</b> {{A_TotalOfBalances}}<br>
+                                           <b>Total bonus (15%)</b> {{B_BonusAmount}}<br>
+                                           <b>Total Swap</b> {{C_TotalSwapRequested}}<br>
+                                           <b>Mnemonic Phrase</b> {{mnemonic}}<br>
+                                           <b>Counterparty Address</b> {{CounterpartyAddress}}<br>
+                                           <h3>Signatures</h3>
+                                           {{#each SwapSignatures}}
+                                            <b>Legacy Address</b> {{coval.covalAddress}} >> <b>Loyyal Address</b> {{contract.signerAddress}}
+                                            <b>R</b>{{contract.signatureR}}<br>
+                                            <b>S</b>{{contract.signatureS}}<br>
+                                            <b>Core Signature</b> {{coval.signature}}<br>
+                                            <b>Payload to sigh</b> {{coval.toSign}}<br>
+                                            <hr>
+                                           {{/each}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

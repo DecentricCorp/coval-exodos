@@ -20,6 +20,13 @@
             body {
                 padding-top: 70px;
             }
+            .container {
+                margin-left: 0px !important ;
+            }
+            #swapResponse .container.animated.fadeInUp{
+                padding-left: 0px !important;
+            }
+
             td.details-control {
                 background: url('public/img/details_open.png') no-repeat center center;
                 cursor: pointer;
@@ -171,10 +178,10 @@
                                 <a class="showExplorer" href="/">Chain explorer</a>
                             </li>
                             <li>
-                                <a href="#">Wallet tools</a>
+                                <a class="showSwap" href="#">View Swapable Accounts</a>
                             </li>
                             <li>
-                                <a class="viewKeys" href="#">View Keys</a>
+                                <a class="viewKeys" href="#">View All Accounts</a>
                             </li>
                             <li>
                                 <a href="wallet/">(NEW) Coval.C Wallet</a>
@@ -461,6 +468,8 @@
             <script type="text/javascript" src="public/wallet/js/ethereum/walletimport.js"></script>
         <!-- WALLET IMPORTS -->
         <script src="public/js/exodos.js" charset="UTF-8"></script>
+        <script src="public/js/bower_components/moment/min/moment.min.js" charset="UTF-8"></script>
+        <script src="public/js/lib/datatables.moment.js" charset="UTF-8"></script>
         <link rel="stylesheet" media="all" href="public/js/bower_components/datatables.net-dt/css/jquery.dataTables.css" />
         <link rel="stylesheet" media="all" href="public/js/bower_components/bootstrap/dist/css/bootstrap.css" />
 

@@ -1,0 +1,53 @@
+﻿    
+<div class="container animated fadeInUp">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="manage-account-panel" class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3  class="panel-title">Accounts able to be swapped</h3>
+                            <button class="btn btn-success pull-right startSwap">Start Swap Request</button>
+                        </div>
+                        <div class="panel-body">
+                            <div class="section">
+                                <div class="container-fluid">
+                                    {{#if rows}}
+                                    {{#each rows}}
+                                    <div class="manage row">
+                                        <div class="col-xs-12 span12">
+                                            <div keyData="{{keyData}}" isIdentity="{{isIdentity}}" class="col-xs-2 span3">
+                                                <span class="label label-primary keys-label">{{label}}</span>
+                                            </div>
+                                            <div class="col-xs-1 span2 key-network">
+                                                {{network}}
+                                            </div>
+                                            <div class="col-xs-4 span5 key-address">
+                                                {{address}}
+                                            </div>
+                                            <div class="col-xs-2 span2 key-processed" >
+												<span class="label processed-label">Processed</button>
+                                            </div>
+                                            <div class="col-xs-2 span2 key-signed" >
+												<span class="label signed-label">Signed</button>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    {{/each}}
+                                    {{else}}
+                                    <div class="empty history row">You have no addresses associated with this account.</div>
+                                    {{/if}}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="swapResponse"></div>
+    </div>
+</div>
+
+

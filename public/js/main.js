@@ -11,6 +11,9 @@ var table
         var bitcoreMnemonic = Mnemonic
     })
     function init(){
+        //turn off wallet click events
+        $(document).off('click.customBindings')
+
         footerCallbackCnt = 0
         table = 
         $('#example-table').DataTable({
@@ -24,15 +27,24 @@ var table
                     "defaultContent": ''
                 },
                 { "data": "address"  },
-                { "data": "balance", className: "sum" ,render: $.fn.dataTable.render.number( ',', '.', 7, '' )  }, 
-                { "data": "lastActivity"  },
+                { "data": "balance", className: "sum" , render: $.fn.dataTable.render.number( ',', '.', 7, '' )  }, 
+                { "data": "lastActivity", className: "date", render: $.fn.dataTable.render.moment( 'YYYY/MM/DD', 'MMMM D YYYY', 'en' )  },
                 { "data": "txCount", },
             ],
             "footerCallback": function(row, data, start, end, display) {
                 if (verbose) console.log('in footerCallback');
-                var api = this.api();
+                getSum(this.api(), function(total){
+                    //$(".sum:not('.sorting')").html(total);
+                    $("tfoot .sum").html(total)
+                    if (footerCallbackCnt === 0) {
+                        footerCallbackCnt++
+                    } else {
+                        footerCallbackCnt = 0
+                    }
+                })
+                //var api = this.api();
 
-                api.columns('.sum', { search: 'applied', page: 'all' }).every(function () {
+                /*api.columns('.sum', { search: 'applied', page: 'all' }).every(function () {
                     var sum = api
                         .cells( null, this.index(), { search: 'applied', page: 'all'} )
                         .render('display')
@@ -53,7 +65,7 @@ var table
                         //popLoginModalSelection()
                     }
                     
-                })
+                })*/
             }
         })
         $.fn.dataTable.ext.search.push(
@@ -73,6 +85,21 @@ var table
             }
         )
         loginCheck()
+    }
+
+    function getSum(table, cb){
+        var cnt = 0
+        var total = 0
+        var values = table.rows({search: "applied", page: "all" })[0]
+        values.forEach(function(item){            
+            var data = table.rows(item).data()[0]
+            total += data.balance
+            if (cnt == values.length-1 ) {
+                return cb(total)
+            } else {
+                 cnt += 1
+            }
+        })
     }
 
     function loginCheck(cb) {
@@ -109,6 +136,11 @@ var table
     $("body").on('click', ".loginStatus", function(){
         popLoginModalSelection()
     })
+
+    $("body").on('click', ".startSwap", function(){
+        newPerformSignatures()
+    })
+    
     
     function enableKeysView(){
         $("body").off('click.keys')
@@ -148,20 +180,50 @@ var table
     function showExplorer() {
         jQuery.get("/explorer", function(resp) {
             templates[name] = Handlebars.compile(resp);
-            display_Pagetemplate(name, function(){
+            display_Pagetemplate(name, ".pageContent", function(){
                 init()
             })
         })
     }
+    var _rows
+    $("body").on('click', ".showSwap", function(){
+        getChainIdsFromAvailableNetworks(function(chainIds){
+            getMyKeys(function(rows) {
+                _rows = rows          
+                rows = rows.rows.filter(function(row){return row.network === "coval"})
+                var pageObject = {}
+                pageObject.chainIds = chainIds
+                pageObject.rows = rows
+                showSwap("swap",pageObject)
+            })
+        })
+    })
+    function showSwap(name, pageObject) {
+        jQuery.get("/views/layouts/swap.html", function(resp) {
+            templates[name] = Handlebars.compile(resp);
+            display_Pagetemplate(name, ".pageContent", function(){
 
-    function display_Pagetemplate(tmpl, cb) {
-        console.log('display')
+            }, pageObject)
+        })
+    }
+
+    function showSwapResponse(name, pageObject) {
+        jQuery.get("/views/layouts/swapResponse.html", function(resp) {
+            templates[name] = Handlebars.compile(resp);
+            display_Pagetemplate(name, "#swapResponse", function(){
+
+            }, pageObject)
+        })
+    }
+
+    function display_Pagetemplate(tmpl, selector, cb, data) {
+        $(document).off('click.customBindings')
         if (templates[tmpl] === undefined) {
             return
         }            
         var template = templates[tmpl]
-        var html = template()
-        $(".pageContent").html(html)
+        var html = template(data)
+        $(selector).html(html)
         return cb()
     }
 
@@ -176,12 +238,16 @@ var table
     function signBalance(key, cb){
         var hd = bitcore.HDPrivateKey(key)
         var address = hd.privateKey.toAddress().toString()
+
         
         var swapDetails = getRow(address, function(details){
             var msg = details.address + details.balance + details.lastActivity
+            toProcessed(address)
             var payload = generatePayload(msg, key)
+            toSigned(address)
             payload.coval.swap = details
             payload = deserializePayload(payload)
+            
             return cb(payload)
         })
     }
@@ -204,7 +270,7 @@ var table
         }
     }
 
-    function generateMnemonicSeed() {
+    function generateNewMnemonicSeed() {
         var m  = new _Mnemonic(128),
             p  = m.toWords().toString().replace(/,/gi, " "),
             h  = m.toHex()
@@ -215,6 +281,11 @@ var table
         return CryptoJS.AES.decrypt(localStorage.getItem('wallet'), String(0)).toString(CryptoJS.enc.Utf8)
     }
 
+    function generateMnemonicFromFreeWallet(){
+         var m  = new _Mnemonic.fromHex(generateSeedFromFreeWallet())
+         return m.toWords()
+    }
+
     function generateAddressFromSeed(seed, index, cb){
         var pk = bitcore.HDPrivateKey.fromSeed(seed, bitcore.Networks.mainnet)
         var d = pk.derive("m/0'/0/"+index)
@@ -222,7 +293,7 @@ var table
         return cb(returnVal)
     }
 
-    function performSignturesOverKeys(cb){
+    /*function performSignturesOverKeys(cb){
         var payloads = []
         var totalBalance = 0
         var _keys
@@ -235,10 +306,14 @@ var table
                             _keys = items.filter(function(item){return item.key.network.name==="coval"})                        
                             _keys.forEach(function(item){
                                 //console.log(item.key.xprivkey)
+                                
+                                toProcessing($("[keydata='"+item.key.xprivkey+"']").parent().find(".key-address").text().trim())
                                 signBalance(item.key.xprivkey, function(_payload){
+                                    toProcessed(_payload.coval.covalAddress)
                                     var balance = _payload.coval.swap.balance
                                     var rounded = Math.round(balance)
                                     totalBalance += rounded
+                                    toSigned(_payload.coval.covalAddress)
                                     console.log("Processed", _payload.coval.covalAddress ,"with a balance of", balance, "rounded to", rounded, "for a total of", totalBalance)
                                     payloads[payloads.length] = _payload
                                     if (payloads.length === _keys.length) {
@@ -247,6 +322,7 @@ var table
                                         var seed = generateSeedFromFreeWallet()
                                         generateAddressFromSeed(seed, 0, function(xcpAddress){
                                             var swapRequest = packageSwapRequest(xcpAddress, payloads, totalBalance, bonus)
+                                            req2 = swapRequest
                                             return cb(swapRequest)
                                         })
                                         
@@ -266,15 +342,110 @@ var table
             }
             return cb(payloads) 
         })        
+    }*/
+
+    function checkIfCanSignKeys(){
+        
+    }
+    function newPerformSignatures() {
+        var _keys
+        me.data.privkey.allRecordsArray(function(items){
+             _keys = items.filter(function(item){return item.key.network.name==="coval"})
+             var requestCollector = {totalBalance: 0, payloads: []}
+             function finalize(swapResponse){
+                 console.log("complete collecting signatures", swapResponse)
+                 showSwapResponse("response", swapResponse)
+                 $(".responseContents").html(swapResponse)
+             }
+             performSignature(_keys, 0, requestCollector, finalize)
+        })
+    }
+    /* Settings */
+    const bonusPercentage = .15
+    const freeWalletAddressIndex = 0
+
+    function performSignature(_keys, index, requestCollector, finalize){
+        var _key = _keys[index]
+
+        // update UI
+        toProcessing(getAddressFromKeyMetadata(_key.key.xprivkey))
+
+        // work
+        unBlockUi(function(){
+            signBalance(_key.key.xprivkey, function(_payload){
+                var roundedBalance = Math.round(_payload.coval.swap.balance)
+                requestCollector.totalBalance += roundedBalance
+                requestCollector.payloads.push(_payload)
+                var msg = "Processed <b>" + _payload.coval.covalAddress  + "</b> <br>With a balance of "+ _payload.coval.swap.balance + " <br>Rounded to "+ roundedBalance + "<br> For a total of " + requestCollector.totalBalance
+                $(".manage.row:contains('"+_payload.coval.covalAddress+"')").append("<div class='manage row'><div class='col-xs-12 span12'>"+msg+"</div></div>")
+                console.log("Processed", _payload.coval.covalAddress ,"with a balance of", _payload.coval.swap.balance, "rounded to", roundedBalance, "for a total of", requestCollector.totalBalance)
+                next()
+            })
+        })
+        
+        // recurse
+        function next(){
+            if (index !== _keys.length-1) {
+                index += 1
+                unBlockUi(function(){
+                    performSignature(_keys, index, requestCollector, finalize)
+                })
+            } else {            
+                generateAddressFromSeed(generateSeedFromFreeWallet(), freeWalletAddressIndex, function(xcpAddress){
+                    return finalize(packageSwapResponse(xcpAddress, requestCollector))
+                })
+            }
+        }
     }
 
-    function packageSwapRequest(xcpAddress, payloads, totalBalance, bonus){
+    function getAddressFromKeyMetadata(key){
+        return $("[keydata='"+key+"']").parent().find(".key-address").text().trim()
+    }
+
+    function unBlockUi(func){
+        return setTimeout(func,10)
+    }
+
+    function packageSwapResponse(xcpAddress, requestCollector){
+        var bonusAmount = Math.round(requestCollector.totalBalance * bonusPercentage)
         return {
-                    CounterpartyAddress: xcpAddress,
-                    SwapSignatures: payloads,
-                    A_TotalOfBalances: totalBalance,
-                    B_BonusAmount: bonus,
-                    C_TotalSwapRequested: totalBalance + bonus,
-                    PassedSignatureChecks: true
-                }
+            CounterpartyAddress: xcpAddress,
+            SwapSignatures: requestCollector.payloads,
+            A_TotalOfBalances: requestCollector.totalBalance,
+            B_BonusAmount: bonusAmount,
+            C_TotalSwapRequested: requestCollector.totalBalance + bonusAmount,
+            PassedSignatureChecks: true,
+            mnemonic: generateMnemonicFromFreeWallet()
+        }
+    }
+
+    /*function packageSwapRequest(xcpAddress, payloads, totalBalance, bonus){
+        return {
+            CounterpartyAddress: xcpAddress,
+            SwapSignatures: payloads,
+            A_TotalOfBalances: totalBalance,
+            B_BonusAmount: bonus,
+            C_TotalSwapRequested: totalBalance + bonus,
+            PassedSignatureChecks: true
+        }
+    }*/
+
+    /* Swap UI */
+    function toProcessed(address) {
+        var element = $(".manage.row:contains("+address+") .processed-label")
+        element.removeClass("label-warning")
+        element.addClass("label-primary")
+        element.text("Processed")	
+    }
+
+    function toProcessing(address) {
+        var element = $(".manage.row:contains("+address+") .processed-label")
+        element.addClass("label-warning")
+        element.text("Processing")	
+    }
+
+    function toSigned(address) {
+        var element = $(".manage.row:contains("+address+") .signed-label")
+        element.addClass("label-success")
+        element.text("Signed")	
     }
