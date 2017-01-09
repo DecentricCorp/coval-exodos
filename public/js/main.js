@@ -419,17 +419,6 @@ var table
         }
     }
 
-    /*function packageSwapRequest(xcpAddress, payloads, totalBalance, bonus){
-        return {
-            CounterpartyAddress: xcpAddress,
-            SwapSignatures: payloads,
-            A_TotalOfBalances: totalBalance,
-            B_BonusAmount: bonus,
-            C_TotalSwapRequested: totalBalance + bonus,
-            PassedSignatureChecks: true
-        }
-    }*/
-
     /* Swap UI */
     function toProcessed(address) {
         var element = $(".manage.row:contains("+address+") .processed-label")
