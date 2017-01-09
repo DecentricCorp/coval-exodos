@@ -199,7 +199,7 @@ var table
         })
     })
     function showSwap(name, pageObject) {
-        jQuery.get("/views/layouts/swap.html", function(resp) {
+        jQuery.get("views/layouts/swap.html", function(resp) {
             templates[name] = Handlebars.compile(resp);
             display_Pagetemplate(name, ".pageContent", function(){
 
@@ -208,7 +208,7 @@ var table
     }
 
     function showSwapResponse(name, pageObject) {
-        jQuery.get("/views/layouts/swapResponse.html", function(resp) {
+        jQuery.get("views/layouts/swapResponse.html", function(resp) {
             templates[name] = Handlebars.compile(resp);
             display_Pagetemplate(name, "#swapResponse", function(){
 
