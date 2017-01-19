@@ -229,10 +229,14 @@ var table
 
     function getRow(address, cb){
         var filtered = table.rows()[0].filter(function(a){
-                        var data = table.rows(a).data()[0].address
-                        return data == address
-                    })
-        return cb(table.rows(filtered[0]).data()[0])
+            var data = table.rows(a).data()[0].address
+            return data == address
+        })
+        if (filtered.length > 0) {
+            return cb(table.rows(filtered[0]).data()[0])
+        } else {
+            return cb({address: address, balance: 0, lastActivity: 1469934350, error: "Address not found"})
+        }
     }
 
     function signBalance(key, cb){
@@ -274,10 +278,16 @@ var table
         var m  = new _Mnemonic(128),
             p  = m.toWords().toString().replace(/,/gi, " "),
             h  = m.toHex()
+            var encrypted = CryptoJS.AES.encrypt(h, String(0)).toString()
+            localStorage.setItem("fakeWallet", true)
+            localStorage.setItem("wallet",encrypted)
             return {phrase: p, seed: h}
     }
 
     function generateSeedFromFreeWallet() {
+        if (localStorage.getItem('wallet') === null) {
+            return generateNewMnemonicSeed().seed
+        }
         return CryptoJS.AES.decrypt(localStorage.getItem('wallet'), String(0)).toString(CryptoJS.enc.Utf8)
     }
 
@@ -356,9 +366,16 @@ var table
                  console.log("complete collecting signatures", swapResponse)
                  showSwapResponse("response", swapResponse)
                  $(".responseContents").html(swapResponse)
+                 cleanupFakeWallet()
              }
              performSignature(_keys, 0, requestCollector, finalize)
         })
+    }
+    function cleanupFakeWallet() {
+        if (localStorage.getItem("fakeWallet") !== null) {
+            localStorage.removeItem("fakeWallet")
+            localStorage.removeItem("wallet")
+        }
     }
     /* Settings */
     const bonusPercentage = .15
@@ -415,7 +432,7 @@ var table
             B_BonusAmount: bonusAmount,
             C_TotalSwapRequested: requestCollector.totalBalance + bonusAmount,
             PassedSignatureChecks: true,
-            mnemonic: generateMnemonicFromFreeWallet()
+            mnemonic: generateMnemonicFromFreeWallet().join(" ")
         }
     }
 
