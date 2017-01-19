@@ -1,5 +1,5 @@
 /*
-exodos - v0.0.0 - 2017-01-09
+exodos - v0.0.0 - 2017-01-18
 Transition tools to assist in exodos from legacy chain
 Lovingly coded by Shannon Code  - http://cov.al 
 */

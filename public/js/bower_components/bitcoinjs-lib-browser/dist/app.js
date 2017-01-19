@@ -1736,6 +1736,17 @@ Testnets.coval = {
   scriptHash: 0x80,
   wif: 189,
   dustThreshold: 100000000,
+}
+Testnets.covalWallet = {
+  messagePrefix: '\x18Bitcoin Signed Message:\n',
+  bip32: {
+    public: 0x0488b21e,
+    private: 0x04358394
+  },
+  pubKeyHash: 0x3d,
+  scriptHash: 0x80,
+  wif: 123,
+  dustThreshold: 100000000,
 };
 
 var register = function (btcjslibNetObj) {

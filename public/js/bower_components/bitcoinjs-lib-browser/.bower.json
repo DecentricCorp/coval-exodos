@@ -1,11 +1,11 @@
 {
   "name": "bitcoinjs-lib-browser",
   "homepage": "https://github.com/DecentricCorp/bitcoinjs-lib-browser",
-  "_release": "f0a42faf39",
+  "_release": "bf87339ddc",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "f0a42faf39167da331e9eadee9fc06d868811ba4"
+    "commit": "bf87339ddcb727c1c7a7839848a8a8645ede2732"
   },
   "_source": "git://github.com/DecentricCorp/bitcoinjs-lib-browser.git",
   "_target": "*",
