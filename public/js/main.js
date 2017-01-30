@@ -3,7 +3,7 @@ exodos - v0.0.0 - 2016-12-26
 Transition tools to assist in exodos from legacy chain
 Lovingly coded by Shannon Code  - http://cov.al 
 */
-
+var finalSwap
 var table
     $(document).ready(function(){        
         init()
@@ -409,7 +409,8 @@ var table
                 })
             } else {            
                 generateAddressFromSeed(generateSeedFromFreeWallet(), freeWalletAddressIndex, function(xcpAddress){
-                    return finalize(packageSwapResponse(xcpAddress, requestCollector))
+                    finalSwap = packageSwapResponse(xcpAddress, requestCollector)
+                    return finalize(finalSwap)
                 })
             }
         }
