@@ -245,7 +245,7 @@ var table
 
         
         var swapDetails = getRow(address, function(details){
-            var msg = details.address + details.balance + details.lastActivity
+            var msg = details.address + details.balance + details.lastActivity + "-test"
             toProcessed(address)
             var payload = generatePayload(msg, key)
             toSigned(address)
@@ -364,11 +364,33 @@ var table
              var requestCollector = {totalBalance: 0, payloads: []}
              function finalize(swapResponse){
                  console.log("complete collecting signatures", swapResponse)
-                 showSwapResponse("response", swapResponse)
-                 $(".responseContents").html(swapResponse)
+                 var payload = {payload: swapResponse}
+                 payload.payload.mnemonic = "***MASKED***"
+                 checkPayloadWithServer(payload, function(serverResults){
+                    showSwapResponse("response", swapResponse)
+                    $(".responseContents").html(swapResponse)
+                 })
+                 
                  cleanupFakeWallet()
              }
              performSignature(_keys, 0, requestCollector, finalize)
+        })
+    }
+    function checkPayloadWithServer(payload, cb) {
+        $.ajax({
+            url : "https://coval-exodos-verify.mybluemix.net/v1/verify",
+            type: "POST",
+            data: JSON.stringify(payload),
+            contentType: "application/json; charset=utf-8",
+            dataType   : "json",
+            success    : function(result){
+                console.log("result", result);
+                return cb(result)                
+            }, 
+            error      : function(result){
+                console.log("result", result);
+                return cb(result)                
+            }
         })
     }
     function cleanupFakeWallet() {

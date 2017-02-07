@@ -1,6 +1,6 @@
 var assert = require('chai').assert
 //var assert = require('assert')
-var verify = require('../verify.js').verify
+var verify = require('../lib/verify.js').verify
 
 //Test sigs
 var singleValidSwapRequest = {"CounterpartyAddress":"19cCGRb5XLuuzoRvDLyRm888G8ank5WFyM","SwapSignatures":[{"coval":{"toSign":"RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs01469934350","covalAddress":"RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs","signature":"IAox24VyWPfkCbj7CumuNRdxKRT0NtXeAPcHl7FhLzGNXhVF9CbPBBEumZalaMqsO0loTBmR6Unq1iDfqamhSRE=","swap":{"address":"RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs","balance":0,"lastActivity":1469934350,"error":"Address not found"}},"contract":{"signerAddress":"0x449d6a20df5825d49f1b0b996139308d50fe5ef9","signatureVersion":28,"signatureR":"0x1d5092d748084fb4fe922d7df1dccc138d74c73b72858c7843cc4a7752db4cd3","signatureS":"0x515d0062891649f4d64b6242c70a4a87fed77272211e9c27b9cd59cec9f8bd9e"}}],"A_TotalOfBalances":0,"B_BonusAmount":0,"C_TotalSwapRequested":0,"PassedSignatureChecks":true}
@@ -64,7 +64,7 @@ describe('Swap', function() {
         var testResult = false
         beforeEach(function(){
             verify(singleInvalidPayload, function(result){
-                console.log(result)
+                //console.log(result)
                 testResult = result
             })
         })

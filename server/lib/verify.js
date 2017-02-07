@@ -3,19 +3,28 @@ var haystack
 var Message = require('bitcore-message')
 var multi = require('bitcore-explorers-multi')
 var notFoundJson = { balance: 0, lastActivity: 1469934350, txCount: 0, error: "Address not found"}
+var logger
 
-
-
+function setLogger(_logger) {
+    logger = _logger
+    logger.ledger("Logger set inside verify")
+}
 function verify(swapRequest, cb) {
+    logger.ledger("inside verify")
+    logger.ledger("entering getjson")
     getJson(function(accounts){
+        logger.ledger(" getjson return")
         haystack = accounts.data
-        serverVerify(swapRequest, function(result){           
+        logger.ledger("entering server verify")
+        serverVerify(swapRequest, function(result){    
+            logger.ledger("server verify retuirn")       
             return cb(result)
         })
     })
 }
 
 function getObjectFromDataStore(payload, cb) {
+    logger.ledger("get object from datastore")
     notFoundJson.address = payload.coval.covalAddress
     var filtered = haystack.filter(function(row){return row.address === payload.coval.covalAddress})[0]
     return cb(filtered || notFoundJson)
@@ -23,6 +32,7 @@ function getObjectFromDataStore(payload, cb) {
 
 
 function serverVerify(finalSwap, cb){
+    logger.ledger("inside server verify")
     finalSwap.SwapSignatures.forEach(function(payload){
         var collector = {}
         collector.pass = function() {
@@ -63,24 +73,30 @@ function serverVerify(finalSwap, cb){
 
 
 function verifyProvidedBalanceIsAccurate(payload, cb) {
+    logger.ledger("inside verifyProvidedBalance")
     getObjectFromDataStore(payload, function(record){
         var valid = payload.coval.swap.balance === record.balance && payload.coval.swap.lastActivity === record.lastActivity
         return cb(valid)
     })    
 }
 
-function getJson(cb){    
-    var obj = JSON.parse(fs.readFileSync('../utils/data/rich.json', 'utf8'))
+function getJson(cb){
+    logger.ledger("inside getJson")
+    var obj = JSON.parse(fs.readFileSync('./utils/data/rich.json', 'utf8'))
     return cb(obj)
 }
 
 
 function verifyProvidedPayloadMatchesGenerated(payload, cb){
-    return cb(payload.coval.covalAddress + payload.coval.swap.balance + payload.coval.swap.lastActivity === payload.coval.toSign)
+    logger.ledger("inside verify provided payload")
+    return cb(payload.coval.covalAddress + payload.coval.swap.balance + payload.coval.swap.lastActivity + "-test" === payload.coval.toSign)
 }
 
 function verifyLegacySignature(payload, cb) {
+    logger.ledger("inside verify legacy")
+    logger.ledger("entering verify msg")
     verifyMessage(payload.coval.toSign, payload.coval.covalAddress, payload.coval.signature, function(valid,err){
+        logger.ledger("verify msg return")
         if (!err) {
             return cb(true)
         } else {
@@ -99,3 +115,4 @@ function verifyMessage(msg, address, signature, cb) {
 }
 
 module.exports.verify = verify
+module.exports.setLogger = setLogger
