@@ -77,7 +77,8 @@ function verifyProvidedBalanceIsAccurate(payload, cb) {
     getObjectFromDataStore(payload, function(record){
         var valid = payload.coval.swap.balance === record.balance && payload.coval.swap.lastActivity === record.lastActivity
         return cb(valid)
-    })    
+    })
+    
 }
 
 function getJson(cb){
