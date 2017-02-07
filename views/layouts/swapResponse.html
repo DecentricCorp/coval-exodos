@@ -7,7 +7,7 @@
                     <div id="manage-account-panel" class="panel panel-primary">
                         <div class="panel-heading">
                             <h3  class="panel-title">Swap Request details</h3>
-                            <button class="btn btn-success pull-right startSwap disabled" disabled="true">Send Request</button>
+                            <!--button class="btn btn-success pull-right startSwap disabled" disabled="true">Send Request</button-->
                         </div>
                         <div class="panel-body">
                             <div class="section">
@@ -26,8 +26,21 @@
                                             <b>S</b>{{contract.signatureS}}<br>
                                             <b>Core Signature</b> {{coval.signature}}<br>
                                             <b>Payload to sign</b> {{coval.toSign}}<br>
+                                            {{/each}}
                                             <hr>
+                                            <h3>Server Response</h3>
+                                            <b>Success:</b> {{serverResults.pass}}<br>
+                                           {{#each serverResults.result}}
+                                                <b>Correct Balance Provided:</b> {{correctBalance.valid}}<br>
+                                                <div> {{correctBalance.msg}}</div>
+                                                <b>Payloads Match:</b> {{payloadMatch.valid}}<br>
+                                                <div> {{payloadMatch.msg}}</div>
+                                                <b>Legacy Signature Validates:</b> {{verifyLegacy.valid}}<br>
+                                                <div> {{verifyLegacy.msg}}</div>
                                            {{/each}}
+                                           <hr>
+                                           <h3>Debug information</h3>
+                                           <textarea>{{safe}}</textarea>
                                         </div>
                                     </div>
                                 </div>

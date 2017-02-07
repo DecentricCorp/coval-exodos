@@ -365,8 +365,13 @@ var table
              function finalize(swapResponse){
                  console.log("complete collecting signatures", swapResponse)
                  var payload = {payload: swapResponse}
+                 var mnemonicBackup = payload.payload.mnemonic
                  payload.payload.mnemonic = "***MASKED***"
                  checkPayloadWithServer(payload, function(serverResults){
+                     swapResponse.mnemonic = mnemonicBackup
+                     swapResponse.serverResults = serverResults
+                     var safe = JSON.stringify(swapResponse)
+                     swapResponse.safe = safe
                     showSwapResponse("response", swapResponse)
                     $(".responseContents").html(swapResponse)
                  })
