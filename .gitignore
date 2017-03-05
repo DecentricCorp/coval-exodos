@@ -21,5 +21,7 @@ npm-debug.log
 utils/data/allseen.json
 utils/data/alltx.json
 txs/
+txs-backup/
 *alltx.json
 *allseen.json
+utils/data/backup*

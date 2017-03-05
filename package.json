@@ -21,6 +21,7 @@
     "express": "3.3.4",
     "express3-handlebars": "~0.5.0",
     "insight-bitcore-api": "git://github.com/DecentricCorp/insight-api-coval.git",
+    "json2csv": "^3.7.3",
     "less-middleware": "~0.1.14",
     "progress": "^1.1.8",
     "soop": "^0.1.5"
