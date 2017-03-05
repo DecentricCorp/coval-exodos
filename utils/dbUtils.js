@@ -37,7 +37,7 @@ function getBalance(addr, msg, showData, cb){
             //var timeFormatted = time.format('MMMM Do YYYY, h:mm:ss a')
             //lastActivity = timeFormatted
             lastActivity = tx.ts
-                total += tx.value_sat * 0.00000001
+            total += tx.value_sat * 0.00000001
             txs[txs.length] = tx
             cnt++
         })        
@@ -46,4 +46,5 @@ function getBalance(addr, msg, showData, cb){
         return console.log(msg, addr, {total: total, lastActivity: lastActivity, txCount: cnt, txs: txs})
     })
 }
+//test()
 module.exports = getBalance

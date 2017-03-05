@@ -38,8 +38,13 @@ var _getBalance = function(addresses, index, bar, callback) {
 	}
 	getBalance(addresses[index], false, false, function(balance){
 		//console.log(balance, addresses[index])
+		if (addresses[index] == "RjpPNAWJhqBEgkkeaeFXD4JfScKVPR67Fi" || addresses[index] === "RjpPNAWJhqBEgkkeaeFXD4JfScKVPR67Fi") {
+			console.log(addresses[index], balance)
+		} else {
+			//console.log(addresses[index], balance)
+		}
 		if (balance.total > 0) {
-			var obj = {address: addresses[index], balance: balance.total, lastActivity: balance.lastActivity, txCount: balance.txCount, type: addresses[index].type }
+			var obj = {address: addresses[index], balance: balance.total || 0, lastActivity: balance.lastActivity, txCount: balance.txCount, type: addresses[index].type }
 			balanceArray.push(obj)
 		}
 		return _getBalance(addresses, index+1, bar, callback)
