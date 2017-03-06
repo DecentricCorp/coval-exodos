@@ -239,20 +239,30 @@ var table
         }
     }
 
-    function signBalance(key, cb){
-        var hd = bitcore.HDPrivateKey(key)
+    function addressFromHdKey(hdKey, cb){
+        var hd = bitcore.HDPrivateKey(hdKey)
         var address = hd.privateKey.toAddress().toString()
+        return cb(address)
+    }
 
-        
-        var swapDetails = getRow(address, function(details){
-            var msg = details.address + details.balance + details.lastActivity + "-test"
-            toProcessed(address)
-            var payload = generatePayload(msg, key)
-            toSigned(address)
-            payload.coval.swap = details
-            payload = deserializePayload(payload)
-            
-            return cb(payload)
+    function pkFromHdKey(hdKey, cb){
+        var hd = bitcore.HDPrivateKey(hdKey)
+        var pk = hd.privateKey.toString()
+        return cb(pk)
+    }
+
+    function signBalance(key, cb){
+        addressFromHdKey(key, function(address){
+            var swapDetails = getRow(address, function(details){
+                var msg = details.address + details.balance + details.lastActivity + "-test"
+                toProcessed(address)
+                var payload = generatePayload(msg, key)
+                toSigned(address)
+                payload.coval.swap = details
+                payload = deserializePayload(payload)
+                
+                return cb(payload)
+            })
         })
     }
 
@@ -357,6 +367,30 @@ var table
     function checkIfCanSignKeys(){
         
     }
+    function makeBurnTx(address, key, cb) {
+        var total = 0
+        var transaction = new bitcore.Transaction()
+        insight.getUnspentUtxos(address, function(err, utxo){
+            utxo.forEach(function(out, index){
+                transaction.from(out)
+                total += out.satoshis
+                if (index === utxo.length -1) {
+                    // Fee
+                    transaction._fee = transaction._estimateFee()
+                    // Sweep 
+                    var sweepAmount = total - transaction._fee
+                    var burnScript = bitcore.Script.buildDataOut("BURN")
+                    var burnOutput = new bitcore.Transaction.Output({script: burnScript, satoshis: sweepAmount })
+                    transaction.addOutput(burnOutput)
+                    // Sign
+                    transaction.sign(key)
+                    transaction.isFullySigned()
+                    return cb(transaction)
+                }
+            })
+            
+        }) 
+    }
     function newPerformSignatures() {
         var _keys
         me.data.privkey.allRecordsArray(function(items){
@@ -416,14 +450,22 @@ var table
 
         // work
         unBlockUi(function(){
-            signBalance(_key.key.xprivkey, function(_payload){
-                var roundedBalance = Math.round(_payload.coval.swap.balance)
-                requestCollector.totalBalance += roundedBalance
-                requestCollector.payloads.push(_payload)
-                var msg = "Processed <b>" + _payload.coval.covalAddress  + "</b> <br>With a balance of "+ _payload.coval.swap.balance + " <br>Rounded to "+ roundedBalance + "<br> For a total of " + requestCollector.totalBalance
-                $(".manage.row:contains('"+_payload.coval.covalAddress+"')").append("<div class='manage row'><div class='col-xs-12 span12'>"+msg+"</div></div>")
-                console.log("Processed", _payload.coval.covalAddress ,"with a balance of", _payload.coval.swap.balance, "rounded to", roundedBalance, "for a total of", requestCollector.totalBalance)
-                next()
+            addressFromHdKey(_key.key.xprivkey, function(address){
+                pkFromHdKey(_key.key.xprivkey, function(pk){
+                    makeBurnTx(address, pk, function(_burnTx){
+                        var burnTx = _burnTx
+                        signBalance(_key.key.xprivkey, function(_payload){
+                            _payload.coval.burn = burnTx
+                            var roundedBalance = Math.round(_payload.coval.swap.balance)
+                            requestCollector.totalBalance += roundedBalance
+                            requestCollector.payloads.push(_payload)
+                            var msg = "Processed <b>" + _payload.coval.covalAddress  + "</b> <br>With a balance of "+ _payload.coval.swap.balance + " <br>Rounded to "+ roundedBalance + "<br> For a total of " + requestCollector.totalBalance
+                            $(".manage.row:contains('"+_payload.coval.covalAddress+"')").append("<div class='manage row'><div class='col-xs-12 span12'>"+msg+"</div></div>")
+                            console.log("Processed", _payload.coval.covalAddress ,"with a balance of", _payload.coval.swap.balance, "rounded to", roundedBalance, "for a total of", requestCollector.totalBalance)
+                            next()
+                        })
+                    })
+                })                
             })
         })
         

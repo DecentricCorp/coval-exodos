@@ -13,15 +13,15 @@ function test() {
     var multiplePartial = "RssL8yT3S1JwvQ52Un2f28aLbeGVFP3SEd"
     var manyWithPositive = "RtxqJoeLDDZEa2UVCuDpSVhhmRkGyzarPU"
     var preMine = "RjpPNAWJhqBEgkkeaeFXD4JfScKVPR67Fi"
-    getBalance(zeroBalance, "Zero Balance")
-    getBalance(singlePositive, "Single Positive")
+    //getBalance(zeroBalance, "Zero Balance")
+    //getBalance(singlePositive, "Single Positive")
     getBalance(multiplePartial, "Multiple Partial")
-    getBalance(manyWithPositive, "Many With Positive")
-    getBalance(preMine, "Premine", false)
+    /*getBalance(manyWithPositive, "Many With Positive")
+    getBalance(preMine, "Premine", false)*/
 }
 function getBalance(addr, msg, showData, cb){
     tx.fromAddr(addr, {}, function(err, data){
-        if (showData) {
+        if (!showData) {
             console.log("DATA", data)
             data.forEach(function(_tx){
                 console.log(_tx.txid)
@@ -46,5 +46,5 @@ function getBalance(addr, msg, showData, cb){
         return console.log(msg, addr, {total: total, lastActivity: lastActivity, txCount: cnt, txs: txs})
     })
 }
-//test()
+test()
 module.exports = getBalance
