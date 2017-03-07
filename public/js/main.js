@@ -450,12 +450,12 @@ var table
 
         // work
         unBlockUi(function(){
-            addressFromHdKey(_key.key.xprivkey, function(address){
-                pkFromHdKey(_key.key.xprivkey, function(pk){
-                    makeBurnTx(address, pk, function(_burnTx){
-                        var burnTx = _burnTx
+            //addressFromHdKey(_key.key.xprivkey, function(address){
+            //    pkFromHdKey(_key.key.xprivkey, function(pk){
+            //        makeBurnTx(address, pk, function(_burnTx){
+            //            var burnTx = _burnTx
                         signBalance(_key.key.xprivkey, function(_payload){
-                            _payload.coval.burn = burnTx
+            //                _payload.coval.burn = burnTx
                             var roundedBalance = Math.round(_payload.coval.swap.balance)
                             requestCollector.totalBalance += roundedBalance
                             requestCollector.payloads.push(_payload)
@@ -465,9 +465,9 @@ var table
                             next()
                         })
                     })
-                })                
-            })
-        })
+                //})                
+            //})
+        //})
         
         // recurse
         function next(){
