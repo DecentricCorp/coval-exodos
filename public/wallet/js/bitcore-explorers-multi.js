@@ -329,39 +329,39 @@ function Insight(url, network) {
         return new Insight(Networks.defaultNetwork);
     }
     if (Networks.get(url)) {
+        var protocol = window.location.protocol || "http:"
         network = Networks.get(url);
         switch (network.name) {
             case "bitcoin":
             case "livenet":
-                url = 'http://wallet.ribbit.me/api/bitcoin'
+                url = protocol+'//wallet.ribbit.me/api/bitcoin'
                 break;
             case "coval":
-                url = "http://coval-explorer.mybluemix.net"
-                //url = 'http://wallet.ribbit.me/api/ribbit'
+                url = protocol+"//coval-explorer.mybluemix.net"
                 break;
             case "test-ribbit":
-                url = 'https://test.ribbitchain.info'
+                url = protocol+'//test.ribbitchain.info'
                 break;
             case "franko":
-                url = 'http://wallet.ribbit.me/api/franko'
+                url = protocol+'//wallet.ribbit.me/api/franko'
                 break;
             case "defcoin":
-                url = 'http://wallet.ribbit.me/api/defcoin'
+                url = protocol+'//wallet.ribbit.me/api/defcoin'
                 break;
             case "digibyte":
-                url = "http://wallet.ribbit.me/api/digibyte"
+                url = protocol+"//wallet.ribbit.me/api/digibyte"
                 break;
             case "litecoin":
-                url= "http://wallet.ribbit.me/api/litecoin"
+                url= protocol+"//wallet.ribbit.me/api/litecoin"
                 break;
             case "dash":
-                url= "http://wallet.ribbit.me/api/dash"
+                url= protocol+"//wallet.ribbit.me/api/dash"
                 break;
             case "ethereum":
-                url = "http://wallet.ribbit.me/api/eth"
+                url = protocol+"//wallet.ribbit.me/api/eth"
                 break;
             default:
-                url = 'https://test-insight.bitpay.com'
+                url = protocol+'//test-insight.bitpay.com'
                 break;
         }
     }
