@@ -313,84 +313,34 @@ var table
         return cb(returnVal)
     }
 
-    /*function performSignturesOverKeys(cb){
-        var payloads = []
-        var totalBalance = 0
-        var _keys
-        if (!cb) {var cb = function(){}}
-        loginCheck(function(loggedIn){
-            if (loggedIn) {
-                if (localStorage.address) {
-                    me.data.privkey.allRecordsArray(function(items){
-                        if (items.length > 0) {
-                            _keys = items.filter(function(item){return item.key.network.name==="coval"})                        
-                            _keys.forEach(function(item){
-                                //console.log(item.key.xprivkey)
-                                
-                                toProcessing($("[keydata='"+item.key.xprivkey+"']").parent().find(".key-address").text().trim())
-                                signBalance(item.key.xprivkey, function(_payload){
-                                    toProcessed(_payload.coval.covalAddress)
-                                    var balance = _payload.coval.swap.balance
-                                    var rounded = Math.round(balance)
-                                    totalBalance += rounded
-                                    toSigned(_payload.coval.covalAddress)
-                                    console.log("Processed", _payload.coval.covalAddress ,"with a balance of", balance, "rounded to", rounded, "for a total of", totalBalance)
-                                    payloads[payloads.length] = _payload
-                                    if (payloads.length === _keys.length) {
-                                        console.log("Complete")
-                                        var bonus = Math.round(totalBalance*.15)
-                                        var seed = generateSeedFromFreeWallet()
-                                        generateAddressFromSeed(seed, 0, function(xcpAddress){
-                                            var swapRequest = packageSwapRequest(xcpAddress, payloads, totalBalance, bonus)
-                                            req2 = swapRequest
-                                            return cb(swapRequest)
-                                        })
-                                        
-                                    }
-                                })
-                            })
-                        } else {
-                            return cb(payloads)
-                        }
-                    })
-                } else {
-                    console.log("No xcp address")
-                }
-            } else {
-                console.log("Not logged in")
-                popLoginModalSelection()
-            }
-            return cb(payloads) 
-        })        
-    }*/
-
-    function checkIfCanSignKeys(){
-        
-    }
     function makeBurnTx(address, key, cb) {
         var total = 0
         var transaction = new bitcore.Transaction()
         insight.getUnspentUtxos(address, function(err, utxo){
-            utxo.forEach(function(out, index){
-                transaction.from(out)
-                total += out.satoshis
-                if (index === utxo.length -1) {
-                    // Fee
-                    transaction._fee = transaction._estimateFee()
-                    // Sweep 
-                    var sweepAmount = total - transaction._fee
-                    var burnScript = bitcore.Script.buildDataOut("BURN")
-                    var burnOutput = new bitcore.Transaction.Output({script: burnScript, satoshis: sweepAmount })
-                    transaction.addOutput(burnOutput)
-                    // Sign
-                    transaction.sign(key)
-                    transaction.isFullySigned()
-                    return cb(transaction)
-                }
-            })
-            return cb(transaction)            
+            if (utxo.length > 0) {
+                utxo.forEach(function(out, index){
+                    transaction.from(out)
+                    total += out.satoshis
+                    if (index === utxo.length -1) {
+                        // Fee
+                        transaction._fee = transaction._estimateFee()
+                        // Sweep 
+                        var sweepAmount = total - transaction._fee
+                        var burnScript = bitcore.Script.buildDataOut("BURN")
+                        var burnOutput = new bitcore.Transaction.Output({script: burnScript, satoshis: sweepAmount })
+                        transaction.addOutput(burnOutput)
+                        // Sign
+                        transaction.sign(key)
+                        transaction.isFullySigned()
+                        return cb(transaction)
+                    }
+                })
+            } else {
+                return cb(transaction)
+            }           
         }) 
     }
+    
     function newPerformSignatures() {
         var _keys
         me.data.privkey.allRecordsArray(function(items){
@@ -450,12 +400,12 @@ var table
 
         // work
         unBlockUi(function(){
-            //addressFromHdKey(_key.key.xprivkey, function(address){
-            //    pkFromHdKey(_key.key.xprivkey, function(pk){
-            //        makeBurnTx(address, pk, function(_burnTx){
-            //            var burnTx = _burnTx
+            addressFromHdKey(_key.key.xprivkey, function(address){
+                pkFromHdKey(_key.key.xprivkey, function(pk){
+                    makeBurnTx(address, pk, function(_burnTx){
+                        var burnTx = _burnTx
                         signBalance(_key.key.xprivkey, function(_payload){
-            //                _payload.coval.burn = burnTx
+                            _payload.coval.burn = burnTx
                             var roundedBalance = Math.round(_payload.coval.swap.balance)
                             requestCollector.totalBalance += roundedBalance
                             requestCollector.payloads.push(_payload)
@@ -465,9 +415,9 @@ var table
                             next()
                         })
                     })
-                //})                
-            //})
-        //})
+                })                
+            })
+        })
         
         // recurse
         function next(){
@@ -479,14 +429,35 @@ var table
             } else {            
                 generateAddressFromSeed(generateSeedFromFreeWallet(), freeWalletAddressIndex, function(xcpAddress){
                     finalSwap = packageSwapResponse(xcpAddress, requestCollector)
-                    return finalize(finalSwap)
+                    return finalize(finalSwap, finalize)
                 })
             }
         }
     }
 
+    /*function startBurnGeneration(finalSwap, finalize){
+        generateBurnTransaction(function(finalSwap){
+            return finalize(finalSwap)
+        })        
+    }
+
+    function generateBurnTransaction(finalSwap, index, cb){
+        var swapSig = finalSwap.SwapSignatures[index]
+        var address = swapSig.coval.covalAddress
+        var hd = getKeyFromAddressMetadata(address)
+        pkFromHdKey(hd, function(pk){
+            makeBurnTx(address, pk, function(_burnTx){
+                console.log(_burnTx)
+            })
+        })
+    }*/
+
     function getAddressFromKeyMetadata(key){
         return $("[keydata='"+key+"']").parent().find(".key-address").text().trim()
+    }
+
+    function getKeyFromAddressMetadata(address) {
+        return $(".manage.row:contains('"+address+"')").find("div[keydata]").attr("keydata")
     }
 
     function unBlockUi(func){
