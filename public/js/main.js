@@ -388,7 +388,7 @@ var table
                     return cb(transaction)
                 }
             })
-            
+            return cb(transaction)            
         }) 
     }
     function newPerformSignatures() {
