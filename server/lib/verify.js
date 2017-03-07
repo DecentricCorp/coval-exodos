@@ -5,7 +5,7 @@ var Message = require('bitcore-message')
 var multi = require('bitcore-explorers-multi')
 var insight = new multi.Insight()
 var notFoundJson = { balance: 0, lastActivity: 1469934350, txCount: 0, error: "Address not found"}
-var shouldBurn = false
+var shouldBurn = true
 var logger
 
 function setLogger(_logger) {
