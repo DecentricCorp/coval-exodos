@@ -21,11 +21,15 @@
                                            <b>Counterparty Address</b> {{CounterpartyAddress}}<br>
                                            <h3>Signatures</h3>
                                            {{#each SwapSignatures}}
-                                            <b>Legacy Address</b> {{coval.covalAddress}} >> <b>Loyyal Address</b> {{contract.signerAddress}}
-                                            <b>R</b>{{contract.signatureR}}<br>
-                                            <b>S</b>{{contract.signatureS}}<br>
+                                            <b>Legacy Address</b> {{coval.covalAddress}} <br>
+                                            <b>Loyyal Address</b> {{contract.signerAddress}} <br>
+                                            <b>R</b> {{contract.signatureR}}<br>
+                                            <b>S</b> {{contract.signatureS}}<br>
                                             <b>Core Signature</b> {{coval.signature}}<br>
                                             <b>Payload to sign</b> {{coval.toSign}}<br>
+                                            <b>Burn Transaction</b> <div style="overflow-wrap: break-word;">{{coval.serializedBurn}}</div>
+                                            <b>Burn Balance</b> {{coval.burnBalance}}<br>
+                                            
                                             <hr>
                                             {{/each}}
                                             <hr>

@@ -413,6 +413,8 @@ var table
                         var burnTx = _burnTx
                         signBalance(_key.key.xprivkey, function(_payload){
                             _payload.coval.burn = burnTx
+                            _payload.coval.serializedBurn = burnTx.toString()
+                            _payload.coval.burnBalance = (burnTx._getInputAmount() * 0.00000001) + " Coval"
                             var roundedBalance = Math.round(_payload.coval.swap.balance)
                             requestCollector.totalBalance += roundedBalance
                             requestCollector.payloads.push(_payload)
