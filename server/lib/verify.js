@@ -1,7 +1,9 @@
 var fs = require('fs')
 var haystack
+var bitcore = require('bitcore')
 var Message = require('bitcore-message')
 var multi = require('bitcore-explorers-multi')
+var insight = new multi.Insight()
 var notFoundJson = { balance: 0, lastActivity: 1469934350, txCount: 0, error: "Address not found"}
 var logger
 
@@ -61,24 +63,83 @@ function serverVerify(finalSwap, cb){
             verifyProvidedBalanceIsAccurate(payload, function(correctBalance){
                 if (correctBalance) {
                     collector.correctBalance = {valid: true}                                
-                    return cb(collector)
+                    //return cb(collector)
                 } else {
                     collector.correctBalance = {valid: false, msg: "Supplied balance doesn't match database"}
+                    //return cb(collector)
+                }
+                return performBurnTxCheck(payload, collector, cb)
+            })  
+        }
+        function performBurnTxCheck(payload, collector, cb) {
+            verifyValidBurn(payload, function(validBurn){
+                if (validBurn) {
+                    collector.burnSigned = {valid: true}                                
+                    //return cb(collector)
+                } else {
+                    collector.burnSigned = {valid: false, msg: "Burn transaction not fully signed"}
+                    //return cb(collector)
+                }
+                return performDoubleSpendCheck(payload, collector, cb)
+            })
+        }
+        function performDoubleSpendCheck(payload, collector, cb) {
+            verifyNotDoubleSpend(payload, function(notDoubleSpend){
+                if (notDoubleSpend) {
+                    collector.notDoubleSpend = {valid: true}                                
+                    return cb(collector)
+                } else {
+                    collector.notDoubleSpend = {valid: false, msg: "Burn transaction appears to be attempting to doublespend"}
                     return cb(collector)
                 }
-            })  
+            })
         }
     })
 }
 
+function verifyNotDoubleSpend(payload, cb){
+    logger.ledger("inside verifyNotDoubleSpend")
+    logger.ledger("address"+payload.coval.covalAddress)
+    logger.ledger("payload",payload.coval)
+    var address = payload.coval.covalAddress    
+    var burnTx = new bitcore.Transaction(payload.coval.burn)
+    logger.ledger("burntx"+burnTx)
+    var balance, pending, total 
+    try {
+    insight.requestGet("/api/addr/"+address+"/balance", function(err,result){
+        if (err) {logger.ledger("ERR: " + err)}
+        logger.ledger("confirmed Response: " +  JSON.stringify(result))
+        balance = Number(result.body)
+        total = balance
+        insight.requestGet("/api/addr/"+address+"/unconfirmedBalance", function(err,result){
+            if (err) {logger.ledger("ERR: " + err)}
+            logger.ledger("unconfirmed Response: " + JSON.stringify(result))
+            pending = Number(result.body)
+            total += pending
+            logger.ledger("Amounts : " + burnTx._getInputAmount(), total)
+            var notDoubleSpend = burnTx._getInputAmount() === total
+            return cb(notDoubleSpend)
+        })
+    })
+    } catch (err) {
+        logger.ledger("ERR", err)
+        return cb(false)
+    }
+}
+
+function verifyValidBurn(payload, cb) {
+    logger.ledger("inside verifyValidBurn")
+    var burnTx = new bitcore.Transaction(payload.coval.burn)
+    var isSigned = burnTx.isFullySigned()
+    return cb(isSigned)
+}
 
 function verifyProvidedBalanceIsAccurate(payload, cb) {
     logger.ledger("inside verifyProvidedBalance")
     getObjectFromDataStore(payload, function(record){
         var valid = payload.coval.swap.balance === record.balance && payload.coval.swap.lastActivity === record.lastActivity
         return cb(valid)
-    })
-    
+    })    
 }
 
 function getJson(cb){

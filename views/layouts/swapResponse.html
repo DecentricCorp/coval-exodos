@@ -37,6 +37,10 @@
                                                 <div> {{payloadMatch.msg}}</div>
                                                 <b>Legacy Signature Validates:</b> {{verifyLegacy.valid}}<br>
                                                 <div> {{verifyLegacy.msg}}</div>
+                                                <b>Burn transaction signed:</b> {{burnSigned.valid}}<br>
+                                                <div> {{burnSigned.msg}}</div>
+                                                <b>Burn transaction is not a doublespend:</b> {{notDoubleSpend.valid}}<br>
+                                                <div> {{notDoubleSpend.msg}}</div>                                                
                                            {{/each}}
                                            <hr>
                                            <h3>Debug information</h3>
