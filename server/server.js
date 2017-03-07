@@ -72,21 +72,39 @@ app.post('/v1/verify/', function(req, res){
     }) 
 })
 
+app.get('/backup/:type?', function(req, res){
+    var logType = req.params.type || "default"
+    switch(logType) {
+        case "default":
+            return res.json({location: __dirname+'/filelog-info.log'})
+        break;
+        case "ledger":
+            return res.json({location: __dirname+'/filelog-ledger.json'})
+        break;
+    }
+
+})
+
 function performExpressSafeVerification(swapSet, cb){
     var results = []
     ledgerLogger.ledger("Entering verify")
-    verify(swapSet, function(result){        
+    verify(swapSet, function(result){
+        ledgerLogger.ledger("done verifying; results: ", result)
+        console.log("Complete collecting results", result.length)
         results[results.length] = result
-        if (results.length === swapSet.SwapSignatures.length) {
+        console.log("Done verifying... should I test?",result.length, swapSet.SwapSignatures.length )
+        if (result.length === swapSet.SwapSignatures.length) {
             ledgerLogger.ledger("entering testPass")
-            testPass(results, function(success){
-                return cb({pass: success, result: results})
+            testPass(result, function(success){
+                return cb({pass: success, result: result})
             })            
         }
     })
 }
 
 function testPass(results, cb) {
+    ledgerLogger.ledger("inside testPass")
+    //return cb(true)
     var count = 0
     results.forEach(function(result){
         if (!result.pass()) {            

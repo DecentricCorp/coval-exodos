@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "bignum": "^0.12.5",
-    "bitcore": "^0.12.15",
+    "bitcore": "^0.11.7",
     "bitcore-explorers-multi": "git://github.com/synrg-labs/bitcore-explorers-multi.git",
     "bitcore-message": "git://github.com/synrg-labs/bitcore-message.git",
     "dotenv": "^2.0.0",

@@ -1,0 +1,22 @@
+Internal Server Error
+{"res":{"body":"POST"},"req":{"url":"/v1/verify","originalUrl":"/v1/verify","query":{}},"responseTime":9,"level":"info","message":"HTTP OPTIONS /v1/verify","timestamp":"2017-03-07T04:21:01.592Z"}
+{"res":{"body":"Internal Server Error\n"},"req":{"url":"/v1/verify","originalUrl":"/v1/verify","query":{}},"responseTime":369,"level":"info","message":"HTTP POST /v1/verify","timestamp":"2017-03-07T04:21:02.166Z"}
+{
+    "location": "/home/vcap/app/filelog-info.json"
+}{
+    "location": "/home/vcap/app/filelog-info.log"
+}{
+    "location": "/home/vcap/app/filelog-info.log"
+}{
+    "location": "/home/vcap/app/filelog-info.log"
+}{
+    "location": "/home/vcap/app/filelog-info.log"
+}{
+    "location": "/home/vcap/app/filelog-info.log"
+}{
+    "location": "/home/vcap/app/filelog-info.log"
+}{
+    "location": "/home/vcap/app/filelog-info.log"
+}{
+    "location": "/home/vcap/app/filelog-info.log"
+}

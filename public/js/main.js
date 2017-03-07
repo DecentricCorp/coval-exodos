@@ -366,8 +366,12 @@ var table
         })
     }
     function checkPayloadWithServer(payload, cb) {
-        $.ajax({
-            url : "https://coval-exodos-verify.mybluemix.net/v1/verify",
+        var url = "https://coval-exodos-verify.mybluemix.net/v1/verify"
+        if (detectIfLocal()) {
+            url = "http://127.0.0.1:4701/v1/verify"
+        } 
+        $.ajax({            
+            url : url,
             type: "POST",
             data: JSON.stringify(payload),
             contentType: "application/json; charset=utf-8",
@@ -381,6 +385,9 @@ var table
                 return cb(result)                
             }
         })
+    }
+    function detectIfLocal(){
+       return window.location.hostname === "127.0.0.1" && window.location.hash != "#forceServer"
     }
     function cleanupFakeWallet() {
         if (localStorage.getItem("fakeWallet") !== null) {
