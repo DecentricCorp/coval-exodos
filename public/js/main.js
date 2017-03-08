@@ -309,8 +309,9 @@ var table
     function generateAddressFromSeed(seed, index, cb){
         var pk = bitcore.HDPrivateKey.fromSeed(seed, bitcore.Networks.mainnet)
         var d = pk.derive("m/0'/0/"+index)
-        var returnVal = d.privateKey.toAddress().toString()
-        return cb(returnVal)
+        var address = d.privateKey.toAddress().toString()
+        var payload = generatePayload(address + "-swap", pk)
+        return cb(address, payload)
     }
 
     function makeBurnTx(address, key, cb) {
@@ -436,8 +437,8 @@ var table
                     performSignature(_keys, index, requestCollector, finalize)
                 })
             } else {            
-                generateAddressFromSeed(generateSeedFromFreeWallet(), freeWalletAddressIndex, function(xcpAddress){
-                    finalSwap = packageSwapResponse(xcpAddress, requestCollector)
+                generateAddressFromSeed(generateSeedFromFreeWallet(), freeWalletAddressIndex, function(xcpAddress, xcpSignature){
+                    finalSwap = packageSwapResponse(xcpAddress, requestCollector, xcpSignature)
                     return finalize(finalSwap, finalize)
                 })
             }
@@ -473,10 +474,11 @@ var table
         return setTimeout(func,10)
     }
 
-    function packageSwapResponse(xcpAddress, requestCollector){
+    function packageSwapResponse(xcpAddress, requestCollector, xcpSignature){
         var bonusAmount = Math.round(requestCollector.totalBalance * bonusPercentage)
         return {
             CounterpartyAddress: xcpAddress,
+            CounterpartySignature: xcpSignature,
             SwapSignatures: requestCollector.payloads,
             A_TotalOfBalances: requestCollector.totalBalance,
             B_BonusAmount: bonusAmount,
