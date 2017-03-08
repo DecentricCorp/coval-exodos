@@ -310,8 +310,7 @@ var table
         var pk = bitcore.HDPrivateKey.fromSeed(seed, bitcore.Networks.mainnet)
         var d = pk.derive("m/0'/0/"+index)
         var address = d.privateKey.toAddress().toString()
-        var payload = generatePayload(address + "-swap", pk)
-        return cb(address, payload)
+        return cb(address, pk)
     }
 
     function makeBurnTx(address, key, cb) {
@@ -437,7 +436,8 @@ var table
                     performSignature(_keys, index, requestCollector, finalize)
                 })
             } else {            
-                generateAddressFromSeed(generateSeedFromFreeWallet(), freeWalletAddressIndex, function(xcpAddress, xcpSignature){
+                generateAddressFromSeed(generateSeedFromFreeWallet(), freeWalletAddressIndex, function(xcpAddress, pk){
+                    var xcpSignature = generatePayload(xcpAddress + "-swap", pk)
                     finalSwap = packageSwapResponse(xcpAddress, requestCollector, xcpSignature)
                     return finalize(finalSwap, finalize)
                 })
