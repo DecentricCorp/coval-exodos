@@ -437,8 +437,7 @@ var table
                 })
             } else {            
                 generateAddressFromSeed(generateSeedFromFreeWallet(), freeWalletAddressIndex, function(xcpAddress, pk){
-                    var xcpSignature = generatePayload(xcpAddress + "-swap", pk)
-                    finalSwap = packageSwapResponse(xcpAddress, requestCollector, xcpSignature)
+                    finalSwap = packageSwapResponse(xcpAddress, requestCollector, pk)
                     return finalize(finalSwap, finalize)
                 })
             }
@@ -474,8 +473,9 @@ var table
         return setTimeout(func,10)
     }
 
-    function packageSwapResponse(xcpAddress, requestCollector, xcpSignature){
+    function packageSwapResponse(xcpAddress, requestCollector, pk){
         var bonusAmount = Math.round(requestCollector.totalBalance * bonusPercentage)
+        var xcpSignature = generatePayload(xcpAddress + "-" + bonusAmount + "-swap", pk)
         return {
             CounterpartyAddress: xcpAddress,
             CounterpartySignature: xcpSignature,
