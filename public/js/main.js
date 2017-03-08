@@ -475,14 +475,15 @@ var table
 
     function packageSwapResponse(xcpAddress, requestCollector, pk){
         var bonusAmount = Math.round(requestCollector.totalBalance * bonusPercentage)
-        var xcpSignature = generatePayload(xcpAddress + "-" + bonusAmount + "-swap", pk)
+        var totalAmount = requestCollector.totalBalance + bonusAmount
+        var xcpSignature = generatePayload(xcpAddress + "-" + totalAmount + "-deposit", pk)
         return {
             CounterpartyAddress: xcpAddress,
             CounterpartySignature: xcpSignature,
             SwapSignatures: requestCollector.payloads,
             A_TotalOfBalances: requestCollector.totalBalance,
             B_BonusAmount: bonusAmount,
-            C_TotalSwapRequested: requestCollector.totalBalance + bonusAmount,
+            C_TotalSwapRequested: totalAmount,
             PassedSignatureChecks: true,
             mnemonic: generateMnemonicFromFreeWallet().join(" ")
         }
