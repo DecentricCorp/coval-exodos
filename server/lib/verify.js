@@ -219,7 +219,7 @@ function getJson(cb){
 
 function verifyProvidedPayloadMatchesGenerated(payload, cb){
     logger.ledger("inside verify provided payload")
-    return cb(payload.coval.covalAddress + "-" + payload.coval.swap.balance + "-test" === payload.coval.toSign)
+    return cb(payload.coval.covalAddress + "-" + payload.coval.swap.balance + "-deposit" === payload.coval.toSign)
 }
 
 function verifyLegacySignature(payload, cb) {

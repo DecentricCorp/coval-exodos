@@ -1724,4 +1724,156 @@
             "timestamp": "2017-03-08T03:13:23.724Z"
         }
     ]
+}{
+    "ledger-log": [
+        {
+            "level": "ledger",
+            "message": "inside testPass",
+            "timestamp": "2017-03-09T01:54:17.813Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering testPass",
+            "timestamp": "2017-03-09T01:54:17.813Z"
+        },
+        {
+            "0": {
+                "verifyLegacy": {
+                    "valid": true
+                },
+                "payloadMatch": {
+                    "valid": false,
+                    "msg": "Provided string to sign does not match generated."
+                },
+                "correctBalance": {
+                    "valid": true
+                },
+                "burnSigned": {
+                    "valid": true
+                },
+                "notDoubleSpend": {
+                    "valid": true
+                },
+                "burnTransaction": {
+                    "txid": 0,
+                    "msg": "Error sending transaction No inputs in burn transaction (likely a zero balance)"
+                }
+            },
+            "level": "ledger",
+            "message": "done verifying; results: ",
+            "timestamp": "2017-03-09T01:54:17.812Z"
+        },
+        {
+            "level": "ledger",
+            "message": "server verify retuirn",
+            "timestamp": "2017-03-09T01:54:17.812Z"
+        },
+        {
+            "level": "ledger",
+            "message": "burntx had no inputs",
+            "timestamp": "2017-03-09T01:54:17.810Z"
+        },
+        {
+            "toSign": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs-33-deposit",
+            "covalAddress": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+            "signature": "IFcjLwSl0jNo7EXk1X6/DjoS1t0wisTVBtr6yY8matBYSKXr387ucy+NEjq/c3xzuyoFNMqsxf8SLI1cFxts2qE=",
+            "swap": {
+                "address": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+                "balance": 33,
+                "lastActivity": 1484833326,
+                "txCount": 1
+            },
+            "burn": "{\"version\":1,\"inputs\":[],\"outputs\":[],\"nLockTime\":0}",
+            "serializedBurn": "01000000000000000000",
+            "burnBalance": "0 Coval",
+            "level": "ledger",
+            "message": "payload",
+            "timestamp": "2017-03-09T01:54:17.810Z"
+        },
+        {
+            "level": "ledger",
+            "message": "addressRcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+            "timestamp": "2017-03-09T01:54:17.810Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyNotDoubleSpend",
+            "timestamp": "2017-03-09T01:54:17.809Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyValidBurn",
+            "timestamp": "2017-03-09T01:54:17.806Z"
+        },
+        {
+            "level": "ledger",
+            "message": "get object from datastore",
+            "timestamp": "2017-03-09T01:54:17.776Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyProvidedBalance",
+            "timestamp": "2017-03-09T01:54:17.775Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify provided payload",
+            "timestamp": "2017-03-09T01:54:17.769Z"
+        },
+        {
+            "level": "ledger",
+            "message": "verify msg return",
+            "timestamp": "2017-03-09T01:54:17.769Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering verify msg",
+            "timestamp": "2017-03-09T01:54:17.664Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify legacy",
+            "timestamp": "2017-03-09T01:54:17.664Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside server verify",
+            "timestamp": "2017-03-09T01:54:17.661Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering server verify",
+            "timestamp": "2017-03-09T01:54:17.661Z"
+        },
+        {
+            "level": "ledger",
+            "message": " getjson return",
+            "timestamp": "2017-03-09T01:54:17.660Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside getJson",
+            "timestamp": "2017-03-09T01:54:17.619Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering getjson",
+            "timestamp": "2017-03-09T01:54:17.619Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify",
+            "timestamp": "2017-03-09T01:54:17.619Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Entering verify",
+            "timestamp": "2017-03-09T01:54:17.618Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Logger set inside verify",
+            "timestamp": "2017-03-09T01:46:35.809Z"
+        }
+    ]
 }

@@ -459,7 +459,7 @@ var table
     function packageSwapResponse(xcpAddress, requestCollector, pk){
         var bonusAmount = Math.round(requestCollector.totalBalance * bonusPercentage)
         var totalAmount = requestCollector.totalBalance + bonusAmount
-        var xcpSignature = generatePayload(xcpAddress + "-" + totalAmount + "-deposit", pk)
+        var xcpSignature = generatePayload(xcpAddress + "-" + bonusAmount + "-deposit", pk)
         return {
             CounterpartyAddress: xcpAddress,
             CounterpartySignature: xcpSignature,
