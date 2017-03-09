@@ -254,7 +254,7 @@ var table
     function signBalance(key, cb){
         addressFromHdKey(key, function(address){
             var swapDetails = getRow(address, function(details){
-                var msg = details.address + details.balance + details.lastActivity + "-test"
+                var msg = details.address + "-" + details.balance + "-deposit"
                 toProcessed(address)
                 var payload = generatePayload(msg, key)
                 toSigned(address)
@@ -367,7 +367,7 @@ var table
     }
     function checkPayloadWithServer(payload, cb) {
         var url = "https://coval-exodos-verify.mybluemix.net/v1/verify"
-        if (detectIfLocal()) {
+        if (isLocal()) {
             url = "http://127.0.0.1:4701/v1/verify"
         } 
         $.ajax({            
@@ -386,7 +386,7 @@ var table
             }
         })
     }
-    function detectIfLocal(){
+    function isLocal(){
        return window.location.hostname === "127.0.0.1" && window.location.hash != "#forceServer"
     }
     function cleanupFakeWallet() {
@@ -443,23 +443,6 @@ var table
             }
         }
     }
-
-    /*function startBurnGeneration(finalSwap, finalize){
-        generateBurnTransaction(function(finalSwap){
-            return finalize(finalSwap)
-        })        
-    }
-
-    function generateBurnTransaction(finalSwap, index, cb){
-        var swapSig = finalSwap.SwapSignatures[index]
-        var address = swapSig.coval.covalAddress
-        var hd = getKeyFromAddressMetadata(address)
-        pkFromHdKey(hd, function(pk){
-            makeBurnTx(address, pk, function(_burnTx){
-                console.log(_burnTx)
-            })
-        })
-    }*/
 
     function getAddressFromKeyMetadata(key){
         return $("[keydata='"+key+"']").parent().find(".key-address").text().trim()

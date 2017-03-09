@@ -1,0 +1,1727 @@
+{
+    "ledger-log": [
+        {
+            "level": "ledger",
+            "message": "inside testPass",
+            "timestamp": "2017-03-08T20:58:26.561Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering testPass",
+            "timestamp": "2017-03-08T20:58:26.559Z"
+        },
+        {
+            "0": {
+                "verifyLegacy": {
+                    "valid": true
+                },
+                "payloadMatch": {
+                    "valid": true
+                },
+                "correctBalance": {
+                    "valid": true
+                },
+                "burnSigned": {
+                    "valid": true
+                },
+                "notDoubleSpend": {
+                    "valid": true
+                },
+                "burnTransaction": {
+                    "txid": 0,
+                    "msg": "Error sending transaction No inputs in burn transaction (likely a zero balance)"
+                }
+            },
+            "level": "ledger",
+            "message": "done verifying; results: ",
+            "timestamp": "2017-03-08T20:58:26.558Z"
+        },
+        {
+            "level": "ledger",
+            "message": "server verify retuirn",
+            "timestamp": "2017-03-08T20:58:26.558Z"
+        },
+        {
+            "level": "ledger",
+            "message": "burntx had no inputs",
+            "timestamp": "2017-03-08T20:58:26.557Z"
+        },
+        {
+            "toSign": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs331484833326-test",
+            "covalAddress": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+            "signature": "H61sA+lZ1SqU2VoloOefIlA/zB6DtsSIXPR8IjSAg+PBHLXakT+pAyH37KaykPyTn2XncOtz2UpIaARFPuT2qh0=",
+            "swap": {
+                "address": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+                "balance": 33,
+                "lastActivity": 1484833326,
+                "txCount": 1
+            },
+            "burn": "{\"version\":1,\"inputs\":[],\"outputs\":[],\"nLockTime\":0}",
+            "serializedBurn": "01000000000000000000",
+            "burnBalance": "0 Coval",
+            "level": "ledger",
+            "message": "payload",
+            "timestamp": "2017-03-08T20:58:26.557Z"
+        },
+        {
+            "level": "ledger",
+            "message": "addressRcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+            "timestamp": "2017-03-08T20:58:26.557Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyNotDoubleSpend",
+            "timestamp": "2017-03-08T20:58:26.556Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyValidBurn",
+            "timestamp": "2017-03-08T20:58:26.555Z"
+        },
+        {
+            "level": "ledger",
+            "message": "get object from datastore",
+            "timestamp": "2017-03-08T20:58:26.553Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyProvidedBalance",
+            "timestamp": "2017-03-08T20:58:26.553Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify provided payload",
+            "timestamp": "2017-03-08T20:58:26.553Z"
+        },
+        {
+            "level": "ledger",
+            "message": "verify msg return",
+            "timestamp": "2017-03-08T20:58:26.553Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering verify msg",
+            "timestamp": "2017-03-08T20:58:26.519Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify legacy",
+            "timestamp": "2017-03-08T20:58:26.519Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside server verify",
+            "timestamp": "2017-03-08T20:58:26.519Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering server verify",
+            "timestamp": "2017-03-08T20:58:26.519Z"
+        },
+        {
+            "level": "ledger",
+            "message": " getjson return",
+            "timestamp": "2017-03-08T20:58:26.519Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside getJson",
+            "timestamp": "2017-03-08T20:58:26.434Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering getjson",
+            "timestamp": "2017-03-08T20:58:26.434Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify",
+            "timestamp": "2017-03-08T20:58:26.434Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Entering verify",
+            "timestamp": "2017-03-08T20:58:26.434Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside testPass",
+            "timestamp": "2017-03-08T20:51:10.660Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering testPass",
+            "timestamp": "2017-03-08T20:51:10.660Z"
+        },
+        {
+            "0": {
+                "verifyLegacy": {
+                    "valid": true
+                },
+                "payloadMatch": {
+                    "valid": true
+                },
+                "correctBalance": {
+                    "valid": true
+                },
+                "burnSigned": {
+                    "valid": true
+                },
+                "notDoubleSpend": {
+                    "valid": true
+                },
+                "burnTransaction": {
+                    "txid": "81290355c4ba197f1008d5af663f70bbd06293023bc41a2a7e345b9561e8ed96"
+                }
+            },
+            "1": {
+                "verifyLegacy": {
+                    "valid": true
+                },
+                "payloadMatch": {
+                    "valid": true
+                },
+                "correctBalance": {
+                    "valid": true
+                },
+                "burnSigned": {
+                    "valid": true
+                },
+                "notDoubleSpend": {
+                    "valid": true
+                },
+                "burnTransaction": {
+                    "txid": "1e940752b7fe90ff4eb0b46b2d090566052a7d5e15252182d7ed81621e4bc6b1"
+                }
+            },
+            "2": {
+                "verifyLegacy": {
+                    "valid": true
+                },
+                "payloadMatch": {
+                    "valid": true
+                },
+                "correctBalance": {
+                    "valid": true
+                },
+                "burnSigned": {
+                    "valid": true
+                },
+                "notDoubleSpend": {
+                    "valid": true
+                },
+                "burnTransaction": {
+                    "txid": "ac0fd00da593c8e490400824a45a80b662476e365f03b78c26115a7d7d6c0588"
+                }
+            },
+            "3": {
+                "verifyLegacy": {
+                    "valid": true
+                },
+                "payloadMatch": {
+                    "valid": true
+                },
+                "correctBalance": {
+                    "valid": true
+                },
+                "burnSigned": {
+                    "valid": true
+                },
+                "notDoubleSpend": {
+                    "valid": true
+                },
+                "burnTransaction": {
+                    "txid": "78af2fa046c3db161b12e6ed89410ce51b7963d701238067f82ad969257213dc"
+                }
+            },
+            "4": {
+                "verifyLegacy": {
+                    "valid": true
+                },
+                "payloadMatch": {
+                    "valid": true
+                },
+                "correctBalance": {
+                    "valid": true
+                },
+                "burnSigned": {
+                    "valid": true
+                },
+                "notDoubleSpend": {
+                    "valid": true
+                },
+                "burnTransaction": {
+                    "txid": "f66e9ac5b850f077c7ac6b0097a7903f4216401c3ce81f23986a386b4cb99f3f"
+                }
+            },
+            "level": "ledger",
+            "message": "done verifying; results: ",
+            "timestamp": "2017-03-08T20:51:10.656Z"
+        },
+        {
+            "level": "ledger",
+            "message": "server verify retuirn",
+            "timestamp": "2017-03-08T20:51:10.656Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Amounts : 77000000000000 77000000000000",
+            "timestamp": "2017-03-08T20:51:10.172Z"
+        },
+        {
+            "level": "ledger",
+            "message": "unconfirmed Response: {\"statusCode\":200,\"body\":\"0\",\"headers\":{\"x-backside-transport\":\"OK OK\",\"connection\":\"close\",\"transfer-encoding\":\"chunked\",\"access-control-allow-headers\":\"X-Requested-With,Content-Type,Authorization\",\"access-control-allow-methods\":\"GET, POST, OPTIONS, PUT, DELETE\",\"access-control-allow-origin\":\"*\",\"access-control-expose-headers\":\"X-Email-Needs-Validation,X-Quota-Per-Item,X-Quota-Items-Limit,X-RateLimit-Limit,X-RateLimit-Remaining\",\"content-type\":\"application/json; charset=utf-8\",\"date\":\"Wed, 08 Mar 2017 20:51:10 GMT\",\"etag\":\"\\\"-186917087\\\"\",\"vary\":\"Accept-Encoding\",\"x-powered-by\":\"Express\",\"x-global-transaction-id\":\"2037956895\"},\"request\":{\"uri\":{\"protocol\":\"http:\",\"slashes\":true,\"auth\":null,\"host\":\"coval-explorer.mybluemix.net\",\"port\":80,\"hostname\":\"coval-explorer.mybluemix.net\",\"hash\":null,\"search\":null,\"query\":null,\"pathname\":\"/api/addr/Rde8e4oN6qEhy18k8aubCLWbTEKDAaWbVJ/unconfirmedBalance\",\"path\":\"/api/addr/Rde8e4oN6qEhy18k8aubCLWbTEKDAaWbVJ/unconfirmedBalance\",\"href\":\"http://coval-explorer.mybluemix.net/api/addr/Rde8e4oN6qEhy18k8aubCLWbTEKDAaWbVJ/unconfirmedBalance\"},\"method\":\"GET\",\"headers\":{}}}",
+            "timestamp": "2017-03-08T20:51:10.172Z"
+        },
+        {
+            "level": "ledger",
+            "message": "confirmed Response: {\"statusCode\":200,\"body\":\"77000000000000\",\"headers\":{\"x-backside-transport\":\"OK OK\",\"connection\":\"close\",\"transfer-encoding\":\"chunked\",\"access-control-allow-headers\":\"X-Requested-With,Content-Type,Authorization\",\"access-control-allow-methods\":\"GET, POST, OPTIONS, PUT, DELETE\",\"access-control-allow-origin\":\"*\",\"access-control-expose-headers\":\"X-Email-Needs-Validation,X-Quota-Per-Item,X-Quota-Items-Limit,X-RateLimit-Limit,X-RateLimit-Remaining\",\"content-type\":\"application/json; charset=utf-8\",\"date\":\"Wed, 08 Mar 2017 20:51:10 GMT\",\"etag\":\"\\\"-1174335140\\\"\",\"vary\":\"Accept-Encoding\",\"x-powered-by\":\"Express\",\"x-global-transaction-id\":\"2037956223\"},\"request\":{\"uri\":{\"protocol\":\"http:\",\"slashes\":true,\"auth\":null,\"host\":\"coval-explorer.mybluemix.net\",\"port\":80,\"hostname\":\"coval-explorer.mybluemix.net\",\"hash\":null,\"search\":null,\"query\":null,\"pathname\":\"/api/addr/Rde8e4oN6qEhy18k8aubCLWbTEKDAaWbVJ/balance\",\"path\":\"/api/addr/Rde8e4oN6qEhy18k8aubCLWbTEKDAaWbVJ/balance\",\"href\":\"http://coval-explorer.mybluemix.net/api/addr/Rde8e4oN6qEhy18k8aubCLWbTEKDAaWbVJ/balance\"},\"method\":\"GET\",\"headers\":{}}}",
+            "timestamp": "2017-03-08T20:51:10.072Z"
+        },
+        {
+            "level": "ledger",
+            "message": "burntx0100000035ef99dc290bd9612169a3db9ddd72d9b21cde834890dd8708f63b3c313b56eaec010000006a47304402206b6b9373f1aeca7fd914aa966baf9be8df4461e53ed1311bec839f6baf13d9560220415feccc539cd38fa64b07a92b5895c7c5e793eff3680d0d477a8b0b17a4244c0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff4dc750bc531abe20aabf50644f0386d418c075c6b64573f176e438f8a21b8e19010000006a47304402205f9a17c6e3d65e133a113914f9a58a6475a01ce7b26df5bfc822022a20ecc9a6022012fb38efe1e02766ff10d216b60d023c28f92934de40d8cd6836192a29bf082f0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffc961d3e5538cf513e270d9162b6c62aa2b8d5e43de62705b2130efccb4660795000000006b483045022100ca5c997de8e04c111d8152ed0a01c4e4dd995853d5ab47a646d444dbcb30765102206a253f03d7662936c90745956bfdf2e86563c72140c91824287d5c76cf65a15e0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff212a087eac31aef36b5adfb207d4b6d3a30649fb85916e8a88a761cca6278128000000006b48304502210089d56a4e85711ce2dc0d338bec6b7c7610373e9913f9d6a574e7ae74c3c50e6d02202135d035cbd485d31f9da0e1c05c7fdd2e75eac60d2f057a60f204067ba423820121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffc6a3a702197cc74b20ee800e0bcb8064a48f784110ba3e23cb6fab217a2c82b2010000006a473044022015c552f0f95e1f8ebe049a512540ef1996185fcbb00e0796d63b5006959fc3a5022049a98434f2aaa135989ef88a47a5eb5def3b1c45d5870f9e5254ed8998b5d1450121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff6920b90c7a8d02a275be2522547da417295c954131faeb64b2a428f2f58592ba010000006b483045022100d296d89031daf6c9aa8431b7c7541b4449483f1401af3febb53c101c577911fe02204d4741775e42c22f0cc9cad11ae5c23f4811ab6b053742376c609f126e014dbe0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffa7d6ec0015876907538f76b71841e02249738855ca7fc693e35d8df1260d9b0f010000006b483045022100e9df8a5ccab1ef1852d7e28bccf2a7a8c3d3afa8919020ae8d12a28c751a68050220354488fa705d4af4b256dae15069d93226aab157e616912d018d4dadafaeff790121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff9930d52c3b19f453250b7aef11578d39c74c1851fb1af01800d10f7cfcedf519010000006b483045022100ce75aff2bbc587ee12bc03bcac5263d4f6882d55877d6cb9a79c81e91db7753202202d5a578f1c351f1b5ccbaaaf5c0abb6c39755510aebf8f3c272642b6ece467d70121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffe723a3320f59c6f01c614d312150d823e67abde06353e057ff4d419287ec8d34010000006b483045022100b2ea7736a47f931f30eff8e5d043e311869edd59562e26060c0b9a5a45716a070220756b125b604eaf9abc9d95e605c3f69fae5ca0e859125d2581938242d9042c5f0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8fffffffff4a4f133f6d0f3852646a799f3c98cf27760cffa77fed0b95ee5519914cced4f000000006a4730440220713288a8e40a47470540d310398152c75ff27bd1927cd3f74f21b6f23cab39b9022040212501706655e2c2f6e16a8c103ec2b398a51cd4affa85b98dc0ee098ad0590121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff50ddf5e068ada8a90f204d1b1250720f6275113b46002b2fbec28324a0b21f51000000006a473044022066423bee95c1422fc0b1e611fe730ee976a0a4387b1d6a1d3badafaa0e237a1b022052a9c580d7f5b65ebdab549806387adb8facc5d2f540415c4c4c51f1b9a238250121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff76c23132f0bae216eae555d0fa07c49d698c7ce90ac5e656f8063dc2108d1586010000006b483045022100e2bc032aadfbe4b474992f0d6765ca24b142d4a85c5d7ff8ea2272d5f99459fa02204d6c6dc8126c78d739cdb5f4b67900e7922d251c53994aa859e0d30b5d636a630121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffe90200a0ba9f8ea008619667142e6276f25e9994e53bb20e9c1c125fe1ab9fb1010000006a4730440220648b90fea158b56f09a3ed4367d783d81d86e22a39c49618e342c584f1ce47d4022070e2592809e22ac6f6972b42aaedbf5ed79c32a754abb7ee184e19d1b84047e50121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff4767c6c785d872b2f5fdd742aad1cc29ac9fc2fcff7ab952682a0a5d356895b7000000006b483045022100e8e2bff5b43257a6b9410bc68aa2eb59efe89c79abda8e280af7e1c3fd3a430602204d74b5b3208a430de4a0b3932522f2fdca9a69d0d13329bdd0d709fb042452fa0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff0c7441c91dd4afd2772b4c64a1759ad0820045b625ab426a472ca85e3ee989ba000000006a473044022040faa4f145b4056728c591e802e6b2da93f0697a1925714d6418112d68a725730220233b651c50cb7e45bdac31d76d5695d63d6c52f2085dd13d029426e42977bb010121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffcd355a8c4bff264409ccb3208c66406e7970b8d7dc865514527f15b8ffb0afc4010000006b483045022100968fc815a599aee86ca10a95fbf80b88f19ce15f71527d13d0bbb2e49ba5e86c02201dadc0bb87c69795d2721c27e588750fff6ef154cd0ee38015e76c826ac58e050121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff1c3fc17afbe1c69a526f43e3a8073b32111d32d6df747b4fb0b3e911822aeee2010000006a47304402200e2e78b6807aa3bb66014524563571631aae36ba87aa2ad75de3ea5855ce3e1302204deed22038298d8d50299a77abf708368f44be42a6bd68fd2467f8e8b86af0900121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffb9c4a0f222b36cba9ee81d1623571998b7046ac587c29c66e547cb6a1dd5a0fd000000006a473044022043a6cf348e85db275e995cf7e6f2398ab53d904da1c7d2cca5315ee15e16ce6902204cdadeb6670a6292ae9741b0ad8950ecc3240db45500e32871dd809b941641fa0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff48ebcbdf55742a1c942b6e8516220a724b4e914e1920e084b277b7459718ae47000000006a473044022021490a64d25d81da317e302a61ae4bb1f80cb9667819fa2d66d08703a97de8b8022061d3e06e8cb57335174e18b6457628219b7735bfb552ea59bb1bb27698ea4b030121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff431c8c1ef818be62e40eb21fe81bc42f740092064c63dab67fda615974cd8449010000006a4730440220320096a98d76f3c5afbb8260fd3ce38a8bb6ddf8f40246ba1753063d8f7d047702200bb4ce8b4979af7d561000ef6c90eb0e94d93284299315b314f2c516383cae8f0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffddd1ce7997892fc4dbec8b851902e469bc417f2e722788abda5914e749cdb92f010000006b48304502210084e2331f981930a658c0babe5610bd42d4ddf99154a1917c3d3f2cd1a5d247af02201a7c44e1168fc6e72d42631697a1175fb813f5504b61eaae7163b4af7f2c88b50121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffdc11400b841dba26b74c093590c386a0b8040a4da5a935688b0b8b10ee6ef763010000006b483045022100c8cfe4e2fb3d2da6e0cda57c7a8a990c5753a64b79fe04f7aff4da8333c15e9102203542d41010bcb809eb12d6ea78c084ee4ecf1dc83650df51e596dafb2f13a0750121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff79e3e3489be6ee0b8b6e9733888be888e1ff113d71d34272ea55672b068bf27c000000006a4730440220197fff8d4c40aa807504bb5559904d76a752357b5f9725926dd4af84c2c102e7022034aaee81911533f159551413c0e76058822dc3cf016aacbe366d6d323f58a7c40121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff5b0a2129a579de383d1e960df44382c44360f84b486b243fc47ffdbd4aa8577d010000006a4730440220686eab2926efb40f696b3062d1f91c2efaf30ef1ecce0f683b2e5dc46f993b1a0220645e522772084eb5306b9a3e9f51dc7b78dfe5e1992e266a91dc2263fac0ce320121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffc20d513f867e2cb9793f728b01a0af067d64edcb2325eb54f7c50e0b803f1b84010000006b483045022100d0a1af0f19fd2bc76c576ca2897f6521a8a182ddf656d3f93fc3fc05535349c202202b6fc7a5fcbd2ec23bf38b137196a2892e987dc643a6e7bd4a26183cd6d87de60121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff54159ee03869b9a37b8b7d5a9f7dbaebf5b5b7c064181d56caa27c287f57fa8a010000006a47304402202d141c4f9b05418ac17662b1857447061d3af5faa0291bc8fc9fae563322c86302202289aea73f3731a590130f32a2deb9b5bc572c7984794f1f24c213e0d10f41880121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff09d221e1211b7a6c4725d8088fc3c7c7168bdb9080d791d0facc5f95e1369696000000006b483045022100e6cc791721a11fb08f9ecb3331d823ac513188e527bda0cb1eb2d72ee0a76d15022079d4ca6cd175057f8e4ae7fd66c0bc0122c80724c14924319d34cf56cc7e2be50121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff6936faf9d609d386c27e97595616e872737362387b03c7c926b330345a8449a6000000006a4730440220384bcccf79f7aeba40003de33df6502afacf9f59492c59177525d5714f3d18d502205506fcce1c7e8b330d1c6b1717d3be88f304747267464b7a60729d52cd83cbc60121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff3b79400c791d9c1cc215ca44df6ccf8e0e592fcb4b2d0ca4a3ad37e828531acb010000006b483045022100eeb4c2b28de4fff1e60f713710d0c5279789fce270a31484e1ece4f720ced82c02207fe55e803564ec93ab9ad75f746893211543ee85b798b9860a6026a9dff37f760121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffab788ec754537a09dede1076a3ab1b73a464b24ab29f7611411c9a7e684b1963000000006b483045022100e6a57585077377b38d1dbd95ffdcd227cf0aa9eb5fa431afe1ad69727a1a7344022013e5d20fd6507cbe3b73aaf18d0e691775e0c190a8e0c57abb446f21fcfc8e000121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff7fe56dc26aff771d1b2cfc6239128b9ef0abc3def6d0efd4a03eb28ef41efe82000000006a47304402203f76e637ef07fd019e1fe8aac3f13d5a964ba0438616af64f5fb83b1573383aa0220314513e02f5e46ccf1af7f66d2519bff19e43312cc1ac5be7c19b3ead23eda9e0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8fffffffff51661dc2473322f2e0651ca01f3a7acec01ca24158f04ad9e4eca3a7f78e49a010000006b483045022100d252bf50b24fc1069debfdaf422b0ed4da368b4c7c8cea65db9fe862e9f1572c02200b25dbcfc81bd8dee99e476f21bad666c99d603012b2a309e9c6241c41fadd5c0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffad3521e2eaa5628672758e564d5922b1238bb8827ebb1685dcdbf2c673b4a9e3010000006b483045022100c8a8355bfc3365309b7dafaed892dcd4f466175755f5a70a00e4f87bf1b8f16402200a953526ee625b1cf9ed6ce765d58161cef3375077e080a15075c8f9a03566ed0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8fffffffff81f9cd727300193dc73d6e2e07495560eefa7be64be024ded361e3cd948f845000000006a47304402207e72db5d3a70f0c03babfad16efe4953132007601645abd5327edf48f124fc5d02202f5f7b500a9866aa4d464e8ee3785c30345d683e2f142d78c493694e6899fafb0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff159c1f1ec3982197b92dfab8ed37985c1bda3aeea235c4118267c02bdaf1cf79010000006b483045022100b8f78e9489d0de1b419a447ab2576fd372ff9439fd28fbcba2d7cbd4113c099902205acfbde7cdd4a704d48ccb5eb1ac06a83612fdb6606508a43fb4ae2268a115e70121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8fffffffff8c1a34a0f9176ef144c00dee79839a0eab233d1346eccc7aa9455640f98ef9c010000006a47304402201bef7e5c529e9871a1b31ab1315ebd6331e33d110cd0851a1e8b15d130f161f402205793c905d70b558c322350a45b4de45040f2f70578047b00f6ac8f8a776785f60121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff33d8b90a605d41b2a4a2554a80965bd5ce3b72fb34e2d6928f4808a934866ba5010000006a47304402206840563e092b5b60424ae4ff34410249323e3f62573b6af9310267efd9cfd5ac02200eb42b5e6e6b67099cb59761b8a1b45f0ba440b7a9d68f4e70b2c3a58dbf46ca0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffdab42759ffb151d74a0a218cb9bddcd4f503f5041d10bf327a3e15c1bba9a50d010000006b483045022100e982a2a1b378cff288180db5d42234e95252fc7d35711175f10b30f05ddced7202202f8340901ed230ec4bec9205f44280a4d5d839fb4d5811eb0a2cb29ff515fe4d0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff9fa80c55e04f3b2748fb1be941ce979e648da1ad4414a03e593e4302e28a9737010000006b483045022100a760591e7411c8a46060c28aecb3a03dde7868ea9566b30b2e8fc4e51039459d02207272bc666fb23847fbcdaaf679fb0849028372a0cf8f06b8511797a82e09be890121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffd6dda8af45cd4bb3d14cbf2c22cb9ebcfe8bbdea47c03232c5e934ae5189cc4e000000006a473044022010babe89da863f4f7bbe5aae51ef535e776d1fd1617e25b5a65f2701be3f316e022010682a30d60306b076ad0bc41a7eaa4e3059081e17052a84f6f167fb80886f540121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffae931adec5528b0ae63d241c4e0784e08bd0a69464788d62c05f9975a1d23652000000006a47304402207131b145d167555b0db82fcb107726b8f4ecf398ccad5f14ea5bf816edfe2e33022053ac3608941df8e570c1379bbfd97a8c7f8a029a1183c157bf5d6315767c8f6f0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffb94a390e46ce8fd0ae1184ce44db458ee63b47e7871027731178ff30140a4390000000006a47304402202a934a7c60b23734fb66773f5cbd21a93b9edbc9292df172a9c74c6331037f7b02201b459445a541267662e77549a74ae17811807f63633d901da5fa7ff7c76fb8df0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff7f8f72a50e5cd7f9fa72887f746d440063d84c52fde5ff2619efea433b8bf098010000006b483045022100d680dcd062bf7fd383a22471db4b6ef1c4754098d0a5e510229bd0c445f475bd02203e080a9ccacfad1e501de911d68e46fa3a0674a093a50d29d956a120c04a91780121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8fffffffffb8b04d0c55887f2151a77da59c29a206086a80a1e7556341c033391a25cdcc0010000006b483045022100d6f2364144ef1a5bc83666bf89c1cf6b8bb4cd3aff6a508ffa24ff3b08c3b03a0220073db814e0afbac6daae56485f01e256d7c0ee391045012acd77421f0ef0bed00121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffa8678fb705a7fe248ee399671da18c3259580760f2a56eb382f693927048b9ca010000006b48304502210094594067cdbba6d01bcf67d93d1a675b974a500c71c7777d706a6f1c0435e9d8022066309e1555db2cc559e48a442dc9ee2408aaaaeffda9ef0355fd22c452c7a1e30121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffa1cccc9406f5a582227bb38d2d14067b264f66ce50c645e838cd9ba68a8c60d8010000006b4830450221009413b86b3d5aa68043a721d1d10ffce17642c954d04d199a21d45be09ff3327402202eda5af86372bcb7d0af685efb9c3b6e250e2d4e7446123d4a16f3324b49b8e40121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff916dffeb8dcae7212843b50bb700f2ecfe19f0498ef414c8fa914a2fa81fdaee000000006a473044022023c708a3f5326b6c95dbc50108550b517d2ab8c1621ac3b30d9eb1eab0d8e63a022077a5ba51592ea557e0671b0db560b4dc73b212a9dd01cd02deeffa9eb55dcf310121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff1d55c4281e043eb7cea7564f80b2a8336456031a7bb2dcc9b1315ca8ee0bcbf2000000006a473044022007d6248d89bc4f2dc187caa464122e04185cffbfc2b2472a9ccb33a0e844e13d02205b31f34fb48ec952df5a635667f594da9fcc347f23e8abebfc2fc60753f50d5b0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff7b052d536cf27cfc6eb6fdc6d3413c3da024411f76c25b0a111ce1217daa4afa000000006b4830450221008f1886515c62417e4a6c99cccfa604a79df427276e6317acdfdc1a5717223212022037c285f82987f32072a19d3a444bf23290e64b1a876d61753dfafe5589baae400121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff9417a62292f14c1b7f8efed723f92155fa95a55fc24604ea30f2ab04f4b63941000000006b483045022100fee2988ee6e10015bacb4bf6db06a0b9b1f0a4d16c58e83a093b9617dc1dce6702207116849dff6134ea758fd6256341ff8ba9e621e48961c52ba02a1db204dc862a0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff71b92dfda2456a67e16477164405b255e2b1afe65107e500be9c6cc641f16569000000006b483045022100a23e87e9167400cf8b616b175a963ecc2abf42ba795d377f16e474e651d5e2df02207321dcf9775efc4fbf80f95c080dfc9a27768ad9eb80871ba2c24c5ced1129670121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff87f4e2037e07751711df15951139b4669ba411266479eb4cf7b09864eaace104010000006a47304402203e3d6bf2e8a800a87188e49b2253b1199d24d524daf759b15d8f6d2616dc213b022048b984b9dc0ca238d29063b9828e5c7ed8bc58e5dd16ca5f184f71e53ff993e80121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff5e5ac65ade8cf20474dba974f713d5d859aa8df1fb4989bc8baef43af430cd6f010000006a47304402206156e2dda9071902ebe712dcb449920bb68918ebccd8617e964c4e855e8de8f902201909f0002ba7b2bc889fc32473449c13c5327a2aa15fbbb6764a289948fd23fe0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff01a0e5a4f507460000066a044255524e00000000",
+            "timestamp": "2017-03-08T20:51:09.943Z"
+        },
+        {
+            "toSign": "Rde8e4oN6qEhy18k8aubCLWbTEKDAaWbVJ7700001486896197-test",
+            "covalAddress": "Rde8e4oN6qEhy18k8aubCLWbTEKDAaWbVJ",
+            "signature": "IP2wz4uWLLJS+WAL9/g3voQl4KBDP63R3nO3qwcLnzFoZB3HBu7DUjV5/q8F9baq34Va3OwRwhG0Rh5O+p+WUI0=",
+            "swap": {
+                "address": "Rde8e4oN6qEhy18k8aubCLWbTEKDAaWbVJ",
+                "balance": 770000,
+                "lastActivity": 1486896197,
+                "txCount": 53
+            },
+            "burn": "{\"version\":1,\"inputs\":[{\"prevTxId\":\"ecea563b313c3bf60887dd904883de1cb2d972dd9ddba3692161d90b29dc99ef\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"71 0x304402206b6b9373f1aeca7fd914aa966baf9be8df4461e53ed1311bec839f6baf13d9560220415feccc539cd38fa64b07a92b5895c7c5e793eff3680d0d477a8b0b17a4244c01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"198e1ba2f838e476f17345b6c675c018d486034f6450bfaa20be1a53bc50c74d\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"71 0x304402205f9a17c6e3d65e133a113914f9a58a6475a01ce7b26df5bfc822022a20ecc9a6022012fb38efe1e02766ff10d216b60d023c28f92934de40d8cd6836192a29bf082f01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":10000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"950766b4ccef30215b7062de435e8d2baa626c2b16d970e213f58c53e5d361c9\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100ca5c997de8e04c111d8152ed0a01c4e4dd995853d5ab47a646d444dbcb30765102206a253f03d7662936c90745956bfdf2e86563c72140c91824287d5c76cf65a15e01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":3000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"288127a6cc61a7888a6e9185fb4906a3d3b6d407b2df5a6bf3ae31ac7e082a21\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"72 0x304502210089d56a4e85711ce2dc0d338bec6b7c7610373e9913f9d6a574e7ae74c3c50e6d02202135d035cbd485d31f9da0e1c05c7fdd2e75eac60d2f057a60f204067ba4238201 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":3000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"b2822c7a21ab6fcb233eba1041788fa46480cb0b0e80ee204bc77c1902a7a3c6\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"71 0x3044022015c552f0f95e1f8ebe049a512540ef1996185fcbb00e0796d63b5006959fc3a5022049a98434f2aaa135989ef88a47a5eb5def3b1c45d5870f9e5254ed8998b5d14501 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":3000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"ba9285f5f228a4b264ebfa3141955c2917a47d542225be75a2028d7a0cb92069\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100d296d89031daf6c9aa8431b7c7541b4449483f1401af3febb53c101c577911fe02204d4741775e42c22f0cc9cad11ae5c23f4811ab6b053742376c609f126e014dbe01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":3000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"0f9b0d26f18d5de393c67fca5588734922e04118b7768f530769871500ecd6a7\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100e9df8a5ccab1ef1852d7e28bccf2a7a8c3d3afa8919020ae8d12a28c751a68050220354488fa705d4af4b256dae15069d93226aab157e616912d018d4dadafaeff7901 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":2000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"19f5edfc7c0fd10018f01afb51184cc7398d5711ef7a0b2553f4193b2cd53099\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100ce75aff2bbc587ee12bc03bcac5263d4f6882d55877d6cb9a79c81e91db7753202202d5a578f1c351f1b5ccbaaaf5c0abb6c39755510aebf8f3c272642b6ece467d701 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":2000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"348dec8792414dff57e05363e0bd7ae623d85021314d611cf0c6590f32a323e7\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100b2ea7736a47f931f30eff8e5d043e311869edd59562e26060c0b9a5a45716a070220756b125b604eaf9abc9d95e605c3f69fae5ca0e859125d2581938242d9042c5f01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":2000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"4fedcc149951e55eb9d0fe77facf6077f28cc9f399a7462685f3d0f633f1a4f4\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x30440220713288a8e40a47470540d310398152c75ff27bd1927cd3f74f21b6f23cab39b9022040212501706655e2c2f6e16a8c103ec2b398a51cd4affa85b98dc0ee098ad05901 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":2000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"511fb2a02483c2be2f2b00463b1175620f7250121b4d200fa9a8ad68e0f5dd50\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x3044022066423bee95c1422fc0b1e611fe730ee976a0a4387b1d6a1d3badafaa0e237a1b022052a9c580d7f5b65ebdab549806387adb8facc5d2f540415c4c4c51f1b9a2382501 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":2000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"86158d10c23d06f856e6c50ae97c8c699dc407fad055e5ea16e2baf03231c276\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100e2bc032aadfbe4b474992f0d6765ca24b142d4a85c5d7ff8ea2272d5f99459fa02204d6c6dc8126c78d739cdb5f4b67900e7922d251c53994aa859e0d30b5d636a6301 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":2000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"b19fabe15f121c9c0eb23be594995ef276622e1467966108a08e9fbaa00002e9\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"71 0x30440220648b90fea158b56f09a3ed4367d783d81d86e22a39c49618e342c584f1ce47d4022070e2592809e22ac6f6972b42aaedbf5ed79c32a754abb7ee184e19d1b84047e501 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":2000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"b79568355d0a2a6852b97afffcc29fac29ccd1aa42d7fdf5b272d885c7c66747\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100e8e2bff5b43257a6b9410bc68aa2eb59efe89c79abda8e280af7e1c3fd3a430602204d74b5b3208a430de4a0b3932522f2fdca9a69d0d13329bdd0d709fb042452fa01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":2000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"ba89e93e5ea82c476a42ab25b6450082d09a75a1644c2b77d2afd41dc941740c\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x3044022040faa4f145b4056728c591e802e6b2da93f0697a1925714d6418112d68a725730220233b651c50cb7e45bdac31d76d5695d63d6c52f2085dd13d029426e42977bb0101 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":2000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"c4afb0ffb8157f52145586dcd7b870796e40668c20b3cc094426ff4b8c5a35cd\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100968fc815a599aee86ca10a95fbf80b88f19ce15f71527d13d0bbb2e49ba5e86c02201dadc0bb87c69795d2721c27e588750fff6ef154cd0ee38015e76c826ac58e0501 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":2000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"e2ee2a8211e9b3b04f7b74dfd6321d11323b07a8e3436f529ac6e1fb7ac13f1c\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"71 0x304402200e2e78b6807aa3bb66014524563571631aae36ba87aa2ad75de3ea5855ce3e1302204deed22038298d8d50299a77abf708368f44be42a6bd68fd2467f8e8b86af09001 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":2000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"fda0d51d6acb47e5669cc287c56a04b798195723161de89eba6cb322f2a0c4b9\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x3044022043a6cf348e85db275e995cf7e6f2398ab53d904da1c7d2cca5315ee15e16ce6902204cdadeb6670a6292ae9741b0ad8950ecc3240db45500e32871dd809b941641fa01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":2000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"47ae189745b777b284e020194e914e4b720a2216856e2b941c2a7455dfcbeb48\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x3044022021490a64d25d81da317e302a61ae4bb1f80cb9667819fa2d66d08703a97de8b8022061d3e06e8cb57335174e18b6457628219b7735bfb552ea59bb1bb27698ea4b0301 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":300000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"4984cd745961da7fb6da634c069200742fc41be81fb20ee462be18f81e8c1c43\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"71 0x30440220320096a98d76f3c5afbb8260fd3ce38a8bb6ddf8f40246ba1753063d8f7d047702200bb4ce8b4979af7d561000ef6c90eb0e94d93284299315b314f2c516383cae8f01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":300000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"2fb9cd49e71459daab8827722e7f41bc69e40219858becdbc42f899779ced1dd\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x304502210084e2331f981930a658c0babe5610bd42d4ddf99154a1917c3d3f2cd1a5d247af02201a7c44e1168fc6e72d42631697a1175fb813f5504b61eaae7163b4af7f2c88b501 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"63f76eee108b0b8b6835a9a54d0a04b8a086c39035094cb726ba1d840b4011dc\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100c8cfe4e2fb3d2da6e0cda57c7a8a990c5753a64b79fe04f7aff4da8333c15e9102203542d41010bcb809eb12d6ea78c084ee4ecf1dc83650df51e596dafb2f13a07501 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"7cf28b062b6755ea7242d3713d11ffe188e88b8833976e8b0beee69b48e3e379\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x30440220197fff8d4c40aa807504bb5559904d76a752357b5f9725926dd4af84c2c102e7022034aaee81911533f159551413c0e76058822dc3cf016aacbe366d6d323f58a7c401 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"7d57a84abdfd7fc43f246b484bf86043c48243f40d961e3d38de79a529210a5b\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"71 0x30440220686eab2926efb40f696b3062d1f91c2efaf30ef1ecce0f683b2e5dc46f993b1a0220645e522772084eb5306b9a3e9f51dc7b78dfe5e1992e266a91dc2263fac0ce3201 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"841b3f800b0ec5f754eb2523cbed647d06afa0018b723f79b92c7e863f510dc2\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100d0a1af0f19fd2bc76c576ca2897f6521a8a182ddf656d3f93fc3fc05535349c202202b6fc7a5fcbd2ec23bf38b137196a2892e987dc643a6e7bd4a26183cd6d87de601 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"8afa577f287ca2ca561d1864c0b7b5f5ebba7d9f5a7d8b7ba3b96938e09e1554\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"71 0x304402202d141c4f9b05418ac17662b1857447061d3af5faa0291bc8fc9fae563322c86302202289aea73f3731a590130f32a2deb9b5bc572c7984794f1f24c213e0d10f418801 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"969636e1955fccfad091d78090db8b16c7c7c38f08d825476c7a1b21e121d209\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100e6cc791721a11fb08f9ecb3331d823ac513188e527bda0cb1eb2d72ee0a76d15022079d4ca6cd175057f8e4ae7fd66c0bc0122c80724c14924319d34cf56cc7e2be501 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"a649845a3430b326c9c7037b3862737372e8165659977ec286d309d6f9fa3669\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x30440220384bcccf79f7aeba40003de33df6502afacf9f59492c59177525d5714f3d18d502205506fcce1c7e8b330d1c6b1717d3be88f304747267464b7a60729d52cd83cbc601 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"cb1a5328e837ada3a40c2d4bcb2f590e8ecf6cdf44ca15c21c9c1d790c40793b\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100eeb4c2b28de4fff1e60f713710d0c5279789fce270a31484e1ece4f720ced82c02207fe55e803564ec93ab9ad75f746893211543ee85b798b9860a6026a9dff37f7601 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"63194b687e9a1c4111769fb24ab264a4731baba37610dede097a5354c78e78ab\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100e6a57585077377b38d1dbd95ffdcd227cf0aa9eb5fa431afe1ad69727a1a7344022013e5d20fd6507cbe3b73aaf18d0e691775e0c190a8e0c57abb446f21fcfc8e0001 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"82fe1ef48eb23ea0d4efd0f6dec3abf09e8b123962fc2c1b1d77ff6ac26de57f\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x304402203f76e637ef07fd019e1fe8aac3f13d5a964ba0438616af64f5fb83b1573383aa0220314513e02f5e46ccf1af7f66d2519bff19e43312cc1ac5be7c19b3ead23eda9e01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"9ae4787f3aca4e9ead048f1524ca01ecaca7f301ca51062e2f327324dc6116f5\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100d252bf50b24fc1069debfdaf422b0ed4da368b4c7c8cea65db9fe862e9f1572c02200b25dbcfc81bd8dee99e476f21bad666c99d603012b2a309e9c6241c41fadd5c01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"e3a9b473c6f2dbdc8516bb7e82b88b23b122594d568e75728662a5eae22135ad\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100c8a8355bfc3365309b7dafaed892dcd4f466175755f5a70a00e4f87bf1b8f16402200a953526ee625b1cf9ed6ce765d58161cef3375077e080a15075c8f9a03566ed01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"45f848d93c1e36ed4d02be64bea7ef0e569574e0e2d673dc93013027d79c1ff8\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x304402207e72db5d3a70f0c03babfad16efe4953132007601645abd5327edf48f124fc5d02202f5f7b500a9866aa4d464e8ee3785c30345d683e2f142d78c493694e6899fafb01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"79cff1da2bc0678211c435a2ee3ada1b5c9837edb8fa2db9972198c31e1f9c15\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100b8f78e9489d0de1b419a447ab2576fd372ff9439fd28fbcba2d7cbd4113c099902205acfbde7cdd4a704d48ccb5eb1ac06a83612fdb6606508a43fb4ae2268a115e701 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"9cef980f645594aac7cc6e34d133b2eaa03998e7de004c14ef76910f4aa3c1f8\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"71 0x304402201bef7e5c529e9871a1b31ab1315ebd6331e33d110cd0851a1e8b15d130f161f402205793c905d70b558c322350a45b4de45040f2f70578047b00f6ac8f8a776785f601 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"a56b8634a908488f92d6e234fb723bced55b96804a55a2a4b2415d600ab9d833\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"71 0x304402206840563e092b5b60424ae4ff34410249323e3f62573b6af9310267efd9cfd5ac02200eb42b5e6e6b67099cb59761b8a1b45f0ba440b7a9d68f4e70b2c3a58dbf46ca01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"0da5a9bbc1153e7a32bf101d04f503f5d4dcbdb98c210a4ad751b1ff5927b4da\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100e982a2a1b378cff288180db5d42234e95252fc7d35711175f10b30f05ddced7202202f8340901ed230ec4bec9205f44280a4d5d839fb4d5811eb0a2cb29ff515fe4d01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"37978ae202433e593ea01444ada18d649e97ce41e91bfb48273b4fe0550ca89f\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100a760591e7411c8a46060c28aecb3a03dde7868ea9566b30b2e8fc4e51039459d02207272bc666fb23847fbcdaaf679fb0849028372a0cf8f06b8511797a82e09be8901 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"4ecc8951ae34e9c53232c047eabd8bfebc9ecb222cbf4cd1b34bcd45afa8ddd6\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x3044022010babe89da863f4f7bbe5aae51ef535e776d1fd1617e25b5a65f2701be3f316e022010682a30d60306b076ad0bc41a7eaa4e3059081e17052a84f6f167fb80886f5401 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"5236d2a175995fc0628d786494a6d08be084074e1c243de60a8b52c5de1a93ae\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x304402207131b145d167555b0db82fcb107726b8f4ecf398ccad5f14ea5bf816edfe2e33022053ac3608941df8e570c1379bbfd97a8c7f8a029a1183c157bf5d6315767c8f6f01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"90430a1430ff781173271087e7473be68e45db44ce8411aed08fce460e394ab9\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x304402202a934a7c60b23734fb66773f5cbd21a93b9edbc9292df172a9c74c6331037f7b02201b459445a541267662e77549a74ae17811807f63633d901da5fa7ff7c76fb8df01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"98f08b3b43eaef1926ffe5fd524cd86300446d747f8872faf9d75c0ea5728f7f\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100d680dcd062bf7fd383a22471db4b6ef1c4754098d0a5e510229bd0c445f475bd02203e080a9ccacfad1e501de911d68e46fa3a0674a093a50d29d956a120c04a917801 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"c0dc5ca29133031c3456751e0aa88660209ac259da771a15f28758c5d0048bfb\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100d6f2364144ef1a5bc83666bf89c1cf6b8bb4cd3aff6a508ffa24ff3b08c3b03a0220073db814e0afbac6daae56485f01e256d7c0ee391045012acd77421f0ef0bed001 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"cab948709293f682b36ea5f260075859328ca11d6799e38e24fea705b78f67a8\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x304502210094594067cdbba6d01bcf67d93d1a675b974a500c71c7777d706a6f1c0435e9d8022066309e1555db2cc559e48a442dc9ee2408aaaaeffda9ef0355fd22c452c7a1e301 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"d8608c8aa69bcd38e845c650ce664f267b06142d8db37b2282a5f50694cccca1\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"72 0x30450221009413b86b3d5aa68043a721d1d10ffce17642c954d04d199a21d45be09ff3327402202eda5af86372bcb7d0af685efb9c3b6e250e2d4e7446123d4a16f3324b49b8e401 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"eeda1fa82f4a91fac814f48e49f019feecf200b70bb5432821e7ca8debff6d91\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x3044022023c708a3f5326b6c95dbc50108550b517d2ab8c1621ac3b30d9eb1eab0d8e63a022077a5ba51592ea557e0671b0db560b4dc73b212a9dd01cd02deeffa9eb55dcf3101 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"f2cb0beea85c31b1c9dcb27b1a03566433a8b2804f56a7ceb73e041e28c4551d\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x3044022007d6248d89bc4f2dc187caa464122e04185cffbfc2b2472a9ccb33a0e844e13d02205b31f34fb48ec952df5a635667f594da9fcc347f23e8abebfc2fc60753f50d5b01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"fa4aaa7d21e11c110a5bc2761f4124a03d3c41d3c6fdb66efc7cf26c532d057b\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"72 0x30450221008f1886515c62417e4a6c99cccfa604a79df427276e6317acdfdc1a5717223212022037c285f82987f32072a19d3a444bf23290e64b1a876d61753dfafe5589baae4001 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":1000000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"4139b6f404abf230ea0446c25fa595fa5521f923d7fe8e7f1b4cf19222a61794\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100fee2988ee6e10015bacb4bf6db06a0b9b1f0a4d16c58e83a093b9617dc1dce6702207116849dff6134ea758fd6256341ff8ba9e621e48961c52ba02a1db204dc862a01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":300000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"6965f141c66c9cbe00e50751e6afb1e255b20544167764e1676a45a2fd2db971\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100a23e87e9167400cf8b616b175a963ecc2abf42ba795d377f16e474e651d5e2df02207321dcf9775efc4fbf80f95c080dfc9a27768ad9eb80871ba2c24c5ced11296701 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":30000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"04e1acea6498b0f74ceb79642611a49b66b439119515df111775077e03e2f487\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"71 0x304402203e3d6bf2e8a800a87188e49b2253b1199d24d524daf759b15d8f6d2616dc213b022048b984b9dc0ca238d29063b9828e5c7ed8bc58e5dd16ca5f184f71e53ff993e801 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":50000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"6fcd30f43af4ae8bbc8949fbf18daa59d8d513f774a9db7404f28cde5ac65a5e\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"71 0x304402206156e2dda9071902ebe712dcb449920bb68918ebccd8617e964c4e855e8de8f902201909f0002ba7b2bc889fc32473449c13c5327a2aa15fbbb6764a289948fd23fe01 33 0x029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8\",\"output\":{\"satoshis\":20000000000,\"script\":\"OP_DUP OP_HASH160 20 0x371962f760a032860a8ff3c2ed31129365848469 OP_EQUALVERIFY OP_CHECKSIG\"}}],\"outputs\":[{\"satoshis\":76999999940000,\"script\":\"OP_RETURN 4 0x4255524e\"}],\"nLockTime\":0,\"fee\":60000}",
+            "serializedBurn": "0100000035ef99dc290bd9612169a3db9ddd72d9b21cde834890dd8708f63b3c313b56eaec010000006a47304402206b6b9373f1aeca7fd914aa966baf9be8df4461e53ed1311bec839f6baf13d9560220415feccc539cd38fa64b07a92b5895c7c5e793eff3680d0d477a8b0b17a4244c0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff4dc750bc531abe20aabf50644f0386d418c075c6b64573f176e438f8a21b8e19010000006a47304402205f9a17c6e3d65e133a113914f9a58a6475a01ce7b26df5bfc822022a20ecc9a6022012fb38efe1e02766ff10d216b60d023c28f92934de40d8cd6836192a29bf082f0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffc961d3e5538cf513e270d9162b6c62aa2b8d5e43de62705b2130efccb4660795000000006b483045022100ca5c997de8e04c111d8152ed0a01c4e4dd995853d5ab47a646d444dbcb30765102206a253f03d7662936c90745956bfdf2e86563c72140c91824287d5c76cf65a15e0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff212a087eac31aef36b5adfb207d4b6d3a30649fb85916e8a88a761cca6278128000000006b48304502210089d56a4e85711ce2dc0d338bec6b7c7610373e9913f9d6a574e7ae74c3c50e6d02202135d035cbd485d31f9da0e1c05c7fdd2e75eac60d2f057a60f204067ba423820121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffc6a3a702197cc74b20ee800e0bcb8064a48f784110ba3e23cb6fab217a2c82b2010000006a473044022015c552f0f95e1f8ebe049a512540ef1996185fcbb00e0796d63b5006959fc3a5022049a98434f2aaa135989ef88a47a5eb5def3b1c45d5870f9e5254ed8998b5d1450121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff6920b90c7a8d02a275be2522547da417295c954131faeb64b2a428f2f58592ba010000006b483045022100d296d89031daf6c9aa8431b7c7541b4449483f1401af3febb53c101c577911fe02204d4741775e42c22f0cc9cad11ae5c23f4811ab6b053742376c609f126e014dbe0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffa7d6ec0015876907538f76b71841e02249738855ca7fc693e35d8df1260d9b0f010000006b483045022100e9df8a5ccab1ef1852d7e28bccf2a7a8c3d3afa8919020ae8d12a28c751a68050220354488fa705d4af4b256dae15069d93226aab157e616912d018d4dadafaeff790121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff9930d52c3b19f453250b7aef11578d39c74c1851fb1af01800d10f7cfcedf519010000006b483045022100ce75aff2bbc587ee12bc03bcac5263d4f6882d55877d6cb9a79c81e91db7753202202d5a578f1c351f1b5ccbaaaf5c0abb6c39755510aebf8f3c272642b6ece467d70121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffe723a3320f59c6f01c614d312150d823e67abde06353e057ff4d419287ec8d34010000006b483045022100b2ea7736a47f931f30eff8e5d043e311869edd59562e26060c0b9a5a45716a070220756b125b604eaf9abc9d95e605c3f69fae5ca0e859125d2581938242d9042c5f0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8fffffffff4a4f133f6d0f3852646a799f3c98cf27760cffa77fed0b95ee5519914cced4f000000006a4730440220713288a8e40a47470540d310398152c75ff27bd1927cd3f74f21b6f23cab39b9022040212501706655e2c2f6e16a8c103ec2b398a51cd4affa85b98dc0ee098ad0590121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff50ddf5e068ada8a90f204d1b1250720f6275113b46002b2fbec28324a0b21f51000000006a473044022066423bee95c1422fc0b1e611fe730ee976a0a4387b1d6a1d3badafaa0e237a1b022052a9c580d7f5b65ebdab549806387adb8facc5d2f540415c4c4c51f1b9a238250121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff76c23132f0bae216eae555d0fa07c49d698c7ce90ac5e656f8063dc2108d1586010000006b483045022100e2bc032aadfbe4b474992f0d6765ca24b142d4a85c5d7ff8ea2272d5f99459fa02204d6c6dc8126c78d739cdb5f4b67900e7922d251c53994aa859e0d30b5d636a630121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffe90200a0ba9f8ea008619667142e6276f25e9994e53bb20e9c1c125fe1ab9fb1010000006a4730440220648b90fea158b56f09a3ed4367d783d81d86e22a39c49618e342c584f1ce47d4022070e2592809e22ac6f6972b42aaedbf5ed79c32a754abb7ee184e19d1b84047e50121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff4767c6c785d872b2f5fdd742aad1cc29ac9fc2fcff7ab952682a0a5d356895b7000000006b483045022100e8e2bff5b43257a6b9410bc68aa2eb59efe89c79abda8e280af7e1c3fd3a430602204d74b5b3208a430de4a0b3932522f2fdca9a69d0d13329bdd0d709fb042452fa0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff0c7441c91dd4afd2772b4c64a1759ad0820045b625ab426a472ca85e3ee989ba000000006a473044022040faa4f145b4056728c591e802e6b2da93f0697a1925714d6418112d68a725730220233b651c50cb7e45bdac31d76d5695d63d6c52f2085dd13d029426e42977bb010121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffcd355a8c4bff264409ccb3208c66406e7970b8d7dc865514527f15b8ffb0afc4010000006b483045022100968fc815a599aee86ca10a95fbf80b88f19ce15f71527d13d0bbb2e49ba5e86c02201dadc0bb87c69795d2721c27e588750fff6ef154cd0ee38015e76c826ac58e050121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff1c3fc17afbe1c69a526f43e3a8073b32111d32d6df747b4fb0b3e911822aeee2010000006a47304402200e2e78b6807aa3bb66014524563571631aae36ba87aa2ad75de3ea5855ce3e1302204deed22038298d8d50299a77abf708368f44be42a6bd68fd2467f8e8b86af0900121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffb9c4a0f222b36cba9ee81d1623571998b7046ac587c29c66e547cb6a1dd5a0fd000000006a473044022043a6cf348e85db275e995cf7e6f2398ab53d904da1c7d2cca5315ee15e16ce6902204cdadeb6670a6292ae9741b0ad8950ecc3240db45500e32871dd809b941641fa0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff48ebcbdf55742a1c942b6e8516220a724b4e914e1920e084b277b7459718ae47000000006a473044022021490a64d25d81da317e302a61ae4bb1f80cb9667819fa2d66d08703a97de8b8022061d3e06e8cb57335174e18b6457628219b7735bfb552ea59bb1bb27698ea4b030121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff431c8c1ef818be62e40eb21fe81bc42f740092064c63dab67fda615974cd8449010000006a4730440220320096a98d76f3c5afbb8260fd3ce38a8bb6ddf8f40246ba1753063d8f7d047702200bb4ce8b4979af7d561000ef6c90eb0e94d93284299315b314f2c516383cae8f0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffddd1ce7997892fc4dbec8b851902e469bc417f2e722788abda5914e749cdb92f010000006b48304502210084e2331f981930a658c0babe5610bd42d4ddf99154a1917c3d3f2cd1a5d247af02201a7c44e1168fc6e72d42631697a1175fb813f5504b61eaae7163b4af7f2c88b50121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffdc11400b841dba26b74c093590c386a0b8040a4da5a935688b0b8b10ee6ef763010000006b483045022100c8cfe4e2fb3d2da6e0cda57c7a8a990c5753a64b79fe04f7aff4da8333c15e9102203542d41010bcb809eb12d6ea78c084ee4ecf1dc83650df51e596dafb2f13a0750121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff79e3e3489be6ee0b8b6e9733888be888e1ff113d71d34272ea55672b068bf27c000000006a4730440220197fff8d4c40aa807504bb5559904d76a752357b5f9725926dd4af84c2c102e7022034aaee81911533f159551413c0e76058822dc3cf016aacbe366d6d323f58a7c40121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff5b0a2129a579de383d1e960df44382c44360f84b486b243fc47ffdbd4aa8577d010000006a4730440220686eab2926efb40f696b3062d1f91c2efaf30ef1ecce0f683b2e5dc46f993b1a0220645e522772084eb5306b9a3e9f51dc7b78dfe5e1992e266a91dc2263fac0ce320121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffc20d513f867e2cb9793f728b01a0af067d64edcb2325eb54f7c50e0b803f1b84010000006b483045022100d0a1af0f19fd2bc76c576ca2897f6521a8a182ddf656d3f93fc3fc05535349c202202b6fc7a5fcbd2ec23bf38b137196a2892e987dc643a6e7bd4a26183cd6d87de60121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff54159ee03869b9a37b8b7d5a9f7dbaebf5b5b7c064181d56caa27c287f57fa8a010000006a47304402202d141c4f9b05418ac17662b1857447061d3af5faa0291bc8fc9fae563322c86302202289aea73f3731a590130f32a2deb9b5bc572c7984794f1f24c213e0d10f41880121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff09d221e1211b7a6c4725d8088fc3c7c7168bdb9080d791d0facc5f95e1369696000000006b483045022100e6cc791721a11fb08f9ecb3331d823ac513188e527bda0cb1eb2d72ee0a76d15022079d4ca6cd175057f8e4ae7fd66c0bc0122c80724c14924319d34cf56cc7e2be50121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff6936faf9d609d386c27e97595616e872737362387b03c7c926b330345a8449a6000000006a4730440220384bcccf79f7aeba40003de33df6502afacf9f59492c59177525d5714f3d18d502205506fcce1c7e8b330d1c6b1717d3be88f304747267464b7a60729d52cd83cbc60121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff3b79400c791d9c1cc215ca44df6ccf8e0e592fcb4b2d0ca4a3ad37e828531acb010000006b483045022100eeb4c2b28de4fff1e60f713710d0c5279789fce270a31484e1ece4f720ced82c02207fe55e803564ec93ab9ad75f746893211543ee85b798b9860a6026a9dff37f760121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffab788ec754537a09dede1076a3ab1b73a464b24ab29f7611411c9a7e684b1963000000006b483045022100e6a57585077377b38d1dbd95ffdcd227cf0aa9eb5fa431afe1ad69727a1a7344022013e5d20fd6507cbe3b73aaf18d0e691775e0c190a8e0c57abb446f21fcfc8e000121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff7fe56dc26aff771d1b2cfc6239128b9ef0abc3def6d0efd4a03eb28ef41efe82000000006a47304402203f76e637ef07fd019e1fe8aac3f13d5a964ba0438616af64f5fb83b1573383aa0220314513e02f5e46ccf1af7f66d2519bff19e43312cc1ac5be7c19b3ead23eda9e0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8fffffffff51661dc2473322f2e0651ca01f3a7acec01ca24158f04ad9e4eca3a7f78e49a010000006b483045022100d252bf50b24fc1069debfdaf422b0ed4da368b4c7c8cea65db9fe862e9f1572c02200b25dbcfc81bd8dee99e476f21bad666c99d603012b2a309e9c6241c41fadd5c0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffad3521e2eaa5628672758e564d5922b1238bb8827ebb1685dcdbf2c673b4a9e3010000006b483045022100c8a8355bfc3365309b7dafaed892dcd4f466175755f5a70a00e4f87bf1b8f16402200a953526ee625b1cf9ed6ce765d58161cef3375077e080a15075c8f9a03566ed0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8fffffffff81f9cd727300193dc73d6e2e07495560eefa7be64be024ded361e3cd948f845000000006a47304402207e72db5d3a70f0c03babfad16efe4953132007601645abd5327edf48f124fc5d02202f5f7b500a9866aa4d464e8ee3785c30345d683e2f142d78c493694e6899fafb0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff159c1f1ec3982197b92dfab8ed37985c1bda3aeea235c4118267c02bdaf1cf79010000006b483045022100b8f78e9489d0de1b419a447ab2576fd372ff9439fd28fbcba2d7cbd4113c099902205acfbde7cdd4a704d48ccb5eb1ac06a83612fdb6606508a43fb4ae2268a115e70121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8fffffffff8c1a34a0f9176ef144c00dee79839a0eab233d1346eccc7aa9455640f98ef9c010000006a47304402201bef7e5c529e9871a1b31ab1315ebd6331e33d110cd0851a1e8b15d130f161f402205793c905d70b558c322350a45b4de45040f2f70578047b00f6ac8f8a776785f60121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff33d8b90a605d41b2a4a2554a80965bd5ce3b72fb34e2d6928f4808a934866ba5010000006a47304402206840563e092b5b60424ae4ff34410249323e3f62573b6af9310267efd9cfd5ac02200eb42b5e6e6b67099cb59761b8a1b45f0ba440b7a9d68f4e70b2c3a58dbf46ca0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffdab42759ffb151d74a0a218cb9bddcd4f503f5041d10bf327a3e15c1bba9a50d010000006b483045022100e982a2a1b378cff288180db5d42234e95252fc7d35711175f10b30f05ddced7202202f8340901ed230ec4bec9205f44280a4d5d839fb4d5811eb0a2cb29ff515fe4d0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff9fa80c55e04f3b2748fb1be941ce979e648da1ad4414a03e593e4302e28a9737010000006b483045022100a760591e7411c8a46060c28aecb3a03dde7868ea9566b30b2e8fc4e51039459d02207272bc666fb23847fbcdaaf679fb0849028372a0cf8f06b8511797a82e09be890121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffd6dda8af45cd4bb3d14cbf2c22cb9ebcfe8bbdea47c03232c5e934ae5189cc4e000000006a473044022010babe89da863f4f7bbe5aae51ef535e776d1fd1617e25b5a65f2701be3f316e022010682a30d60306b076ad0bc41a7eaa4e3059081e17052a84f6f167fb80886f540121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffae931adec5528b0ae63d241c4e0784e08bd0a69464788d62c05f9975a1d23652000000006a47304402207131b145d167555b0db82fcb107726b8f4ecf398ccad5f14ea5bf816edfe2e33022053ac3608941df8e570c1379bbfd97a8c7f8a029a1183c157bf5d6315767c8f6f0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffb94a390e46ce8fd0ae1184ce44db458ee63b47e7871027731178ff30140a4390000000006a47304402202a934a7c60b23734fb66773f5cbd21a93b9edbc9292df172a9c74c6331037f7b02201b459445a541267662e77549a74ae17811807f63633d901da5fa7ff7c76fb8df0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff7f8f72a50e5cd7f9fa72887f746d440063d84c52fde5ff2619efea433b8bf098010000006b483045022100d680dcd062bf7fd383a22471db4b6ef1c4754098d0a5e510229bd0c445f475bd02203e080a9ccacfad1e501de911d68e46fa3a0674a093a50d29d956a120c04a91780121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8fffffffffb8b04d0c55887f2151a77da59c29a206086a80a1e7556341c033391a25cdcc0010000006b483045022100d6f2364144ef1a5bc83666bf89c1cf6b8bb4cd3aff6a508ffa24ff3b08c3b03a0220073db814e0afbac6daae56485f01e256d7c0ee391045012acd77421f0ef0bed00121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffa8678fb705a7fe248ee399671da18c3259580760f2a56eb382f693927048b9ca010000006b48304502210094594067cdbba6d01bcf67d93d1a675b974a500c71c7777d706a6f1c0435e9d8022066309e1555db2cc559e48a442dc9ee2408aaaaeffda9ef0355fd22c452c7a1e30121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffffa1cccc9406f5a582227bb38d2d14067b264f66ce50c645e838cd9ba68a8c60d8010000006b4830450221009413b86b3d5aa68043a721d1d10ffce17642c954d04d199a21d45be09ff3327402202eda5af86372bcb7d0af685efb9c3b6e250e2d4e7446123d4a16f3324b49b8e40121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff916dffeb8dcae7212843b50bb700f2ecfe19f0498ef414c8fa914a2fa81fdaee000000006a473044022023c708a3f5326b6c95dbc50108550b517d2ab8c1621ac3b30d9eb1eab0d8e63a022077a5ba51592ea557e0671b0db560b4dc73b212a9dd01cd02deeffa9eb55dcf310121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff1d55c4281e043eb7cea7564f80b2a8336456031a7bb2dcc9b1315ca8ee0bcbf2000000006a473044022007d6248d89bc4f2dc187caa464122e04185cffbfc2b2472a9ccb33a0e844e13d02205b31f34fb48ec952df5a635667f594da9fcc347f23e8abebfc2fc60753f50d5b0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff7b052d536cf27cfc6eb6fdc6d3413c3da024411f76c25b0a111ce1217daa4afa000000006b4830450221008f1886515c62417e4a6c99cccfa604a79df427276e6317acdfdc1a5717223212022037c285f82987f32072a19d3a444bf23290e64b1a876d61753dfafe5589baae400121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff9417a62292f14c1b7f8efed723f92155fa95a55fc24604ea30f2ab04f4b63941000000006b483045022100fee2988ee6e10015bacb4bf6db06a0b9b1f0a4d16c58e83a093b9617dc1dce6702207116849dff6134ea758fd6256341ff8ba9e621e48961c52ba02a1db204dc862a0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff71b92dfda2456a67e16477164405b255e2b1afe65107e500be9c6cc641f16569000000006b483045022100a23e87e9167400cf8b616b175a963ecc2abf42ba795d377f16e474e651d5e2df02207321dcf9775efc4fbf80f95c080dfc9a27768ad9eb80871ba2c24c5ced1129670121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff87f4e2037e07751711df15951139b4669ba411266479eb4cf7b09864eaace104010000006a47304402203e3d6bf2e8a800a87188e49b2253b1199d24d524daf759b15d8f6d2616dc213b022048b984b9dc0ca238d29063b9828e5c7ed8bc58e5dd16ca5f184f71e53ff993e80121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff5e5ac65ade8cf20474dba974f713d5d859aa8df1fb4989bc8baef43af430cd6f010000006a47304402206156e2dda9071902ebe712dcb449920bb68918ebccd8617e964c4e855e8de8f902201909f0002ba7b2bc889fc32473449c13c5327a2aa15fbbb6764a289948fd23fe0121029050e91795a6fcf2cbced881da73c5584523b384a39b99033731fdaa03cb8db8ffffffff01a0e5a4f507460000066a044255524e00000000",
+            "burnBalance": "770000 Coval",
+            "level": "ledger",
+            "message": "payload",
+            "timestamp": "2017-03-08T20:51:09.912Z"
+        },
+        {
+            "level": "ledger",
+            "message": "addressRde8e4oN6qEhy18k8aubCLWbTEKDAaWbVJ",
+            "timestamp": "2017-03-08T20:51:09.912Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyNotDoubleSpend",
+            "timestamp": "2017-03-08T20:51:09.912Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyValidBurn",
+            "timestamp": "2017-03-08T20:51:09.699Z"
+        },
+        {
+            "level": "ledger",
+            "message": "get object from datastore",
+            "timestamp": "2017-03-08T20:51:09.697Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyProvidedBalance",
+            "timestamp": "2017-03-08T20:51:09.697Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify provided payload",
+            "timestamp": "2017-03-08T20:51:09.691Z"
+        },
+        {
+            "level": "ledger",
+            "message": "verify msg return",
+            "timestamp": "2017-03-08T20:51:09.690Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering verify msg",
+            "timestamp": "2017-03-08T20:51:09.669Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify legacy",
+            "timestamp": "2017-03-08T20:51:09.669Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Amounts : 130812230250974 130812230250974",
+            "timestamp": "2017-03-08T20:51:09.645Z"
+        },
+        {
+            "level": "ledger",
+            "message": "unconfirmed Response: {\"statusCode\":200,\"body\":\"0\",\"headers\":{\"x-backside-transport\":\"OK OK\",\"connection\":\"close\",\"transfer-encoding\":\"chunked\",\"access-control-allow-headers\":\"X-Requested-With,Content-Type,Authorization\",\"access-control-allow-methods\":\"GET, POST, OPTIONS, PUT, DELETE\",\"access-control-allow-origin\":\"*\",\"access-control-expose-headers\":\"X-Email-Needs-Validation,X-Quota-Per-Item,X-Quota-Items-Limit,X-RateLimit-Limit,X-RateLimit-Remaining\",\"content-type\":\"application/json; charset=utf-8\",\"date\":\"Wed, 08 Mar 2017 20:51:09 GMT\",\"etag\":\"\\\"-186917087\\\"\",\"vary\":\"Accept-Encoding\",\"x-powered-by\":\"Express\",\"x-global-transaction-id\":\"893265725\"},\"request\":{\"uri\":{\"protocol\":\"http:\",\"slashes\":true,\"auth\":null,\"host\":\"coval-explorer.mybluemix.net\",\"port\":80,\"hostname\":\"coval-explorer.mybluemix.net\",\"hash\":null,\"search\":null,\"query\":null,\"pathname\":\"/api/addr/RbN6sgyM3BXBszVY9tzySVhhHmUPR4vVd9/unconfirmedBalance\",\"path\":\"/api/addr/RbN6sgyM3BXBszVY9tzySVhhHmUPR4vVd9/unconfirmedBalance\",\"href\":\"http://coval-explorer.mybluemix.net/api/addr/RbN6sgyM3BXBszVY9tzySVhhHmUPR4vVd9/unconfirmedBalance\"},\"method\":\"GET\",\"headers\":{}}}",
+            "timestamp": "2017-03-08T20:51:09.644Z"
+        },
+        {
+            "level": "ledger",
+            "message": "confirmed Response: {\"statusCode\":200,\"body\":\"130812230250974\",\"headers\":{\"x-backside-transport\":\"OK OK\",\"connection\":\"close\",\"transfer-encoding\":\"chunked\",\"access-control-allow-headers\":\"X-Requested-With,Content-Type,Authorization\",\"access-control-allow-methods\":\"GET, POST, OPTIONS, PUT, DELETE\",\"access-control-allow-origin\":\"*\",\"access-control-expose-headers\":\"X-Email-Needs-Validation,X-Quota-Per-Item,X-Quota-Items-Limit,X-RateLimit-Limit,X-RateLimit-Remaining\",\"content-type\":\"application/json; charset=utf-8\",\"date\":\"Wed, 08 Mar 2017 20:51:09 GMT\",\"etag\":\"\\\"204573002\\\"\",\"vary\":\"Accept-Encoding\",\"x-powered-by\":\"Express\",\"x-global-transaction-id\":\"2037954863\"},\"request\":{\"uri\":{\"protocol\":\"http:\",\"slashes\":true,\"auth\":null,\"host\":\"coval-explorer.mybluemix.net\",\"port\":80,\"hostname\":\"coval-explorer.mybluemix.net\",\"hash\":null,\"search\":null,\"query\":null,\"pathname\":\"/api/addr/RbN6sgyM3BXBszVY9tzySVhhHmUPR4vVd9/balance\",\"path\":\"/api/addr/RbN6sgyM3BXBszVY9tzySVhhHmUPR4vVd9/balance\",\"href\":\"http://coval-explorer.mybluemix.net/api/addr/RbN6sgyM3BXBszVY9tzySVhhHmUPR4vVd9/balance\"},\"method\":\"GET\",\"headers\":{}}}",
+            "timestamp": "2017-03-08T20:51:09.625Z"
+        },
+        {
+            "level": "ledger",
+            "message": "burntx010000000194b6b62342329dd6a597f832d6e755f0fc58394cf59308261a7c689749f64489000000006a473044022043a99437f5381f589a6f0e646d8fba3e20f6cb33864e153f0483369dc220c3f002206ee2a2745b95b2f9daca7ecf1498895b6cb00823cfafcc5d1cc76e23a79c8491012103325c63ea25dc59950f93efba6f24b354eac348a4c469a0c7376c39b420d0fa0fffffffff01ce0a8418f9760000066a044255524e00000000",
+            "timestamp": "2017-03-08T20:51:09.605Z"
+        },
+        {
+            "toSign": "RbN6sgyM3BXBszVY9tzySVhhHmUPR4vVd91308122.302509741486471724-test",
+            "covalAddress": "RbN6sgyM3BXBszVY9tzySVhhHmUPR4vVd9",
+            "signature": "IITnIE2o56jEmHMbibIxeBLe0OOTOHdLmjJedHeBqLnMUUwHPip2xA4tJlo2HapGelkTEIGkSo4TRI3bHD46auA=",
+            "swap": {
+                "address": "RbN6sgyM3BXBszVY9tzySVhhHmUPR4vVd9",
+                "balance": 1308122.30250974,
+                "lastActivity": 1486471724,
+                "txCount": 1
+            },
+            "burn": "{\"version\":1,\"inputs\":[{\"prevTxId\":\"8944f64997687c1a260893f54c3958fcf055e7d632f897a5d69d324223b6b694\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x3044022043a99437f5381f589a6f0e646d8fba3e20f6cb33864e153f0483369dc220c3f002206ee2a2745b95b2f9daca7ecf1498895b6cb00823cfafcc5d1cc76e23a79c849101 33 0x03325c63ea25dc59950f93efba6f24b354eac348a4c469a0c7376c39b420d0fa0f\",\"output\":{\"satoshis\":130812230250974,\"script\":\"OP_DUP OP_HASH160 20 0x1e210195cadca78babb5c7254539f77f33c63d38 OP_EQUALVERIFY OP_CHECKSIG\"}}],\"outputs\":[{\"satoshis\":130812230240974,\"script\":\"OP_RETURN 4 0x4255524e\"}],\"nLockTime\":0,\"fee\":10000}",
+            "serializedBurn": "010000000194b6b62342329dd6a597f832d6e755f0fc58394cf59308261a7c689749f64489000000006a473044022043a99437f5381f589a6f0e646d8fba3e20f6cb33864e153f0483369dc220c3f002206ee2a2745b95b2f9daca7ecf1498895b6cb00823cfafcc5d1cc76e23a79c8491012103325c63ea25dc59950f93efba6f24b354eac348a4c469a0c7376c39b420d0fa0fffffffff01ce0a8418f9760000066a044255524e00000000",
+            "burnBalance": "1308122.30250974 Coval",
+            "level": "ledger",
+            "message": "payload",
+            "timestamp": "2017-03-08T20:51:09.604Z"
+        },
+        {
+            "level": "ledger",
+            "message": "addressRbN6sgyM3BXBszVY9tzySVhhHmUPR4vVd9",
+            "timestamp": "2017-03-08T20:51:09.604Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyNotDoubleSpend",
+            "timestamp": "2017-03-08T20:51:09.604Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyValidBurn",
+            "timestamp": "2017-03-08T20:51:09.598Z"
+        },
+        {
+            "level": "ledger",
+            "message": "get object from datastore",
+            "timestamp": "2017-03-08T20:51:09.596Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyProvidedBalance",
+            "timestamp": "2017-03-08T20:51:09.596Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify provided payload",
+            "timestamp": "2017-03-08T20:51:09.594Z"
+        },
+        {
+            "level": "ledger",
+            "message": "verify msg return",
+            "timestamp": "2017-03-08T20:51:09.594Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering verify msg",
+            "timestamp": "2017-03-08T20:51:09.569Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify legacy",
+            "timestamp": "2017-03-08T20:51:09.568Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Amounts : 1071429599980000 1071429599980000",
+            "timestamp": "2017-03-08T20:51:09.526Z"
+        },
+        {
+            "level": "ledger",
+            "message": "unconfirmed Response: {\"statusCode\":200,\"body\":\"0\",\"headers\":{\"x-backside-transport\":\"OK OK\",\"connection\":\"close\",\"transfer-encoding\":\"chunked\",\"access-control-allow-headers\":\"X-Requested-With,Content-Type,Authorization\",\"access-control-allow-methods\":\"GET, POST, OPTIONS, PUT, DELETE\",\"access-control-allow-origin\":\"*\",\"access-control-expose-headers\":\"X-Email-Needs-Validation,X-Quota-Per-Item,X-Quota-Items-Limit,X-RateLimit-Limit,X-RateLimit-Remaining\",\"content-type\":\"application/json; charset=utf-8\",\"date\":\"Wed, 08 Mar 2017 20:51:09 GMT\",\"etag\":\"\\\"-186917087\\\"\",\"vary\":\"Accept-Encoding\",\"x-powered-by\":\"Express\",\"x-global-transaction-id\":\"2037954527\"},\"request\":{\"uri\":{\"protocol\":\"http:\",\"slashes\":true,\"auth\":null,\"host\":\"coval-explorer.mybluemix.net\",\"port\":80,\"hostname\":\"coval-explorer.mybluemix.net\",\"hash\":null,\"search\":null,\"query\":null,\"pathname\":\"/api/addr/RfPLxzTtqLo3KGw4e7zx1CGK2ye6mMgogD/unconfirmedBalance\",\"path\":\"/api/addr/RfPLxzTtqLo3KGw4e7zx1CGK2ye6mMgogD/unconfirmedBalance\",\"href\":\"http://coval-explorer.mybluemix.net/api/addr/RfPLxzTtqLo3KGw4e7zx1CGK2ye6mMgogD/unconfirmedBalance\"},\"method\":\"GET\",\"headers\":{}}}",
+            "timestamp": "2017-03-08T20:51:09.526Z"
+        },
+        {
+            "level": "ledger",
+            "message": "confirmed Response: {\"statusCode\":200,\"body\":\"1071429599980000\",\"headers\":{\"x-backside-transport\":\"OK OK\",\"connection\":\"close\",\"transfer-encoding\":\"chunked\",\"access-control-allow-headers\":\"X-Requested-With,Content-Type,Authorization\",\"access-control-allow-methods\":\"GET, POST, OPTIONS, PUT, DELETE\",\"access-control-allow-origin\":\"*\",\"access-control-expose-headers\":\"X-Email-Needs-Validation,X-Quota-Per-Item,X-Quota-Items-Limit,X-RateLimit-Limit,X-RateLimit-Remaining\",\"content-type\":\"application/json; charset=utf-8\",\"date\":\"Wed, 08 Mar 2017 20:51:09 GMT\",\"etag\":\"\\\"-999087750\\\"\",\"vary\":\"Accept-Encoding\",\"x-powered-by\":\"Express\",\"x-vcap-request-id\":\"a1f44620-00ce-4205-58ad-52e29b19e937\",\"x-client-ip\":\"169.55.43.235\",\"x-global-transaction-id\":\"3253730401\"},\"request\":{\"uri\":{\"protocol\":\"http:\",\"slashes\":true,\"auth\":null,\"host\":\"coval-explorer.mybluemix.net\",\"port\":80,\"hostname\":\"coval-explorer.mybluemix.net\",\"hash\":null,\"search\":null,\"query\":null,\"pathname\":\"/api/addr/RfPLxzTtqLo3KGw4e7zx1CGK2ye6mMgogD/balance\",\"path\":\"/api/addr/RfPLxzTtqLo3KGw4e7zx1CGK2ye6mMgogD/balance\",\"href\":\"http://coval-explorer.mybluemix.net/api/addr/RfPLxzTtqLo3KGw4e7zx1CGK2ye6mMgogD/balance\"},\"method\":\"GET\",\"headers\":{}}}",
+            "timestamp": "2017-03-08T20:51:09.507Z"
+        },
+        {
+            "level": "ledger",
+            "message": "burntx010000000361e744ead2cb9ceab1a2c1b8e7575f0f5e670cd0a9f5f93ab03bb1b33c03fcac000000006a473044022033acbdf7091bb380e1074ad175fb0e9fbe19f2140acf2029a2ed881642370a93022007c07b42ec1cd6896d22e37e43c4228d74e0a8ef9f521f1f6166e68a11b093c201210369e187a838836d7a8257014cd2351bd65e3dcef620f6d1262647184c0cf396beffffffffc1bfe668a3f83491fa33b053988c37a335b1b27cf48ec70677e793cc95b629b7000000006a47304402201821bd902facfd60984d8ce521aab59604d6be083a95dc845393ed2dc3a6e0ee02201c41d1c3d2f235c192830af7b54de6520450e1873571c5ede233d655ed8e334b01210369e187a838836d7a8257014cd2351bd65e3dcef620f6d1262647184c0cf396beffffffffc63719c29c4884b06d6434d2cd95cd7aa953fe2238cf62325850311c2d123632000000006a47304402203fbba6707bc912fcc62859b1276da3ebe3967d0b53c05d8acdf368b26e851597022001f5b4d2627e04461485b70a105a2a2c1fb8bcc8452ae9f5d6aa224f916c58f801210369e187a838836d7a8257014cd2351bd65e3dcef620f6d1262647184c0cf396beffffffff01d042b5a475ce0300066a044255524e00000000",
+            "timestamp": "2017-03-08T20:51:09.485Z"
+        },
+        {
+            "toSign": "RfPLxzTtqLo3KGw4e7zx1CGK2ye6mMgogD10714295.99981486412509-test",
+            "covalAddress": "RfPLxzTtqLo3KGw4e7zx1CGK2ye6mMgogD",
+            "signature": "H/5fVEhH4wImoI3j2iJ8/58Uj9/02EwKCqas9aLb9ke+PHPpozesR7eq7nZGkCV/DnqpC91oDVaL8zTKro63YGc=",
+            "swap": {
+                "address": "RfPLxzTtqLo3KGw4e7zx1CGK2ye6mMgogD",
+                "balance": 10714295.9998,
+                "lastActivity": 1486412509,
+                "txCount": 3
+            },
+            "burn": "{\"version\":1,\"inputs\":[{\"prevTxId\":\"acfc033cb3b13bb03af9f5a9d00c675e0f5f57e7b8c1a2b1ea9ccbd2ea44e761\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x3044022033acbdf7091bb380e1074ad175fb0e9fbe19f2140acf2029a2ed881642370a93022007c07b42ec1cd6896d22e37e43c4228d74e0a8ef9f521f1f6166e68a11b093c201 33 0x0369e187a838836d7a8257014cd2351bd65e3dcef620f6d1262647184c0cf396be\",\"output\":{\"satoshis\":357142899990000,\"script\":\"OP_DUP OP_HASH160 20 0x4a3db02e0e4832120fc3747277bd6540d9a333a8 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"b729b695cc93e77706c78ef47cb2b135a3378c9853b033fa9134f8a368e6bfc1\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x304402201821bd902facfd60984d8ce521aab59604d6be083a95dc845393ed2dc3a6e0ee02201c41d1c3d2f235c192830af7b54de6520450e1873571c5ede233d655ed8e334b01 33 0x0369e187a838836d7a8257014cd2351bd65e3dcef620f6d1262647184c0cf396be\",\"output\":{\"satoshis\":714285699990000,\"script\":\"OP_DUP OP_HASH160 20 0x4a3db02e0e4832120fc3747277bd6540d9a333a8 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"3236122d1c3150583262cf3822fe53a97acd95cdd234646db084489cc21937c6\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x304402203fbba6707bc912fcc62859b1276da3ebe3967d0b53c05d8acdf368b26e851597022001f5b4d2627e04461485b70a105a2a2c1fb8bcc8452ae9f5d6aa224f916c58f801 33 0x0369e187a838836d7a8257014cd2351bd65e3dcef620f6d1262647184c0cf396be\",\"output\":{\"satoshis\":1000000000,\"script\":\"OP_DUP OP_HASH160 20 0x4a3db02e0e4832120fc3747277bd6540d9a333a8 OP_EQUALVERIFY OP_CHECKSIG\"}}],\"outputs\":[{\"satoshis\":1071429599970000,\"script\":\"OP_RETURN 4 0x4255524e\"}],\"nLockTime\":0,\"fee\":10000}",
+            "serializedBurn": "010000000361e744ead2cb9ceab1a2c1b8e7575f0f5e670cd0a9f5f93ab03bb1b33c03fcac000000006a473044022033acbdf7091bb380e1074ad175fb0e9fbe19f2140acf2029a2ed881642370a93022007c07b42ec1cd6896d22e37e43c4228d74e0a8ef9f521f1f6166e68a11b093c201210369e187a838836d7a8257014cd2351bd65e3dcef620f6d1262647184c0cf396beffffffffc1bfe668a3f83491fa33b053988c37a335b1b27cf48ec70677e793cc95b629b7000000006a47304402201821bd902facfd60984d8ce521aab59604d6be083a95dc845393ed2dc3a6e0ee02201c41d1c3d2f235c192830af7b54de6520450e1873571c5ede233d655ed8e334b01210369e187a838836d7a8257014cd2351bd65e3dcef620f6d1262647184c0cf396beffffffffc63719c29c4884b06d6434d2cd95cd7aa953fe2238cf62325850311c2d123632000000006a47304402203fbba6707bc912fcc62859b1276da3ebe3967d0b53c05d8acdf368b26e851597022001f5b4d2627e04461485b70a105a2a2c1fb8bcc8452ae9f5d6aa224f916c58f801210369e187a838836d7a8257014cd2351bd65e3dcef620f6d1262647184c0cf396beffffffff01d042b5a475ce0300066a044255524e00000000",
+            "burnBalance": "10714295.9998 Coval",
+            "level": "ledger",
+            "message": "payload",
+            "timestamp": "2017-03-08T20:51:09.483Z"
+        },
+        {
+            "level": "ledger",
+            "message": "addressRfPLxzTtqLo3KGw4e7zx1CGK2ye6mMgogD",
+            "timestamp": "2017-03-08T20:51:09.483Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyNotDoubleSpend",
+            "timestamp": "2017-03-08T20:51:09.483Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyValidBurn",
+            "timestamp": "2017-03-08T20:51:09.468Z"
+        },
+        {
+            "level": "ledger",
+            "message": "get object from datastore",
+            "timestamp": "2017-03-08T20:51:09.466Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyProvidedBalance",
+            "timestamp": "2017-03-08T20:51:09.466Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify provided payload",
+            "timestamp": "2017-03-08T20:51:09.465Z"
+        },
+        {
+            "level": "ledger",
+            "message": "verify msg return",
+            "timestamp": "2017-03-08T20:51:09.465Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering verify msg",
+            "timestamp": "2017-03-08T20:51:09.428Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify legacy",
+            "timestamp": "2017-03-08T20:51:09.428Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Amounts : 714306899999000 714306899999000",
+            "timestamp": "2017-03-08T20:51:09.373Z"
+        },
+        {
+            "level": "ledger",
+            "message": "unconfirmed Response: {\"statusCode\":200,\"body\":\"0\",\"headers\":{\"x-backside-transport\":\"OK OK\",\"connection\":\"close\",\"transfer-encoding\":\"chunked\",\"access-control-allow-headers\":\"X-Requested-With,Content-Type,Authorization\",\"access-control-allow-methods\":\"GET, POST, OPTIONS, PUT, DELETE\",\"access-control-allow-origin\":\"*\",\"access-control-expose-headers\":\"X-Email-Needs-Validation,X-Quota-Per-Item,X-Quota-Items-Limit,X-RateLimit-Limit,X-RateLimit-Remaining\",\"content-type\":\"application/json; charset=utf-8\",\"date\":\"Wed, 08 Mar 2017 20:51:09 GMT\",\"etag\":\"\\\"-186917087\\\"\",\"vary\":\"Accept-Encoding\",\"x-powered-by\":\"Express\",\"x-global-transaction-id\":\"893265245\"},\"request\":{\"uri\":{\"protocol\":\"http:\",\"slashes\":true,\"auth\":null,\"host\":\"coval-explorer.mybluemix.net\",\"port\":80,\"hostname\":\"coval-explorer.mybluemix.net\",\"hash\":null,\"search\":null,\"query\":null,\"pathname\":\"/api/addr/RiSYQmrV6yr1E9BvthUmtE4xMkUtPi1ZZQ/unconfirmedBalance\",\"path\":\"/api/addr/RiSYQmrV6yr1E9BvthUmtE4xMkUtPi1ZZQ/unconfirmedBalance\",\"href\":\"http://coval-explorer.mybluemix.net/api/addr/RiSYQmrV6yr1E9BvthUmtE4xMkUtPi1ZZQ/unconfirmedBalance\"},\"method\":\"GET\",\"headers\":{}}}",
+            "timestamp": "2017-03-08T20:51:09.373Z"
+        },
+        {
+            "level": "ledger",
+            "message": "confirmed Response: {\"statusCode\":200,\"body\":\"714306899999000\",\"headers\":{\"x-backside-transport\":\"OK OK\",\"connection\":\"close\",\"transfer-encoding\":\"chunked\",\"access-control-allow-headers\":\"X-Requested-With,Content-Type,Authorization\",\"access-control-allow-methods\":\"GET, POST, OPTIONS, PUT, DELETE\",\"access-control-allow-origin\":\"*\",\"access-control-expose-headers\":\"X-Email-Needs-Validation,X-Quota-Per-Item,X-Quota-Items-Limit,X-RateLimit-Limit,X-RateLimit-Remaining\",\"content-type\":\"application/json; charset=utf-8\",\"date\":\"Wed, 08 Mar 2017 20:51:09 GMT\",\"etag\":\"\\\"-1302347605\\\"\",\"vary\":\"Accept-Encoding\",\"x-powered-by\":\"Express\",\"x-global-transaction-id\":\"2337586175\"},\"request\":{\"uri\":{\"protocol\":\"http:\",\"slashes\":true,\"auth\":null,\"host\":\"coval-explorer.mybluemix.net\",\"port\":80,\"hostname\":\"coval-explorer.mybluemix.net\",\"hash\":null,\"search\":null,\"query\":null,\"pathname\":\"/api/addr/RiSYQmrV6yr1E9BvthUmtE4xMkUtPi1ZZQ/balance\",\"path\":\"/api/addr/RiSYQmrV6yr1E9BvthUmtE4xMkUtPi1ZZQ/balance\",\"href\":\"http://coval-explorer.mybluemix.net/api/addr/RiSYQmrV6yr1E9BvthUmtE4xMkUtPi1ZZQ/balance\"},\"method\":\"GET\",\"headers\":{}}}",
+            "timestamp": "2017-03-08T20:51:09.356Z"
+        },
+        {
+            "level": "ledger",
+            "message": "burntx01000000031276d36036675a799478e43f0bba12067d28e97fea512e2b4e0e32a7a477e6fd010000006a47304402205def1f0ff24f2903e8176fdb836203d906841614e136695932b8fb6f636cf58b02204f078335436f8a2533be79166715b02e167ebdca9ba645ca0571a820647986ff0121027043e6cd00d6abcc4d02c3165f48e29deb427baaf904b40ed1d5958d57dee025ffffffff224535b400a04956838c0073288c0ac7c1d45a1f6f34ad517f78e2d56f76eec6000000006b483045022100d29c7936c0465d39d9e727e6a3e0b45dbe8aa4d9ee0c8c51d3e1359fb170d115022055580c269c5c70f690837cae0ea4838b6ce2926bca8b8978c3cdaae2d8f99a990121027043e6cd00d6abcc4d02c3165f48e29deb427baaf904b40ed1d5958d57dee025ffffffff339e39634824a425b4c1eaf72afdbdb2d16fd62fe5bcd56b14649abbdb03ba1a000000006a473044022020240e87c502d7ecc7f8a72401ddd95485be92d25054677e8a96e59163f322fa02206215a103525ac37d995cc161217911c799919eab9dcb9fda87ae6f0368eaa77c0121027043e6cd00d6abcc4d02c3165f48e29deb427baaf904b40ed1d5958d57dee025ffffffff0108d20889a8890200066a044255524e00000000",
+            "timestamp": "2017-03-08T20:51:09.339Z"
+        },
+        {
+            "toSign": "RiSYQmrV6yr1E9BvthUmtE4xMkUtPi1ZZQ7143068.999991486415586-test",
+            "covalAddress": "RiSYQmrV6yr1E9BvthUmtE4xMkUtPi1ZZQ",
+            "signature": "IG1HcS4W6xfszaqGqZ/Zduxh/qA6kXOKCp4E+sH+eY0OTguGcx19UuPmgVHf3OtTM0C+OobdyygJuK8br2ipzCQ=",
+            "swap": {
+                "address": "RiSYQmrV6yr1E9BvthUmtE4xMkUtPi1ZZQ",
+                "balance": 7143068.99999,
+                "lastActivity": 1486415586,
+                "txCount": 3
+            },
+            "burn": "{\"version\":1,\"inputs\":[{\"prevTxId\":\"fde677a4a7320e4e2b2e51ea7fe9287d0612ba0b3fe47894795a673660d37612\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"71 0x304402205def1f0ff24f2903e8176fdb836203d906841614e136695932b8fb6f636cf58b02204f078335436f8a2533be79166715b02e167ebdca9ba645ca0571a820647986ff01 33 0x027043e6cd00d6abcc4d02c3165f48e29deb427baaf904b40ed1d5958d57dee025\",\"output\":{\"satoshis\":20000000000,\"script\":\"OP_DUP OP_HASH160 20 0x6bc0dde9dbe96d6b5da7abeae14d373be9519fe8 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"c6ee766fd5e2787f51ad346f1f5ad4c1c70a8c2873008c835649a000b4354522\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"72 0x3045022100d29c7936c0465d39d9e727e6a3e0b45dbe8aa4d9ee0c8c51d3e1359fb170d115022055580c269c5c70f690837cae0ea4838b6ce2926bca8b8978c3cdaae2d8f99a9901 33 0x027043e6cd00d6abcc4d02c3165f48e29deb427baaf904b40ed1d5958d57dee025\",\"output\":{\"satoshis\":714285699999000,\"script\":\"OP_DUP OP_HASH160 20 0x6bc0dde9dbe96d6b5da7abeae14d373be9519fe8 OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"1aba03dbbb9a64146bd5bce52fd66fd1b2bdfd2af7eac1b425a4244863399e33\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x3044022020240e87c502d7ecc7f8a72401ddd95485be92d25054677e8a96e59163f322fa02206215a103525ac37d995cc161217911c799919eab9dcb9fda87ae6f0368eaa77c01 33 0x027043e6cd00d6abcc4d02c3165f48e29deb427baaf904b40ed1d5958d57dee025\",\"output\":{\"satoshis\":1200000000,\"script\":\"OP_DUP OP_HASH160 20 0x6bc0dde9dbe96d6b5da7abeae14d373be9519fe8 OP_EQUALVERIFY OP_CHECKSIG\"}}],\"outputs\":[{\"satoshis\":714306899989000,\"script\":\"OP_RETURN 4 0x4255524e\"}],\"nLockTime\":0,\"fee\":10000}",
+            "serializedBurn": "01000000031276d36036675a799478e43f0bba12067d28e97fea512e2b4e0e32a7a477e6fd010000006a47304402205def1f0ff24f2903e8176fdb836203d906841614e136695932b8fb6f636cf58b02204f078335436f8a2533be79166715b02e167ebdca9ba645ca0571a820647986ff0121027043e6cd00d6abcc4d02c3165f48e29deb427baaf904b40ed1d5958d57dee025ffffffff224535b400a04956838c0073288c0ac7c1d45a1f6f34ad517f78e2d56f76eec6000000006b483045022100d29c7936c0465d39d9e727e6a3e0b45dbe8aa4d9ee0c8c51d3e1359fb170d115022055580c269c5c70f690837cae0ea4838b6ce2926bca8b8978c3cdaae2d8f99a990121027043e6cd00d6abcc4d02c3165f48e29deb427baaf904b40ed1d5958d57dee025ffffffff339e39634824a425b4c1eaf72afdbdb2d16fd62fe5bcd56b14649abbdb03ba1a000000006a473044022020240e87c502d7ecc7f8a72401ddd95485be92d25054677e8a96e59163f322fa02206215a103525ac37d995cc161217911c799919eab9dcb9fda87ae6f0368eaa77c0121027043e6cd00d6abcc4d02c3165f48e29deb427baaf904b40ed1d5958d57dee025ffffffff0108d20889a8890200066a044255524e00000000",
+            "burnBalance": "7143068.99999 Coval",
+            "level": "ledger",
+            "message": "payload",
+            "timestamp": "2017-03-08T20:51:09.336Z"
+        },
+        {
+            "level": "ledger",
+            "message": "addressRiSYQmrV6yr1E9BvthUmtE4xMkUtPi1ZZQ",
+            "timestamp": "2017-03-08T20:51:09.336Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyNotDoubleSpend",
+            "timestamp": "2017-03-08T20:51:09.336Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyValidBurn",
+            "timestamp": "2017-03-08T20:51:09.317Z"
+        },
+        {
+            "level": "ledger",
+            "message": "get object from datastore",
+            "timestamp": "2017-03-08T20:51:09.316Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyProvidedBalance",
+            "timestamp": "2017-03-08T20:51:09.315Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify provided payload",
+            "timestamp": "2017-03-08T20:51:09.315Z"
+        },
+        {
+            "level": "ledger",
+            "message": "verify msg return",
+            "timestamp": "2017-03-08T20:51:09.315Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering verify msg",
+            "timestamp": "2017-03-08T20:51:09.278Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify legacy",
+            "timestamp": "2017-03-08T20:51:09.278Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Amounts : 33495699940000 33495699940000",
+            "timestamp": "2017-03-08T20:51:09.229Z"
+        },
+        {
+            "level": "ledger",
+            "message": "unconfirmed Response: {\"statusCode\":200,\"body\":\"0\",\"headers\":{\"x-backside-transport\":\"OK OK\",\"connection\":\"close\",\"transfer-encoding\":\"chunked\",\"access-control-allow-headers\":\"X-Requested-With,Content-Type,Authorization\",\"access-control-allow-methods\":\"GET, POST, OPTIONS, PUT, DELETE\",\"access-control-allow-origin\":\"*\",\"access-control-expose-headers\":\"X-Email-Needs-Validation,X-Quota-Per-Item,X-Quota-Items-Limit,X-RateLimit-Limit,X-RateLimit-Remaining\",\"content-type\":\"application/json; charset=utf-8\",\"date\":\"Wed, 08 Mar 2017 20:51:09 GMT\",\"etag\":\"\\\"-186917087\\\"\",\"vary\":\"Accept-Encoding\",\"x-powered-by\":\"Express\",\"x-vcap-request-id\":\"4902d676-2539-48eb-4341-5bede11c2b36\",\"x-client-ip\":\"169.55.43.235\",\"x-global-transaction-id\":\"3253729809\"},\"request\":{\"uri\":{\"protocol\":\"http:\",\"slashes\":true,\"auth\":null,\"host\":\"coval-explorer.mybluemix.net\",\"port\":80,\"hostname\":\"coval-explorer.mybluemix.net\",\"hash\":null,\"search\":null,\"query\":null,\"pathname\":\"/api/addr/RpNex9go8YekinedpXPu2scGm7Jp5DfviW/unconfirmedBalance\",\"path\":\"/api/addr/RpNex9go8YekinedpXPu2scGm7Jp5DfviW/unconfirmedBalance\",\"href\":\"http://coval-explorer.mybluemix.net/api/addr/RpNex9go8YekinedpXPu2scGm7Jp5DfviW/unconfirmedBalance\"},\"method\":\"GET\",\"headers\":{}}}",
+            "timestamp": "2017-03-08T20:51:09.228Z"
+        },
+        {
+            "level": "ledger",
+            "message": "confirmed Response: {\"statusCode\":200,\"body\":\"33495699940000\",\"headers\":{\"x-backside-transport\":\"OK OK\",\"connection\":\"close\",\"transfer-encoding\":\"chunked\",\"access-control-allow-headers\":\"X-Requested-With,Content-Type,Authorization\",\"access-control-allow-methods\":\"GET, POST, OPTIONS, PUT, DELETE\",\"access-control-allow-origin\":\"*\",\"access-control-expose-headers\":\"X-Email-Needs-Validation,X-Quota-Per-Item,X-Quota-Items-Limit,X-RateLimit-Limit,X-RateLimit-Remaining\",\"content-type\":\"application/json; charset=utf-8\",\"date\":\"Wed, 08 Mar 2017 20:51:09 GMT\",\"etag\":\"\\\"-701175275\\\"\",\"vary\":\"Accept-Encoding\",\"x-powered-by\":\"Express\",\"x-vcap-request-id\":\"b2f15cde-f5ac-4834-52d1-4c9300b6d2c3\",\"x-client-ip\":\"169.55.43.235\",\"x-global-transaction-id\":\"3253729745\"},\"request\":{\"uri\":{\"protocol\":\"http:\",\"slashes\":true,\"auth\":null,\"host\":\"coval-explorer.mybluemix.net\",\"port\":80,\"hostname\":\"coval-explorer.mybluemix.net\",\"hash\":null,\"search\":null,\"query\":null,\"pathname\":\"/api/addr/RpNex9go8YekinedpXPu2scGm7Jp5DfviW/balance\",\"path\":\"/api/addr/RpNex9go8YekinedpXPu2scGm7Jp5DfviW/balance\",\"href\":\"http://coval-explorer.mybluemix.net/api/addr/RpNex9go8YekinedpXPu2scGm7Jp5DfviW/balance\"},\"method\":\"GET\",\"headers\":{}}}",
+            "timestamp": "2017-03-08T20:51:09.210Z"
+        },
+        {
+            "level": "ledger",
+            "message": "burntx010000000218c4ccb3ebd466be18dc76537d9f489d9a2bc18c117ee56acaa45a0c76590c4e000000006a4730440220578d4f193db5fe098edd3cce53a4b38653490424d368813fba287f7c1126d57102204c28c997429f37889136aad46e83c032330b4a844d24ebb926902e12f6a8baa6012103a4bd60d6bcaa9f98f9c0fa50e192b007535e5b04a106684975a19fc1bfb0190fffffffff18c4ccb3ebd466be18dc76537d9f489d9a2bc18c117ee56acaa45a0c76590c4e010000006a473044022021b9e236b85a1da8d9f7525bd340dbe33a7589b9e029874f8bc2ebfdc73cb63d022045005596a49f71bc664d618fbe12d4caaa6355272772e38b1457f24647c36759012103a4bd60d6bcaa9f98f9c0fa50e192b007535e5b04a106684975a19fc1bfb0190fffffffff0190bb4bd3761e0000066a044255524e00000000",
+            "timestamp": "2017-03-08T20:51:09.175Z"
+        },
+        {
+            "toSign": "RpNex9go8YekinedpXPu2scGm7Jp5DfviW334956.99941486415834-test",
+            "covalAddress": "RpNex9go8YekinedpXPu2scGm7Jp5DfviW",
+            "signature": "H/x0AO4+2C87DDRzWdbgbd+fq0VAQkFpt5R8Siw1xkBcGANO3ITuX2R4NegHYKTz+ynswEoKTOPA+FnI9AC6aa4=",
+            "swap": {
+                "address": "RpNex9go8YekinedpXPu2scGm7Jp5DfviW",
+                "balance": 334956.9994,
+                "lastActivity": 1486415834,
+                "txCount": 2
+            },
+            "burn": "{\"version\":1,\"inputs\":[{\"prevTxId\":\"4e0c59760c5aa4ca6ae57e118cc12b9a9d489f7d5376dc18be66d4ebb3ccc418\",\"outputIndex\":0,\"sequenceNumber\":4294967295,\"script\":\"71 0x30440220578d4f193db5fe098edd3cce53a4b38653490424d368813fba287f7c1126d57102204c28c997429f37889136aad46e83c032330b4a844d24ebb926902e12f6a8baa601 33 0x03a4bd60d6bcaa9f98f9c0fa50e192b007535e5b04a106684975a19fc1bfb0190f\",\"output\":{\"satoshis\":30000000000000,\"script\":\"OP_DUP OP_HASH160 20 0xacd56af731f32c9d55a2f729b3457d0821314dec OP_EQUALVERIFY OP_CHECKSIG\"}},{\"prevTxId\":\"4e0c59760c5aa4ca6ae57e118cc12b9a9d489f7d5376dc18be66d4ebb3ccc418\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"71 0x3044022021b9e236b85a1da8d9f7525bd340dbe33a7589b9e029874f8bc2ebfdc73cb63d022045005596a49f71bc664d618fbe12d4caaa6355272772e38b1457f24647c3675901 33 0x03a4bd60d6bcaa9f98f9c0fa50e192b007535e5b04a106684975a19fc1bfb0190f\",\"output\":{\"satoshis\":3495699940000,\"script\":\"OP_DUP OP_HASH160 20 0xacd56af731f32c9d55a2f729b3457d0821314dec OP_EQUALVERIFY OP_CHECKSIG\"}}],\"outputs\":[{\"satoshis\":33495699930000,\"script\":\"OP_RETURN 4 0x4255524e\"}],\"nLockTime\":0,\"fee\":10000}",
+            "serializedBurn": "010000000218c4ccb3ebd466be18dc76537d9f489d9a2bc18c117ee56acaa45a0c76590c4e000000006a4730440220578d4f193db5fe098edd3cce53a4b38653490424d368813fba287f7c1126d57102204c28c997429f37889136aad46e83c032330b4a844d24ebb926902e12f6a8baa6012103a4bd60d6bcaa9f98f9c0fa50e192b007535e5b04a106684975a19fc1bfb0190fffffffff18c4ccb3ebd466be18dc76537d9f489d9a2bc18c117ee56acaa45a0c76590c4e010000006a473044022021b9e236b85a1da8d9f7525bd340dbe33a7589b9e029874f8bc2ebfdc73cb63d022045005596a49f71bc664d618fbe12d4caaa6355272772e38b1457f24647c36759012103a4bd60d6bcaa9f98f9c0fa50e192b007535e5b04a106684975a19fc1bfb0190fffffffff0190bb4bd3761e0000066a044255524e00000000",
+            "burnBalance": "334956.99940000003 Coval",
+            "level": "ledger",
+            "message": "payload",
+            "timestamp": "2017-03-08T20:51:09.174Z"
+        },
+        {
+            "level": "ledger",
+            "message": "addressRpNex9go8YekinedpXPu2scGm7Jp5DfviW",
+            "timestamp": "2017-03-08T20:51:09.174Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyNotDoubleSpend",
+            "timestamp": "2017-03-08T20:51:09.174Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyValidBurn",
+            "timestamp": "2017-03-08T20:51:09.144Z"
+        },
+        {
+            "level": "ledger",
+            "message": "get object from datastore",
+            "timestamp": "2017-03-08T20:51:09.143Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyProvidedBalance",
+            "timestamp": "2017-03-08T20:51:09.143Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify provided payload",
+            "timestamp": "2017-03-08T20:51:09.143Z"
+        },
+        {
+            "level": "ledger",
+            "message": "verify msg return",
+            "timestamp": "2017-03-08T20:51:09.143Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering verify msg",
+            "timestamp": "2017-03-08T20:51:09.091Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify legacy",
+            "timestamp": "2017-03-08T20:51:09.091Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside server verify",
+            "timestamp": "2017-03-08T20:51:09.091Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering server verify",
+            "timestamp": "2017-03-08T20:51:09.091Z"
+        },
+        {
+            "level": "ledger",
+            "message": " getjson return",
+            "timestamp": "2017-03-08T20:51:09.091Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside getJson",
+            "timestamp": "2017-03-08T20:51:09.032Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering getjson",
+            "timestamp": "2017-03-08T20:51:09.031Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify",
+            "timestamp": "2017-03-08T20:51:09.031Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Entering verify",
+            "timestamp": "2017-03-08T20:51:09.031Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside testPass",
+            "timestamp": "2017-03-08T20:19:42.067Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering testPass",
+            "timestamp": "2017-03-08T20:19:42.067Z"
+        },
+        {
+            "0": {
+                "verifyLegacy": {
+                    "valid": true
+                },
+                "payloadMatch": {
+                    "valid": true
+                },
+                "correctBalance": {
+                    "valid": true
+                },
+                "burnSigned": {
+                    "valid": true
+                },
+                "notDoubleSpend": {
+                    "valid": true
+                },
+                "burnTransaction": {
+                    "txid": 0,
+                    "msg": "Error sending transaction No inputs in burn transaction (likely a zero balance)"
+                }
+            },
+            "level": "ledger",
+            "message": "done verifying; results: ",
+            "timestamp": "2017-03-08T20:19:42.067Z"
+        },
+        {
+            "level": "ledger",
+            "message": "server verify retuirn",
+            "timestamp": "2017-03-08T20:19:42.067Z"
+        },
+        {
+            "level": "ledger",
+            "message": "burntx had no inputs",
+            "timestamp": "2017-03-08T20:19:42.063Z"
+        },
+        {
+            "toSign": "RwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe1001488573702-test",
+            "covalAddress": "RwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe",
+            "signature": "H3+kinEqy9Xbbr9g8nXIX97bSK/0fheHl8gUGfeB7C/iNvsYJLUvT5tY/MNGyMcuNv/IZSlrdCAdQ1ld1GLJ/iw=",
+            "swap": {
+                "address": "RwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe",
+                "balance": 100,
+                "lastActivity": 1488573702,
+                "txCount": 1
+            },
+            "burn": "{\"version\":1,\"inputs\":[],\"outputs\":[],\"nLockTime\":0}",
+            "serializedBurn": "01000000000000000000",
+            "burnBalance": "0 Coval",
+            "level": "ledger",
+            "message": "payload",
+            "timestamp": "2017-03-08T20:19:42.063Z"
+        },
+        {
+            "level": "ledger",
+            "message": "addressRwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe",
+            "timestamp": "2017-03-08T20:19:42.063Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyNotDoubleSpend",
+            "timestamp": "2017-03-08T20:19:42.063Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyValidBurn",
+            "timestamp": "2017-03-08T20:19:42.063Z"
+        },
+        {
+            "level": "ledger",
+            "message": "get object from datastore",
+            "timestamp": "2017-03-08T20:19:42.062Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyProvidedBalance",
+            "timestamp": "2017-03-08T20:19:42.061Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify provided payload",
+            "timestamp": "2017-03-08T20:19:42.061Z"
+        },
+        {
+            "level": "ledger",
+            "message": "verify msg return",
+            "timestamp": "2017-03-08T20:19:42.055Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering verify msg",
+            "timestamp": "2017-03-08T20:19:41.987Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify legacy",
+            "timestamp": "2017-03-08T20:19:41.987Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside server verify",
+            "timestamp": "2017-03-08T20:19:41.987Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering server verify",
+            "timestamp": "2017-03-08T20:19:41.986Z"
+        },
+        {
+            "level": "ledger",
+            "message": " getjson return",
+            "timestamp": "2017-03-08T20:19:41.986Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside getJson",
+            "timestamp": "2017-03-08T20:19:41.917Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering getjson",
+            "timestamp": "2017-03-08T20:19:41.916Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify",
+            "timestamp": "2017-03-08T20:19:41.916Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Entering verify",
+            "timestamp": "2017-03-08T20:19:41.916Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside testPass",
+            "timestamp": "2017-03-08T20:07:00.365Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering testPass",
+            "timestamp": "2017-03-08T20:07:00.365Z"
+        },
+        {
+            "0": {
+                "verifyLegacy": {
+                    "valid": true
+                },
+                "payloadMatch": {
+                    "valid": true
+                },
+                "correctBalance": {
+                    "valid": true
+                },
+                "burnSigned": {
+                    "valid": true
+                },
+                "notDoubleSpend": {
+                    "valid": true
+                },
+                "burnTransaction": {
+                    "txid": 0,
+                    "msg": "Error sending transaction No inputs in burn transaction (likely a zero balance)"
+                }
+            },
+            "level": "ledger",
+            "message": "done verifying; results: ",
+            "timestamp": "2017-03-08T20:07:00.365Z"
+        },
+        {
+            "level": "ledger",
+            "message": "server verify retuirn",
+            "timestamp": "2017-03-08T20:07:00.364Z"
+        },
+        {
+            "level": "ledger",
+            "message": "burntx had no inputs",
+            "timestamp": "2017-03-08T20:07:00.364Z"
+        },
+        {
+            "toSign": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs331484833326-test",
+            "covalAddress": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+            "signature": "IN8euOVeuBxO/G68OGYwi+RRG8PAA6ZJ1rw6WNdP0LKlLRDO/DwmBBnwIOyT4u2vVZ6GNoF/inCdqLW0GPfpSgU=",
+            "swap": {
+                "address": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+                "balance": 33,
+                "lastActivity": 1484833326,
+                "txCount": 1
+            },
+            "burn": "{\"version\":1,\"inputs\":[],\"outputs\":[],\"nLockTime\":0}",
+            "serializedBurn": "01000000000000000000",
+            "burnBalance": "0 Coval",
+            "level": "ledger",
+            "message": "payload",
+            "timestamp": "2017-03-08T20:07:00.364Z"
+        },
+        {
+            "level": "ledger",
+            "message": "addressRcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+            "timestamp": "2017-03-08T20:07:00.364Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyNotDoubleSpend",
+            "timestamp": "2017-03-08T20:07:00.363Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyValidBurn",
+            "timestamp": "2017-03-08T20:07:00.363Z"
+        },
+        {
+            "level": "ledger",
+            "message": "get object from datastore",
+            "timestamp": "2017-03-08T20:07:00.359Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyProvidedBalance",
+            "timestamp": "2017-03-08T20:07:00.359Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify provided payload",
+            "timestamp": "2017-03-08T20:07:00.353Z"
+        },
+        {
+            "level": "ledger",
+            "message": "verify msg return",
+            "timestamp": "2017-03-08T20:07:00.352Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering verify msg",
+            "timestamp": "2017-03-08T20:07:00.324Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify legacy",
+            "timestamp": "2017-03-08T20:07:00.324Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside server verify",
+            "timestamp": "2017-03-08T20:07:00.324Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering server verify",
+            "timestamp": "2017-03-08T20:07:00.324Z"
+        },
+        {
+            "level": "ledger",
+            "message": " getjson return",
+            "timestamp": "2017-03-08T20:07:00.323Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside getJson",
+            "timestamp": "2017-03-08T20:07:00.215Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering getjson",
+            "timestamp": "2017-03-08T20:07:00.215Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify",
+            "timestamp": "2017-03-08T20:07:00.215Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Entering verify",
+            "timestamp": "2017-03-08T20:07:00.214Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside testPass",
+            "timestamp": "2017-03-08T19:47:09.734Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering testPass",
+            "timestamp": "2017-03-08T19:47:09.733Z"
+        },
+        {
+            "0": {
+                "verifyLegacy": {
+                    "valid": true
+                },
+                "payloadMatch": {
+                    "valid": true
+                },
+                "correctBalance": {
+                    "valid": true
+                },
+                "burnSigned": {
+                    "valid": true
+                },
+                "notDoubleSpend": {
+                    "valid": true
+                },
+                "burnTransaction": {
+                    "txid": 0,
+                    "msg": "Error sending transaction No inputs in burn transaction (likely a zero balance)"
+                }
+            },
+            "level": "ledger",
+            "message": "done verifying; results: ",
+            "timestamp": "2017-03-08T19:47:09.733Z"
+        },
+        {
+            "level": "ledger",
+            "message": "server verify retuirn",
+            "timestamp": "2017-03-08T19:47:09.732Z"
+        },
+        {
+            "level": "ledger",
+            "message": "burntx had no inputs",
+            "timestamp": "2017-03-08T19:47:09.732Z"
+        },
+        {
+            "toSign": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs331484833326-test",
+            "covalAddress": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+            "signature": "H7wAWBHk+s0VikiTk341AtonVgoTgalFx33pQxfowGOpNHK1aseEm1K66OOIcbRy3yN4f7rJWXnIEiarxwGgf/g=",
+            "swap": {
+                "address": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+                "balance": 33,
+                "lastActivity": 1484833326,
+                "txCount": 1
+            },
+            "burn": "{\"version\":1,\"inputs\":[],\"outputs\":[],\"nLockTime\":0}",
+            "serializedBurn": "01000000000000000000",
+            "burnBalance": "0 Coval",
+            "level": "ledger",
+            "message": "payload",
+            "timestamp": "2017-03-08T19:47:09.731Z"
+        },
+        {
+            "level": "ledger",
+            "message": "addressRcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+            "timestamp": "2017-03-08T19:47:09.731Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyNotDoubleSpend",
+            "timestamp": "2017-03-08T19:47:09.731Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyValidBurn",
+            "timestamp": "2017-03-08T19:47:09.731Z"
+        },
+        {
+            "level": "ledger",
+            "message": "get object from datastore",
+            "timestamp": "2017-03-08T19:47:09.730Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyProvidedBalance",
+            "timestamp": "2017-03-08T19:47:09.729Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify provided payload",
+            "timestamp": "2017-03-08T19:47:09.718Z"
+        },
+        {
+            "level": "ledger",
+            "message": "verify msg return",
+            "timestamp": "2017-03-08T19:47:09.718Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering verify msg",
+            "timestamp": "2017-03-08T19:47:09.635Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify legacy",
+            "timestamp": "2017-03-08T19:47:09.635Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside server verify",
+            "timestamp": "2017-03-08T19:47:09.632Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering server verify",
+            "timestamp": "2017-03-08T19:47:09.632Z"
+        },
+        {
+            "level": "ledger",
+            "message": " getjson return",
+            "timestamp": "2017-03-08T19:47:09.632Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside getJson",
+            "timestamp": "2017-03-08T19:47:09.565Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering getjson",
+            "timestamp": "2017-03-08T19:47:09.565Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify",
+            "timestamp": "2017-03-08T19:47:09.565Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Entering verify",
+            "timestamp": "2017-03-08T19:47:09.564Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside testPass",
+            "timestamp": "2017-03-08T16:18:34.022Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering testPass",
+            "timestamp": "2017-03-08T16:18:34.022Z"
+        },
+        {
+            "0": {
+                "verifyLegacy": {
+                    "valid": true
+                },
+                "payloadMatch": {
+                    "valid": true
+                },
+                "correctBalance": {
+                    "valid": true
+                },
+                "burnSigned": {
+                    "valid": true
+                },
+                "notDoubleSpend": {
+                    "valid": true
+                },
+                "burnTransaction": {
+                    "txid": 0,
+                    "msg": "Error sending transaction No inputs in burn transaction (likely a zero balance)"
+                }
+            },
+            "level": "ledger",
+            "message": "done verifying; results: ",
+            "timestamp": "2017-03-08T16:18:34.021Z"
+        },
+        {
+            "level": "ledger",
+            "message": "server verify retuirn",
+            "timestamp": "2017-03-08T16:18:34.021Z"
+        },
+        {
+            "level": "ledger",
+            "message": "burntx had no inputs",
+            "timestamp": "2017-03-08T16:18:34.020Z"
+        },
+        {
+            "toSign": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs331484833326-test",
+            "covalAddress": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+            "signature": "HxYav8ioPdWo+79EsDlCXFyHndp4e9oMcGMSj9N1JW2cQw6Dz1NB7Dj894x3yaDrO6Wn0i95NrJtcpGJqKAn2Qg=",
+            "swap": {
+                "address": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+                "balance": 33,
+                "lastActivity": 1484833326,
+                "txCount": 1
+            },
+            "burn": "{\"version\":1,\"inputs\":[],\"outputs\":[],\"nLockTime\":0}",
+            "serializedBurn": "01000000000000000000",
+            "burnBalance": "0 Coval",
+            "level": "ledger",
+            "message": "payload",
+            "timestamp": "2017-03-08T16:18:34.020Z"
+        },
+        {
+            "level": "ledger",
+            "message": "addressRcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+            "timestamp": "2017-03-08T16:18:34.020Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyNotDoubleSpend",
+            "timestamp": "2017-03-08T16:18:34.018Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyValidBurn",
+            "timestamp": "2017-03-08T16:18:34.017Z"
+        },
+        {
+            "level": "ledger",
+            "message": "get object from datastore",
+            "timestamp": "2017-03-08T16:18:34.006Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyProvidedBalance",
+            "timestamp": "2017-03-08T16:18:34.006Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify provided payload",
+            "timestamp": "2017-03-08T16:18:33.999Z"
+        },
+        {
+            "level": "ledger",
+            "message": "verify msg return",
+            "timestamp": "2017-03-08T16:18:33.999Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering verify msg",
+            "timestamp": "2017-03-08T16:18:33.970Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify legacy",
+            "timestamp": "2017-03-08T16:18:33.970Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside server verify",
+            "timestamp": "2017-03-08T16:18:33.970Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering server verify",
+            "timestamp": "2017-03-08T16:18:33.970Z"
+        },
+        {
+            "level": "ledger",
+            "message": " getjson return",
+            "timestamp": "2017-03-08T16:18:33.970Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside getJson",
+            "timestamp": "2017-03-08T16:18:33.928Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering getjson",
+            "timestamp": "2017-03-08T16:18:33.928Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify",
+            "timestamp": "2017-03-08T16:18:33.928Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Entering verify",
+            "timestamp": "2017-03-08T16:18:33.928Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside testPass",
+            "timestamp": "2017-03-08T08:54:13.002Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering testPass",
+            "timestamp": "2017-03-08T08:54:13.002Z"
+        },
+        {
+            "0": {
+                "verifyLegacy": {
+                    "valid": true
+                },
+                "payloadMatch": {
+                    "valid": true
+                },
+                "correctBalance": {
+                    "valid": true
+                },
+                "burnSigned": {
+                    "valid": true
+                },
+                "notDoubleSpend": {
+                    "valid": true
+                },
+                "burnTransaction": {
+                    "txid": 0,
+                    "msg": "Error sending transaction No inputs in burn transaction (likely a zero balance)"
+                }
+            },
+            "level": "ledger",
+            "message": "done verifying; results: ",
+            "timestamp": "2017-03-08T08:54:13.002Z"
+        },
+        {
+            "level": "ledger",
+            "message": "server verify retuirn",
+            "timestamp": "2017-03-08T08:54:13.002Z"
+        },
+        {
+            "level": "ledger",
+            "message": "burntx had no inputs",
+            "timestamp": "2017-03-08T08:54:13.001Z"
+        },
+        {
+            "toSign": "RwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe1001488573702-test",
+            "covalAddress": "RwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe",
+            "signature": "H+RRXZlxzn+OVaYvThu5g2qdomr+5uJ7MZe8mwiNJqmDLtZ2QROER8gqQz6xQ2RpIEc5JaLu5Wedh2tQLkATr2w=",
+            "swap": {
+                "address": "RwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe",
+                "balance": 100,
+                "lastActivity": 1488573702,
+                "txCount": 1
+            },
+            "burn": "{\"version\":1,\"inputs\":[],\"outputs\":[],\"nLockTime\":0}",
+            "serializedBurn": "01000000000000000000",
+            "burnBalance": "0 Coval",
+            "level": "ledger",
+            "message": "payload",
+            "timestamp": "2017-03-08T08:54:13.001Z"
+        },
+        {
+            "level": "ledger",
+            "message": "addressRwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe",
+            "timestamp": "2017-03-08T08:54:13.001Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyNotDoubleSpend",
+            "timestamp": "2017-03-08T08:54:13.001Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyValidBurn",
+            "timestamp": "2017-03-08T08:54:13.000Z"
+        },
+        {
+            "level": "ledger",
+            "message": "get object from datastore",
+            "timestamp": "2017-03-08T08:54:12.999Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyProvidedBalance",
+            "timestamp": "2017-03-08T08:54:12.999Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify provided payload",
+            "timestamp": "2017-03-08T08:54:12.995Z"
+        },
+        {
+            "level": "ledger",
+            "message": "verify msg return",
+            "timestamp": "2017-03-08T08:54:12.995Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering verify msg",
+            "timestamp": "2017-03-08T08:54:12.952Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify legacy",
+            "timestamp": "2017-03-08T08:54:12.952Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside server verify",
+            "timestamp": "2017-03-08T08:54:12.952Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering server verify",
+            "timestamp": "2017-03-08T08:54:12.952Z"
+        },
+        {
+            "level": "ledger",
+            "message": " getjson return",
+            "timestamp": "2017-03-08T08:54:12.951Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside getJson",
+            "timestamp": "2017-03-08T08:54:12.892Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering getjson",
+            "timestamp": "2017-03-08T08:54:12.892Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify",
+            "timestamp": "2017-03-08T08:54:12.892Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Entering verify",
+            "timestamp": "2017-03-08T08:54:12.892Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside testPass",
+            "timestamp": "2017-03-08T07:43:42.953Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering testPass",
+            "timestamp": "2017-03-08T07:43:42.952Z"
+        },
+        {
+            "0": {
+                "verifyLegacy": {
+                    "valid": true
+                },
+                "payloadMatch": {
+                    "valid": true
+                },
+                "correctBalance": {
+                    "valid": true
+                },
+                "burnSigned": {
+                    "valid": true
+                },
+                "notDoubleSpend": {
+                    "valid": true
+                },
+                "burnTransaction": {
+                    "txid": "a4132ed81a7bc81a46759b54019075914780ea6b59e48bd417d6e767d8f2f9cd"
+                }
+            },
+            "level": "ledger",
+            "message": "done verifying; results: ",
+            "timestamp": "2017-03-08T07:43:42.952Z"
+        },
+        {
+            "level": "ledger",
+            "message": "server verify retuirn",
+            "timestamp": "2017-03-08T07:43:42.952Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Amounts : 10000000000 10000000000",
+            "timestamp": "2017-03-08T07:43:42.926Z"
+        },
+        {
+            "level": "ledger",
+            "message": "unconfirmed Response: {\"statusCode\":200,\"body\":\"0\",\"headers\":{\"x-backside-transport\":\"OK OK\",\"connection\":\"close\",\"transfer-encoding\":\"chunked\",\"access-control-allow-headers\":\"X-Requested-With,Content-Type,Authorization\",\"access-control-allow-methods\":\"GET, POST, OPTIONS, PUT, DELETE\",\"access-control-allow-origin\":\"*\",\"access-control-expose-headers\":\"X-Email-Needs-Validation,X-Quota-Per-Item,X-Quota-Items-Limit,X-RateLimit-Limit,X-RateLimit-Remaining\",\"content-type\":\"application/json; charset=utf-8\",\"date\":\"Wed, 08 Mar 2017 07:43:42 GMT\",\"etag\":\"\\\"-186917087\\\"\",\"vary\":\"Accept-Encoding\",\"x-powered-by\":\"Express\",\"x-global-transaction-id\":\"4093159351\"},\"request\":{\"uri\":{\"protocol\":\"http:\",\"slashes\":true,\"auth\":null,\"host\":\"coval-explorer.mybluemix.net\",\"port\":80,\"hostname\":\"coval-explorer.mybluemix.net\",\"hash\":null,\"search\":null,\"query\":null,\"pathname\":\"/api/addr/RwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe/unconfirmedBalance\",\"path\":\"/api/addr/RwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe/unconfirmedBalance\",\"href\":\"http://coval-explorer.mybluemix.net/api/addr/RwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe/unconfirmedBalance\"},\"method\":\"GET\",\"headers\":{}}}",
+            "timestamp": "2017-03-08T07:43:42.926Z"
+        },
+        {
+            "level": "ledger",
+            "message": "confirmed Response: {\"statusCode\":200,\"body\":\"10000000000\",\"headers\":{\"x-backside-transport\":\"OK OK\",\"connection\":\"close\",\"transfer-encoding\":\"chunked\",\"access-control-allow-headers\":\"X-Requested-With,Content-Type,Authorization\",\"access-control-allow-methods\":\"GET, POST, OPTIONS, PUT, DELETE\",\"access-control-allow-origin\":\"*\",\"access-control-expose-headers\":\"X-Email-Needs-Validation,X-Quota-Per-Item,X-Quota-Items-Limit,X-RateLimit-Limit,X-RateLimit-Remaining\",\"content-type\":\"application/json; charset=utf-8\",\"date\":\"Wed, 08 Mar 2017 07:43:42 GMT\",\"etag\":\"\\\"1636513200\\\"\",\"vary\":\"Accept-Encoding\",\"x-powered-by\":\"Express\",\"x-global-transaction-id\":\"1981035521\"},\"request\":{\"uri\":{\"protocol\":\"http:\",\"slashes\":true,\"auth\":null,\"host\":\"coval-explorer.mybluemix.net\",\"port\":80,\"hostname\":\"coval-explorer.mybluemix.net\",\"hash\":null,\"search\":null,\"query\":null,\"pathname\":\"/api/addr/RwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe/balance\",\"path\":\"/api/addr/RwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe/balance\",\"href\":\"http://coval-explorer.mybluemix.net/api/addr/RwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe/balance\"},\"method\":\"GET\",\"headers\":{}}}",
+            "timestamp": "2017-03-08T07:43:42.888Z"
+        },
+        {
+            "level": "ledger",
+            "message": "burntx010000000160abf3c124c67678264964baf5b664e8bc0a2b1139aa7a94c6d9f94d5c116f01010000006a4730440220779b087028e243c032b3f18095f36328c24311a14edbfad9b9f2f95a31927c3002200c26b66e8476a8427f00e27dbc476a40b5350e1f39ad99c9b7678ebdf563969c012103950c52e787636ab82a40b633c75ccfc76acdb57361b39b01f857ae8746fbe577ffffffff01f0bc0b5402000000066a044255524e00000000",
+            "timestamp": "2017-03-08T07:43:42.848Z"
+        },
+        {
+            "toSign": "RwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe1001488573702-test",
+            "covalAddress": "RwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe",
+            "signature": "IK/W+HDRNXOHTArPhF3XAcGzcGAnJxrn+j95CCxCeHjRKWlXEMqT703UfTD/wOBAVv3VnNll3gH9Pe7fXYsdKSQ=",
+            "swap": {
+                "address": "RwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe",
+                "balance": 100,
+                "lastActivity": 1488573702,
+                "txCount": 1
+            },
+            "burn": "{\"version\":1,\"inputs\":[{\"prevTxId\":\"016f115c4df9d9c6947aaa39112b0abce864b6f5ba6449267876c624c1f3ab60\",\"outputIndex\":1,\"sequenceNumber\":4294967295,\"script\":\"71 0x30440220779b087028e243c032b3f18095f36328c24311a14edbfad9b9f2f95a31927c3002200c26b66e8476a8427f00e27dbc476a40b5350e1f39ad99c9b7678ebdf563969c01 33 0x03950c52e787636ab82a40b633c75ccfc76acdb57361b39b01f857ae8746fbe577\",\"output\":{\"satoshis\":10000000000,\"script\":\"OP_DUP OP_HASH160 20 0xf9e85bc41a372280126d23332fe81c672b3c43d1 OP_EQUALVERIFY OP_CHECKSIG\"}}],\"outputs\":[{\"satoshis\":9999990000,\"script\":\"OP_RETURN 4 0x4255524e\"}],\"nLockTime\":0,\"fee\":10000}",
+            "serializedBurn": "010000000160abf3c124c67678264964baf5b664e8bc0a2b1139aa7a94c6d9f94d5c116f01010000006a4730440220779b087028e243c032b3f18095f36328c24311a14edbfad9b9f2f95a31927c3002200c26b66e8476a8427f00e27dbc476a40b5350e1f39ad99c9b7678ebdf563969c012103950c52e787636ab82a40b633c75ccfc76acdb57361b39b01f857ae8746fbe577ffffffff01f0bc0b5402000000066a044255524e00000000",
+            "burnBalance": "100 Coval",
+            "level": "ledger",
+            "message": "payload",
+            "timestamp": "2017-03-08T07:43:42.847Z"
+        },
+        {
+            "level": "ledger",
+            "message": "addressRwQBfwSABu4QWY7Cs5F9E84mpA8K1UpxGe",
+            "timestamp": "2017-03-08T07:43:42.847Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyNotDoubleSpend",
+            "timestamp": "2017-03-08T07:43:42.847Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyValidBurn",
+            "timestamp": "2017-03-08T07:43:42.836Z"
+        },
+        {
+            "level": "ledger",
+            "message": "get object from datastore",
+            "timestamp": "2017-03-08T07:43:42.834Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyProvidedBalance",
+            "timestamp": "2017-03-08T07:43:42.834Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify provided payload",
+            "timestamp": "2017-03-08T07:43:42.834Z"
+        },
+        {
+            "level": "ledger",
+            "message": "verify msg return",
+            "timestamp": "2017-03-08T07:43:42.833Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering verify msg",
+            "timestamp": "2017-03-08T07:43:42.798Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify legacy",
+            "timestamp": "2017-03-08T07:43:42.798Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside server verify",
+            "timestamp": "2017-03-08T07:43:42.798Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering server verify",
+            "timestamp": "2017-03-08T07:43:42.798Z"
+        },
+        {
+            "level": "ledger",
+            "message": " getjson return",
+            "timestamp": "2017-03-08T07:43:42.797Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside getJson",
+            "timestamp": "2017-03-08T07:43:42.735Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering getjson",
+            "timestamp": "2017-03-08T07:43:42.735Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify",
+            "timestamp": "2017-03-08T07:43:42.735Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Entering verify",
+            "timestamp": "2017-03-08T07:43:42.734Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside testPass",
+            "timestamp": "2017-03-08T03:13:23.847Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering testPass",
+            "timestamp": "2017-03-08T03:13:23.847Z"
+        },
+        {
+            "0": {
+                "verifyLegacy": {
+                    "valid": true
+                },
+                "payloadMatch": {
+                    "valid": true
+                },
+                "correctBalance": {
+                    "valid": true
+                },
+                "burnSigned": {
+                    "valid": true
+                },
+                "notDoubleSpend": {
+                    "valid": true
+                },
+                "burnTransaction": {
+                    "txid": 0,
+                    "msg": "Error sending transaction No inputs in burn transaction (likely a zero balance)"
+                }
+            },
+            "level": "ledger",
+            "message": "done verifying; results: ",
+            "timestamp": "2017-03-08T03:13:23.846Z"
+        },
+        {
+            "level": "ledger",
+            "message": "server verify retuirn",
+            "timestamp": "2017-03-08T03:13:23.846Z"
+        },
+        {
+            "level": "ledger",
+            "message": "burntx had no inputs",
+            "timestamp": "2017-03-08T03:13:23.846Z"
+        },
+        {
+            "toSign": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs331484833326-test",
+            "covalAddress": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+            "signature": "H3CSyJhubTfYLW2YlY6dpiBQ3rkTspFhC1j6rslrG6wTPipHnMBIC9+Qco1iDOdF+a3mApZc86X3djB1VcyqDA0=",
+            "swap": {
+                "address": "RcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+                "balance": 33,
+                "lastActivity": 1484833326,
+                "txCount": 1
+            },
+            "burn": "{\"version\":1,\"inputs\":[],\"outputs\":[],\"nLockTime\":0}",
+            "serializedBurn": "01000000000000000000",
+            "burnBalance": "0 Coval",
+            "level": "ledger",
+            "message": "payload",
+            "timestamp": "2017-03-08T03:13:23.845Z"
+        },
+        {
+            "level": "ledger",
+            "message": "addressRcjbSHVpqDiK6uNLtLd6EGPjE1WxTmq1bs",
+            "timestamp": "2017-03-08T03:13:23.845Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyNotDoubleSpend",
+            "timestamp": "2017-03-08T03:13:23.845Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyValidBurn",
+            "timestamp": "2017-03-08T03:13:23.844Z"
+        },
+        {
+            "level": "ledger",
+            "message": "get object from datastore",
+            "timestamp": "2017-03-08T03:13:23.840Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verifyProvidedBalance",
+            "timestamp": "2017-03-08T03:13:23.840Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify provided payload",
+            "timestamp": "2017-03-08T03:13:23.835Z"
+        },
+        {
+            "level": "ledger",
+            "message": "verify msg return",
+            "timestamp": "2017-03-08T03:13:23.834Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering verify msg",
+            "timestamp": "2017-03-08T03:13:23.780Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify legacy",
+            "timestamp": "2017-03-08T03:13:23.780Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside server verify",
+            "timestamp": "2017-03-08T03:13:23.780Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering server verify",
+            "timestamp": "2017-03-08T03:13:23.780Z"
+        },
+        {
+            "level": "ledger",
+            "message": " getjson return",
+            "timestamp": "2017-03-08T03:13:23.779Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside getJson",
+            "timestamp": "2017-03-08T03:13:23.725Z"
+        },
+        {
+            "level": "ledger",
+            "message": "entering getjson",
+            "timestamp": "2017-03-08T03:13:23.725Z"
+        },
+        {
+            "level": "ledger",
+            "message": "inside verify",
+            "timestamp": "2017-03-08T03:13:23.724Z"
+        },
+        {
+            "level": "ledger",
+            "message": "Entering verify",
+            "timestamp": "2017-03-08T03:13:23.724Z"
+        }
+    ]
+}
