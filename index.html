@@ -43,9 +43,31 @@
             .dataTables_filter {
                 display: none !important;
             }
+            .loadingMsg {
+                color: white;
+                top: 15px;
+                position: relative;
+            }
+            .splash {
+                visibility: visible;
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 10000 !important;
+                background-color: rgba(158, 158, 158, 0.78);
+            }
+            .loadingImage {
+                left: 40%;
+                position: relative;
+                top: 25px;
+            }
         </style>
         <script>
-        function initKloud(){console.log("Disabled")}
+        function initKloud(){
+            console.log("Disabled")
+        }
         /* Check if on mobile */
 		var inElectron
         window.mobileAndTabletcheck = function () {
@@ -148,8 +170,9 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="splash bg-green" id="splash" style="display: none; visibility: visible;">
-            <div class="splash-inner" for="splashScreen">
+        <div class="splash bg-green" id="splash">
+            <img class="loadingImage" src="public/img/loading.gif">
+            <div class="splash-inner" for="splashScreen" style="display:none">
                 <div class="splash-loader">
                     <!--img class="preload-large" src="public/images/preload-6-white.gif" alt=""-->
                 </div>
@@ -173,7 +196,8 @@
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
+                        <div class="loadingMsg">Loading...</div>
+                        <ul class="nav navbar-nav" style="display:none">
                             <li>
                                 <a class="showExplorer" href="/">Home</a>
                             </li>

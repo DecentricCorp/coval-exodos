@@ -68,6 +68,14 @@ var table
                 })*/
             }
         })
+        table.on('draw.dt', function ( e, settings, json, xhr ) {
+            $(".splash").fadeOut();
+            console.log("Table Loaded")
+            $(".navbar-nav").fadeIn()
+            $(".loadingMsg").hide()
+            
+            // Note no return - manipulate the data directly in the JSON object.
+        } )
         $.fn.dataTable.ext.search.push(
             function( settings, data, dataIndex ) {
                 var min = parseInt( $('#min').val(), 10 );
@@ -211,9 +219,20 @@ var table
         jQuery.get("views/layouts/swapResponse.html", function(resp) {
             templates[name] = Handlebars.compile(resp);
             display_Pagetemplate(name, "#swapResponse", function(){
-
+                downloadBackup();
             }, pageObject)
         })
+    }
+
+    function downloadBackup() {
+        download(JSON.stringify(finalSwap, null, 4), 'swapBackup.txt', 'text/plain');
+    }
+    function download(text, name, type) {
+        var a = document.createElement("a");
+        var file = new Blob([text], {type: type});
+        a.href = URL.createObjectURL(file);
+        a.download = name;
+        a.click();
     }
 
     function display_Pagetemplate(tmpl, selector, cb, data) {
