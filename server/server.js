@@ -3,6 +3,7 @@ var app = express()
 var verify = require('./lib/verify.js').verify
 var verifyLogger = require('./lib/verify.js').setLogger
 var loggerPlugin = require('./lib/logger.js')
+var PubNub = require('pubnub')
 
 var bodyParser = require('body-parser')
 app.use(function(req, res, next) {
@@ -14,6 +15,29 @@ app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }))
+
+var pubnub = new PubNub({
+    subscribeKey: "sub-c-9fc431ea-0a55-11e7-930d-02ee2ddab7fe",
+    publishKey: "pub-c-f84e67fe-8f6a-463b-b91f-8baf13942dd5",
+    secretKey: "sec-c-OTllNmUwNzgtNTYyOC00ZWRiLTkyMjUtYTJhOTIxNmI1ZGEz",
+    ssl: true
+})
+
+function publishResponse(payload) {
+    pubnub.publish({
+            message: payload,
+            channel: 'swap',
+            sendByPost: false, // true to send via post
+            storeInHistory: true, //override default storage options
+            meta: {
+                "cool": "meta"
+            } // publish extra meta with the request
+        },
+        function (status, response) {
+            // handle status, response
+        }
+    )
+}
 
 
 //Test sigs
@@ -96,6 +120,8 @@ function performExpressSafeVerification(swapSet, cb){
         if (result.length === swapSet.SwapSignatures.length) {
             ledgerLogger.ledger("entering testPass")
             testPass(result, function(success){
+                console.log("pulishing now")
+                publishResponse({pass: success, result: result, request: swapSet})
                 return cb({pass: success, result: result})
             })            
         }
