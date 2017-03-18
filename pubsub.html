@@ -2,6 +2,7 @@
     <head>
         <script src="//cdn.pubnub.com/sdk/javascript/pubnub.4.5.0.js"></script>
         <script>
+            var SwapRequests = {requests: [], Total: sumTotal, Bonus: sumBonus}
             var pubnub = new PubNub({
                 subscribeKey: "sub-c-9fc431ea-0a55-11e7-930d-02ee2ddab7fe",
                 publishKey: "myPublishKey",
@@ -23,6 +24,46 @@
                     }
                 })
                 console.log("loaded", pubnub)
+                function getHistory() {
+                    pubnub.history(
+                        {
+                            channel: 'swap',
+                            reverse: true, // Setting to true will traverse the time line in reverse starting with the oldest message first.
+                            count: 100, // how many items to fetch
+                            //stringifiedTimeToken: true, // false is the default
+                            //start: '14896763020597976', // start time token to fetch
+                            //end: '123123123133' // end timetoken to fetch
+                        },
+                        function (status, response) {
+                            console.log(response)
+                            SwapRequests.requests[SwapRequests.requests.length] = response.messages;
+                            
+                            // handle status, response
+                        }
+                    );
+                }
+                function sumTotal() {
+                    field = "C_TotalSwapRequested"
+                    sumColumn(field)
+                }
+
+                function sumBonus() {
+                    field = "B_BonusAmount"
+                    sumColumn(field)
+                }
+
+                function sumColumn(field) {
+                    var total = 0
+                    SwapRequests.requests[0].forEach(function(item, index){
+                        if (item.entry.request) {
+                            total += Number(item.entry.request[field])
+                            //console.log(item.entry.request.B_BonusAmount)
+                            if (index === SwapRequests.requests[0].length-1) {
+                                console.log("total", total)
+                            }
+                        }
+                    })
+                }
             //}
         </script>
     </head>
