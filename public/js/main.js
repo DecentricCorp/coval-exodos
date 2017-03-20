@@ -385,25 +385,46 @@ var table
         })
     }
     function checkPayloadWithServer(payload, cb) {
-        var url = "https://coval-exodos-verify.mybluemix.net/v1/verify"
-        if (isLocal()) {
+        
+
+        //var url = "https://coval-exodos-verify.mybluemix.net/v1/verify"
+        /// ==> 
+        var url = "https://coval.stdlib.com/coval-exodos-server@dev/"
+        /*if (isLocal()) {
             url = "http://127.0.0.1:4701/v1/verify"
-        } 
-        $.ajax({            
-            url : url,
-            type: "POST",
-            data: JSON.stringify(payload),
-            contentType: "application/json; charset=utf-8",
-            dataType   : "json",
-            success    : function(result){
-                console.log("result", result);
-                return cb(result)                
-            }, 
-            error      : function(result){
-                console.log("result", result);
-                return cb(result)                
-            }
-        })
+        }*/ 
+        var requestEnvelope = {}
+        requestEnvelope.kwargs = payload
+        
+        doAjax()
+        function doAjax(){
+            $.ajax({            
+                url : url,
+                type: "POST",
+                data: JSON.stringify(payload),
+                contentType: "application/json; charset=utf-8",
+                dataType   : "json",
+                success    : function(result){
+                    console.log("result", result);
+                    return cb(result)                
+                }, 
+                error      : function(result){
+                    console.log("result", result);
+                    return cb(result)                
+                }
+            })
+        }
+
+        function doStdLib() {
+            lib.coval.liveService['@0.0.0']('hello', 'world', {keyword: 'argument'}, function (err, result) {
+
+                if (err) {
+                    // handle it
+                }
+                return cb(result)
+
+            })
+        }
     }
     function isLocal(){
        return window.location.hostname === "127.0.0.1" && window.location.hash != "#forceServer"
